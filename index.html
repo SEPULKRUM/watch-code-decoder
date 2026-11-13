@@ -392,7 +392,7 @@ const year6={
 
 const month6={
   "1":"January","2":"February","3":"March","4":"April","5":"May","6":"June",
-  "7":"July","8":"August","9":"September","O":"October","N":"November","D":"December"
+  "7":"July","8":"August","9":"September","0":"October","A":"November","B":"December"
 };
 
 const production11={
@@ -526,7 +526,7 @@ function decode(){
     return;
   }
 
-  if(/^[A-Z][1-9OND][A-Z0-9]{4}$/.test(code)){decode6(code);return}
+  if(/^[A-Z][0-9AB][A-Z0-9]{4}$/.test(code)){decode6(code);return}
   if(/^[A-Z0-9]{4}\d{3}[A-J]$/.test(code)){decode8(code);return}
   if(/^\d{2}[A-Z0-9]\d{3}[A-Z0-9]{5}$/.test(code)){decode11(code);return}
 
