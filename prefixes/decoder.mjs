@@ -1,4 +1,5 @@
 import {normalizeAnniversary} from './anniversary.mjs?v=7c8896384ae6cc00';
+import {decodeAwgM520ua} from './awg-m520ua.mjs?v=ua-20261116';
 import {ownerPattern} from './owner-prefix-readings.mjs?v=7c8896384ae6cc00';
 import {applyGuide} from './guide-interpretations.mjs?v=7c8896384ae6cc00';
 import {prefixMeaning} from './prefix-meanings.mjs?v=7c8896384ae6cc00';
@@ -15,6 +16,7 @@ export function decodeModel(input,data=null,references=null){
  if(!/^[A-Z0-9-]+$/.test(cleaned))return {recognized:false,reason:'Enter a Casio model or prefix using letters, numbers and hyphens.',segments:[]};
  const key=compact(cleaned),exact=data?(Object.values(data.models).find(m=>compact(m.id)===key)||Object.values(data.models).find(m=>(m.specs?.supplied_aliases?.value||[]).some(alias=>compact(alias)===key))):null;
  const matches=exactReferences(references,cleaned);
+ const arrows=decodeAwgM520ua(key,exact,matches);if(arrows)return arrows;
  if(exact?.specs?.reference_scope?.value==='2011_clock_index'){
   const prefix=exact.id.match(/^[A-Z]+/)?.[0]||'';
   return {recognized:true,prefix,family:'2011 CLOCK INDEX',normalized:exact.id,segments:[{type:'prefix',token:prefix,communityMeaning:null,title:'Clock index identifier',description:'Clock reference printed in the supplied 2011 index. Watch-prefix meanings and technical functions are not inferred.',status:'secondary_reported'},{type:'series',token:exact.id.slice(prefix.length).replace(/^-/,''),title:'Indexed clock designation',description:'Identifier as listed; no dimensions, mass, module or functions established by this extraction.',status:'secondary_reported'}],exact,references:matches,historicalReference:true};

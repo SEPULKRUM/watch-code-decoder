@@ -1,16 +1,16 @@
 {
   "source_repository": "SEPULKRUM/casio-watch-specs",
-  "source_commit": "b66fae1d8d09ea190244c513cbb863d714db81cc",
-  "beta_source_commit": "1cd161ca57b9af1fdca29452999e12b2d6a391ad",
+  "source_commit": "063db208a99c106ec555c849ac44303a5f5b8733",
+  "beta_source_commit": "aef3cec19efd8eb49653be069aaabb2a827976aa",
   "destination": "https://sepulkrum.github.io/watch-code-decoder/prefixes/",
   "backup": "https://sepulkrum-casio-specs-beta.miniatureagave.chatgpt.site/",
   "individual_watch_identifiers": 29148,
   "files_sha256": {
     "anniversary-data.mjs": "80334d630ee95c82910cd5098f9d89e2d1cd866e96137abf1a35387444770ac1",
     "anniversary.mjs": "97f930e405b1b1fe557b89b266b1ff6d1ab8321e793b7701d7574e5755e4678a",
-    "app.mjs": "419a5339e97e5b72a6c4439fef4bcb266ce2f5e76a7d253b70e9be5b0fd1d238",
+    "app.mjs": "1d36e71f6885b06f6ec33e2fc37fe476f6b5d70f091cb746fd38f54cb0afed37",
     "brand-emblem.svg": "83bd9517dc72df9d8cc459a58c0cd628af583e509aa9c413ce321248cfa2d7b3",
-    "build-info.json": "0d6d3d47e31898cd7a924c4ca0cfb2233f8114b942a4c99cff6dca977aa93239",
+    "build-info.json": "1e2c332b576830c93835c55dfb938279ad9af7cc5140a6ab0babb430c4d0cdb8",
     "catalog-2011-reference.mjs": "843b9e87ba7b132c6874f1ec215234fdb2af278879383812a82bff1f125de492",
     "catalog-batch-reference.mjs": "fd12edde44b7f6a23d0ad5a614520bc819699e5d7af878c4c3f80e0e9ac1daac",
     "catalog.json": "a4434bdbab55798e0c9d1826f6dc0863ba7c9bafaa94460fe7d63081f3bde4bc",
@@ -18,11 +18,11 @@
     "core.mjs": "3e02152a5072251a7fcb9fdb242dd8764aaa7585464fd9512b48008b81bdab23",
     "decoder-presentation.mjs": "784fb3c2eecdafbb063391f7e2e4d0e8b4f4af50e8c978a07dbb326d83418a5c",
     "decoder-rules.mjs": "e5fc5bae67f26f5d8c2cf6b22071c951b98e34f6fc41503f69afe76cff764c5b",
-    "decoder.mjs": "6220a089187252cbdba87c477dd186804f9361310aa42127022df619b05f3bd5",
+    "decoder.mjs": "489d4ac92c39feca896a0c77be87829d27326c6138c70b784e19c67efacb18b6",
     "english.mjs": "273347dd491b69629be7b793d598e2f5046232a2ef72b20b12e77e7f279c3440",
     "guide-interpretations.mjs": "7ba095a01b6337165c6b459ab4602f80ac5bb4ee2557eb2af2c5ae585128ce3b",
     "historical-review.mjs": "443e38e042656cbd26322c67fd78f0bc3949ddb47df9940c57f99b25408a4018",
-    "index.html": "33a7d216cb666be0cb3d6958135a54bdc473fa88cff7e56b917bc0cf2a7c1010",
+    "index.html": "84fa613b4fc38dda08f2ec5f6d78c8ebcf404beac81b94a62bfa70341cde6554",
     "master-research.json": "5c0a524bb267a838b7b649cfef27854307f66581d70432bf6d036901ac83143f",
     "master-research.mjs": "82f6b4e6b05fba6aa063fdac92d0314a5be76757d0e1f060cb0cf4e45b56f8dc",
     "model-references.json": "c573a356050bea4c0b8337ab21e9806dd2b12c34c62f528e5e6ec828b84b306c",
@@ -34,10 +34,10 @@
     "prefix-data.mjs": "5b81738e48a8b126bd2f6fa55f42102f0e3f85c4dfbba07961cdd6c49a639193",
     "prefix-meanings.mjs": "2f7b361273fb77b039758621490f810267ad0607d134ed92b403676c8a6ef976",
     "protrek-reference.mjs": "35318c3675115c0df1477603782d7b4cd89c71c1d7aa15ac34bd02499601c921",
-    "reconciliation-report.json": "7c6327dd500e2106af6c0f5c7a239f874c089cb716101bbd249a52c61d8d29f8",
+    "reconciliation-report.json": "82a81d32bce3967a75cafb5d777d544142c7a018d341ebc5f31bb194883a0d08",
     "research/source-checks-2026-11-16.json": "b8b5855919ce1715cff26c6b20587b0c6718d67e10753a27ebb792c775d32f8b",
     "research-prefix-data.mjs": "225bd87a4622b3edd8a6db1eac7fcb5e3e76be6a435ef16a7502a1f24b2a1e7e",
-    "search-index.json": "48179482a7af45facf0fcb165663a3c704cc7cb845f2013e19e85fc0426d6ae5",
+    "search-index.json": "d363c1c7ec9ca03acec69516f133008138573f1b6aaf5600812ed36b1b902b54",
     "specification-display.mjs": "9d2c78f7b1e86229ca3d01bd7cb70577738a6ded47bb0e86afef5e3275efebb9",
     "style.css": "8f9e9d9236c769e76415ab3c7aa8d9af4f9ffcddea626ae75ed58fe079a745cf",
     "unified-models.csv": "5c44b696f552b2d2a732de03c7ad9b2c88e1eea9774fc01182c794b36a9755ca",
@@ -45,12 +45,14 @@
     "variant-interpretations.mjs": "65eee0ee326d5be8c36475811c1435a5b14f658eb835ac398b312a0f34c5e7c0",
     "watches.csv": "b533f84b4415d587dcba5566efcd033550990a6c3614082bfba03850e53ac728",
     "watchnavi-reference.mjs": "ecf17e595a422767d8ec87db498c6f972d4d2b45607c73a02fce1fcfdd03736d",
-    "watchnavi-search.mjs": "e8194ca938d514a5be09281cc4171bc40cf6b50a9eccc2543bffb6a20fadc8a8"
+    "watchnavi-search.mjs": "e8194ca938d514a5be09281cc4171bc40cf6b50a9eccc2543bffb6a20fadc8a8",
+    "awg-m520ua.mjs": "1d9e79cf89fd75638d4d7bb5bdb0fd9685c138fcecc4228fde240a5549d69f32"
   },
   "public_overrides": [
     "Removed the beta badge and changed the initial status to Public reference. Backup beta remains unchanged.",
     "Moved ten decoder research panels into a collapsed Research and sources section below the main watch search; preserved panel contents and identifiers; updated navigation to open the section.",
     "Removed bulk-download links from the public interface and enlarged the case-back decoder link. Browser-required public datasets remain accessible.",
-    "Added the existing GoatCounter visitor badge with a separate canonical count for /watch-code-decoder/prefixes/."
+    "Added the existing GoatCounter visitor badge with a separate canonical count for /watch-code-decoder/prefixes/.",
+    "Added the scoped AWG-M520UA collaboration interpretation and owner video after successful beta publication; retained public layout and counter."
   ]
 }

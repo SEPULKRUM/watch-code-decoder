@@ -12,7 +12,7 @@ import {historicalReview} from './historical-review.mjs?v=7c8896384ae6cc00';
 import {guideReferenceSections} from './guide-interpretations.mjs?v=7c8896384ae6cc00';
 import {decoderDisclosure,decoderRules,evidenceName} from './decoder-rules.mjs?v=7c8896384ae6cc00';
 import {value,moduleIds,findModels,stats,safeUrl,validateData,label,display,evidenceLabel,recordEvidenceLabel} from './core.mjs?v=7c8896384ae6cc00';
-import {decodeModel,entries} from './decoder.mjs?v=7c8896384ae6cc00';
+import {decodeModel,entries} from './decoder.mjs?v=ua-20261116';
 import {validateReferences,findReferences,referenceStatus} from './model-references.mjs?v=7c8896384ae6cc00';
 import {modelColor,officialProductLink} from './decoder-presentation.mjs?v=7c8896384ae6cc00';
 import {validateParts,partsForModel} from './parts.mjs?v=7c8896384ae6cc00';
@@ -147,7 +147,7 @@ function renderPrefix(query,force=false){
   row.append(el('div',segment.token,'decode-token'),description);root.append(row);
  }
  for(const item of result.guideNotes||[]){const box=el('section',undefined,'guide-context');box.append(el('h4',`Supplied guide · page ${item.page}`),el('p',item.text),el('small','Guide / community interpretation · exact-model confirmation varies'));root.append(box)}
- for(const item of result.editionNotes||[]){const box=el('section',undefined,'guide-context');box.append(el('h4',item.title),el('p',item.description),el('small',evidenceName(item.status)),link('Edition reference ↗',item.source));root.append(box)}
+ for(const item of result.editionNotes||[]){const box=el('section',undefined,'guide-context');box.append(el('h4',item.title),el('p',item.description),el('small',evidenceName(item.status)),link(item.linkLabel||'Edition reference ↗',item.source));root.append(box)}
  const color=modelColor(result);
  if(color){const section=el('section',undefined,'model-color');section.append(el('h4','Model color code'));const swatch=el('span',undefined,'color-swatch');swatch.style.backgroundColor=color.swatch;swatch.setAttribute('aria-hidden','true');const line=el('p');line.append(swatch,el('strong',`${color.digit} · ${color.label}`));section.append(line,el('p',color.note),el('small',evidenceName(color.evidence)));if(color.actual)section.append(el('small',`Catalog evidence takes precedence over the heuristic (${color.actualStatus}).`));root.append(section)}
  if(result.officialFeatures){const box=el('section',undefined,'confirmed-features');box.append(el('h4','Features confirmed by Casio'),el('p',result.officialFeatures.description));if(result.officialFeatures.technologyName)box.append(el('p','Official technology name: '+result.officialFeatures.technologyName));box.append(link('Casio feature reference ↗',result.officialFeatures.source),el('small','Confirms the cited model’s features; individual letter expansions remain interpretations.'));root.append(box)}
