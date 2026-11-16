@@ -1,0 +1,1325 @@
+{
+  "schema_version": 1,
+  "accessed": "2026-11-15",
+  "supplier": "Boley",
+  "scope": "Exact checked model listing links and explicit supplier QW codes only. No parts tables, images, prices or availability republished. Catalog specification values unchanged.",
+  "sitemap_url": "https://boley.de/sitemap-casepart-casio.xml",
+  "models": {
+    "GW-M5610U-1": {
+      "url": "https://boley.de/en/case-parts/casio/25216.gw-m5610u-1",
+      "listed_model": "GW-M5610U-1",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "a565849d91adb7a1e4e7a6c1de680e74a7184b2b1d2da1f1b6283318446eb2fd",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "3495"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "GW7900B-1": {
+      "url": "https://boley.de/en/case-parts/casio/20207.gw-7900b-1",
+      "listed_model": "GW-7900B-1",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "04cc3ed5979222c3341857b4b013cd7d4bf37fffcaab9acd5c0f0ba1e7380840",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "3200"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "G2900F-1V": {
+      "url": "https://boley.de/en/case-parts/casio/9450.g-2900f-1v",
+      "listed_model": "G-2900F-1V",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "f1b62728a2c0ebea11e7aff5037f86073197a5423f405e8bae7d5e38ba5c772d",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "2548"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "GW5600J-1": {
+      "url": "https://boley.de/en/case-parts/casio/20182.gw-5600j-1",
+      "listed_model": "GW-5600J-1",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "3bd066170553fe587ac1f608d2dc016903b7f640ede1945c553039130ae3a9ae",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "2924"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "GA-B2100-1A": {
+      "url": "https://boley.de/en/case-parts/casio/24376.ga-b2100-1a",
+      "listed_model": "GA-B2100-1A",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "47d860bd1324bf59026f30a1c99b2f3d574152b735c21c6ee624efb387c535d6",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "5689"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "A158WA-1": {
+      "url": "https://boley.de/en/case-parts/casio/17698.a158wa-1",
+      "listed_model": "A158WA-1",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "063cd7974a05fc268b7426b1ff1a2204479179c6a0ec81243839d1f21c4f5b2b",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "1271",
+        "593"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "A700W-1A": {
+      "url": "https://boley.de/en/case-parts/casio/21665.a700w-1a",
+      "listed_model": "A700W-1A",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "83b1556d405a1b4a8f1a6a31d16c71aa8ea55a95d4a35d89e5265eda8d1649ee",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "3472",
+        "3479"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "BGA-280-1A": {
+      "url": "https://boley.de/en/case-parts/casio/22433.bga-280-1a",
+      "listed_model": "BGA-280-1A",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "f7f0c6122c20316310676dcfd190e103de16a198a6b5cfd5350ed83edfd2abcf",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "5662"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "DBC-32-1A": {
+      "url": "https://boley.de/en/case-parts/casio/9676.dbc-32-1a",
+      "listed_model": "DBC-32-1A",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "a0d95eb563fcdf6f70ec63479a8a61dbdb32a8e3739905ac26b14765ce0aea94",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "2888"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "ECB-900DB-1A": {
+      "url": "https://boley.de/en/case-parts/casio/22925.ecb-900db-1a",
+      "listed_model": "ECB-900DB-1A",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "8b7da9453d29f51f55e2212c8fc3dae9c47ad52e8c90ec3f140d16791b1f9806",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "5582"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "F-105W-1A": {
+      "url": "https://boley.de/en/case-parts/casio/4938.f-105w-1a",
+      "listed_model": "F-105W-1A",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "6efa92e2299e3f1cb5058afb6856a05d33d8c7507a6363c36928e56f48d1aca9",
+      "observed_qw_codes": [
+        "QW1275DF-01"
+      ],
+      "observed_module_ids": [
+        "1275"
+      ],
+      "recorded_module_ids": [
+        "1275"
+      ],
+      "module_comparison": "agrees_with_recorded_reference",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "G-5600UE-1": {
+      "url": "https://boley.de/en/case-parts/casio/23939.g-5600ue-1",
+      "listed_model": "G-5600UE-1",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "3768cbd1afd79b270a0681d4840c07d841e7bf8cde22e1685c07bf4e80b41fe8",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "3496"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "GA-2100-1A": {
+      "url": "https://boley.de/en/case-parts/casio/24201.ga-2100-1a",
+      "listed_model": "GA-2100-1A",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "e277d18fb9357cfb2dbb932d332ff9b894b13178ce6efd6fb457ee2d8aca1aaf",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "5611"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "GA-2100-7A": {
+      "url": "https://boley.de/en/case-parts/casio/24205.ga-2100-7a",
+      "listed_model": "GA-2100-7A",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "f7e9fc9ce5c082ff0797e86583dcf99e2cd2148306022193ba0175d4fdf8d167",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "5611"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "GMW-B5000D-1": {
+      "url": "https://boley.de/en/case-parts/casio/24891.gmw-b5000d-1",
+      "listed_model": "GMW-B5000D-1",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "567e89c6b8f888fe53b5590319c128d344c9f72d0f61fb57e96cb0d1dd75fd91",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "3539"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "GW-M5610U-1B": {
+      "url": "https://boley.de/en/case-parts/casio/25217.gw-m5610u-1b",
+      "listed_model": "GW-M5610U-1B",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "99e1fd53e3ca5bf8b583c30efc613e5112412a6d3df38f3e5779233bf04a11ce",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "3495"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "LCW-M100DSE-1A": {
+      "url": "https://boley.de/en/case-parts/casio/20377.lcw-m100dse-1a",
+      "listed_model": "LCW-M100DSE-1A",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "c07cc82ec05b1db9a076d7c296d29417136a869fe41dae4432495e2a6961f604",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "5161"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "LCW-M100TSE-1A": {
+      "url": "https://boley.de/en/case-parts/casio/25344.lcw-m100tse-1a",
+      "listed_model": "LCW-M100TSE-1A",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "abfde62364491d273298aafb3b958d6e5d93342ec3189a38dc0a3dfaf60cdf65",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "5161"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "LCW-M170TD-1A": {
+      "url": "https://boley.de/en/case-parts/casio/25348.lcw-m170td-1a",
+      "listed_model": "LCW-M170TD-1A",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "1054deae4614a3991921897a42e646e7321416528180d69abd8340ccfd5c0dfc",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "5161"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "PRG-270-1": {
+      "url": "https://boley.de/en/case-parts/casio/28141.prg-270-1",
+      "listed_model": "PRG-270-1",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "dc467941a6a73c41a1b95eafd47c47d0329bf204ec7dffaf0f2654f3cd36a882",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "3415"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "PRG-340-1": {
+      "url": "https://boley.de/en/case-parts/casio/28174.prg-340-1",
+      "listed_model": "PRG-340-1",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "2b2fe293bf8e7c6f02ff2444f6b505f7e92dd24079f689cc462915b505e1d44a",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "3513"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "G-9300-1": {
+      "url": "https://boley.de/en/case-parts/casio/19850.g-9300-1",
+      "listed_model": "G-9300-1",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "7202c3f2091ade6a36b52df45ef03be3b7c82246326da2b71169493b1af4ad8b",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "3261",
+        "3281"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "GA-110-1B": {
+      "url": "https://boley.de/en/case-parts/casio/19860.ga-110-1b",
+      "listed_model": "GA-110-1B",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "ae2b578c59342e625ec8a5205d01ec44522350a7724c30f7466d4c465c617206",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "5146",
+        "5425"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "GA-700-1B": {
+      "url": "https://boley.de/en/case-parts/casio/24290.ga-700-1b",
+      "listed_model": "GA-700-1B",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "e13cec895154d4dee606b88dc469166c7e3c721c378f09ec798ab4f7a4aa9a42",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "5522"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "GA-B001-1A": {
+      "url": "https://boley.de/en/case-parts/casio/24372.ga-b001-1a",
+      "listed_model": "GA-B001-1A",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "34ce4aa91e6997b99314aa8f815b15d882a6821dc604e5ca110e3e140f871697",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "5690"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "GBD-200-1": {
+      "url": "https://boley.de/en/case-parts/casio/24505.gbd-200-1",
+      "listed_model": "GBD-200-1",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "193c60e2cbb28030e3414b4887f70d2630a9d59632da071eaf711703c4297439",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "3506"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "GBD-H2000-1A": {
+      "url": "https://boley.de/en/case-parts/casio/24532.gbd-h2000-1a",
+      "listed_model": "GBD-H2000-1A",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "9f4e16224ebca72323329fb892f9ad0712345f4699007b5877acc8459fcd3255",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "3515"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "GBX-100-1": {
+      "url": "https://boley.de/en/case-parts/casio/24535.gbx-100-1",
+      "listed_model": "GBX-100-1",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "6c760ebb60e9de1d271590897f51371aa0f6ea64651b92c9136627ba0ca2c998",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "3482"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "GST-B400D-1A": {
+      "url": "https://boley.de/en/case-parts/casio/24999.gst-b400d-1a",
+      "listed_model": "GST-B400D-1A",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "4020058e3f0c577c994f3eea9c023baaa632d546229de860b6e02d1f781a3dfc",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "5657"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "GST-B500D-1A": {
+      "url": "https://boley.de/en/case-parts/casio/25007.gst-b500d-1a",
+      "listed_model": "GST-B500D-1A",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "f10caf0585515ce6a9671c43a82685cad69b0f627681ceb4c85cd48749365cf7",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "5684"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "GW-9400-1": {
+      "url": "https://boley.de/en/case-parts/casio/25112.gw-9400-1",
+      "listed_model": "GW-9400-1",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "7c9c7739ce6de96d4693f0ad458fca0f4c84c239c68b594d111c6baa904a5257",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "3410"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "GW-B5600-2": {
+      "url": "https://boley.de/en/case-parts/casio/25142.gw-b5600-2",
+      "listed_model": "GW-B5600-2",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "ac8f97b9d957115139e895bc7baf5af19e99a302052aeb677e558248f55c788f",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "3459",
+        "3461"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "GX-56BB-1": {
+      "url": "https://boley.de/en/case-parts/casio/25258.gx-56bb-1",
+      "listed_model": "GX-56BB-1",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "391b8cfcbeccace99e0818780314097929f2fc33259408d428b1c5fb279317b7",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "3221"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "MRG-B5000D-1": {
+      "url": "https://boley.de/en/case-parts/casio/26555.mrg-b5000d-1",
+      "listed_model": "MRG-B5000D-1",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "befffed281677f22cabbbe1708e08c95c683743ba13cf8ebead9b7fd1882481c",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "3501"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "MTG-B3000D-1A": {
+      "url": "https://boley.de/en/case-parts/casio/26797.mtg-b3000d-1a",
+      "listed_model": "MTG-B3000D-1A",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "ec080aeb69c1f19ba5b3dd4084e248a78e7bb953dc6b9d412fc9a3894315000a",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "5672"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "PRT-B50-1": {
+      "url": "https://boley.de/en/case-parts/casio/28195.prt-b50-1",
+      "listed_model": "PRT-B50-1",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "d1438688028d095b6f12ff2d037da203fd7fc5d036d6ecb7f018249e16811836",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "5601"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "PRW3500-1": {
+      "url": "https://boley.de/en/case-parts/casio/28242.prw-3500-1",
+      "listed_model": "PRW-3500-1",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "0284883257b17ec86b4bd50f0432cc7a7f59fc0634b0dfb3abd0244160f88007",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "3414"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "G9000-1V": {
+      "url": "https://boley.de/en/case-parts/casio/8763.g-9000-1v",
+      "listed_model": "G-9000-1V",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "c78559125f151d355b5330b1a1ce7069f1f514a766254ff35d491b4775561feb",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "3031"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "G7710-1": {
+      "url": "https://boley.de/en/case-parts/casio/19750.g-7710-1",
+      "listed_model": "G-7710-1",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "d4de1ccf07f4690cd5fd9f0474a2e802eb7601e6623a4af7dbc8f718ec9d2052",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "3095"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "PAG240-1": {
+      "url": "https://boley.de/en/case-parts/casio/21124.pag-240-1",
+      "listed_model": "PAG-240-1",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "ebf2e7400e37c3a381a24708f0f68be853be12a34fd673dcff57125373e86491",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "3246"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "PAW1500-1V": {
+      "url": "https://boley.de/en/case-parts/casio/6331.paw-1500-1v",
+      "listed_model": "PAW-1500-1V",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "7af5598c4cde917b1e24558b782763bd3e3f139f7be56cabdec9b5c73bd99d68",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "3134"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "PAW2000-1": {
+      "url": "https://boley.de/en/case-parts/casio/21138.paw-2000-1",
+      "listed_model": "PAW-2000-1",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "cdece783fa7bba8e48e7758e5793be8f353c18747f3a0b581214c41c5e8bcae5",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "3172"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "PRW3000-1A": {
+      "url": "https://boley.de/en/case-parts/casio/28209.prw-3000-1a",
+      "listed_model": "PRW-3000-1A",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "267b44a91f341d1d796b11e252bf5be00bfa020d0bcb9e302a3545f5d9a00290",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "3414"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "WVA470J-1A": {
+      "url": "https://boley.de/en/case-parts/casio/21617.wva-470j-1a",
+      "listed_model": "WVA-470J-1A",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "f268b233d384a55a14a8e7077b5e70a039e0cc7130e4c423e8447b09e1b5f808",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "5052"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "WVA430J-1A": {
+      "url": "https://boley.de/en/case-parts/casio/13551.wva-430j-1a",
+      "listed_model": "WVA-430J-1A",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "af976caabeaff55310480da328f7b29847070ff40dc661a0e3cb8ae9094e7c4d",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "3311"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "G2300B-1V": {
+      "url": "https://boley.de/en/case-parts/casio/1898.g-2300b-1v",
+      "listed_model": "G-2300B-1V",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "ecfacd104ec159284f52063e1660f4ba9c0759cafa7c80c0e1d1b6596c187a73",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "2184"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "G2310R-1": {
+      "url": "https://boley.de/en/case-parts/casio/19643.g-2310r-1",
+      "listed_model": "G-2310R-1",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "f05d5b97d65d154bfbe8023bd7e03ca144d10876eda0aed36b9f8a64e275a4a8",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "3192"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "G7700-1": {
+      "url": "https://boley.de/en/case-parts/casio/19745.g-7700-1",
+      "listed_model": "G-7700-1",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "927bd8e826811c2ad8eaf69f8c677ae1c6187cb63b83861cb4bfcf9a8fe54344",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "3095"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "BG169R-1": {
+      "url": "https://boley.de/en/case-parts/casio/18048.bg-169r-1",
+      "listed_model": "BG-169R-1",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "6ea3c8430a770be9330ebbf9576df97c607605779f70d5fddafa3ff3469058af",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "3189",
+        "3252"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "BG5601-1": {
+      "url": "https://boley.de/en/case-parts/casio/18291.bg-5601-1",
+      "listed_model": "BG-5601-1",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "548d6078325f14156b3096b9650c743fa3321bff192474aafd3186f545fdd923",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "2994"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "BG1006SA-1": {
+      "url": "https://boley.de/en/case-parts/casio/17980.bg-1006sa-1",
+      "listed_model": "BG-1006SA-1",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "0f4b0c3d8729eef8c7d42c2e95839778b305d343300b0da0fa264497ed1499d5",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "3188",
+        "3288"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "DW9052-1V": {
+      "url": "https://boley.de/en/case-parts/casio/6250.dw-9052-1v",
+      "listed_model": "DW-9052-1V",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "97b9d52a5b5b5d218f782ad2ca2d8970d922e68ea63b8f84387aaee51474fddd",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "1659"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "GW9200-1": {
+      "url": "https://boley.de/en/case-parts/casio/20254.gw-9200-1",
+      "listed_model": "GW-9200-1",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "4ab9525945b73c4ff7513a9935a698824f25ead751baf76429fc2e92739c73d0",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "3147"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "GW9100-1": {
+      "url": "https://boley.de/en/case-parts/casio/20242.gw-9100-1",
+      "listed_model": "GW-9100-1",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "aacaabe09d1166d205a4ce85b2c1ae848c2fb691bb8d888a136c0e30ba7d6594",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "3089"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "G9000MS-1": {
+      "url": "https://boley.de/en/case-parts/casio/19824.g-9000ms-1",
+      "listed_model": "G-9000MS-1",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "72bead6658697d650e983daaaa0c55ff1b1d36d18c2ffa0913952af295b8221b",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "3031"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "PAG80-1V": {
+      "url": "https://boley.de/en/case-parts/casio/3747.pag-80-1v",
+      "listed_model": "PAG-80-1V",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "659546564c78452e72d2c9de6a8b563754a4e4c4e08b44d47cec1e93e4b4a691",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "2894"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "GW2500-1A": {
+      "url": "https://boley.de/en/case-parts/casio/20143.gw-2500-1a",
+      "listed_model": "GW-2500-1A",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "6bfff52ccc340d55d24fac6fc4c3c918733eaed12933699ea7b027ea8274bc04",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "5064"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "EFSS570D-1A": {
+      "url": "https://boley.de/en/case-parts/casio/23561.efs-s570d-1a",
+      "listed_model": "EFS-S570D-1A",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "59108af114380c940022148e3f6eb7bcb2ec1b7a4e6de547b28a3769966341bc",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "5634"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "BGD565-1": {
+      "url": "https://boley.de/en/case-parts/casio/22541.bgd-565-1",
+      "listed_model": "BGD-565-1",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "8d7cbc85603d126341b7d042b53b1dadcdca08ae3cde53ece706bd781b86b9e9",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "3489"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "BGD565-7": {
+      "url": "https://boley.de/en/case-parts/casio/22543.bgd-565-7",
+      "listed_model": "BGD-565-7",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "91c7700530402b93a1588534d8b432ddb5326e3b5551f0cf232b964a0b94767f",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "3489"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "BA110-1A": {
+      "url": "https://boley.de/en/case-parts/casio/21905.ba-110-1a",
+      "listed_model": "BA-110-1A",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "44a88cc096e0a63d01b09b2f63828a6aff51f47ce1065fb7d3044142a0f4358f",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "5338"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "GW-M5610-1": {
+      "url": "https://boley.de/en/case-parts/casio/25194.gw-m5610-1",
+      "listed_model": "GW-M5610-1",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "774e9b2ec796e8e5cac70e297cc7404174ab0d593d563bc2def378ba1b1b9c42",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "3159"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "GW-M5610-1B": {
+      "url": "https://boley.de/en/case-parts/casio/25195.gw-m5610-1b",
+      "listed_model": "GW-M5610-1B",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "ab14c2d115ed688213d499fc67a6c1ea810e65596e2f93c3a8045f37b5d4f1ed",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "3159"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "GW-M5610BA-1": {
+      "url": "https://boley.de/en/case-parts/casio/25196.gw-m5610ba-1",
+      "listed_model": "GW-M5610BA-1",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "6871956319ba1045bd3e5b8a6f22a499988d45650534ed90ce3b6dadc1233d07",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "3159"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "GW-M5610BC-1": {
+      "url": "https://boley.de/en/case-parts/casio/25198.gw-m5610bc-1",
+      "listed_model": "GW-M5610BC-1",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "b1f322102e59e21c0b0ec7226c7f69fc24c92cc282ddcb9da1a63cb1229dec29",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "3159"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "GW-M5610MD-7": {
+      "url": "https://boley.de/en/case-parts/casio/25205.gw-m5610md-7",
+      "listed_model": "GW-M5610MD-7",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "a7186f90e11e34500ae9bd33c5a55b346916ff57bed8e188166ea4f211d8cfe8",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "3159"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "GW-M5610R-1": {
+      "url": "https://boley.de/en/case-parts/casio/25211.gw-m5610r-1",
+      "listed_model": "GW-M5610R-1",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "176d648785418675121315744d3d57a4d8785a202d013f0633284fdf71e8ffbd",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "3159"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "GW-M5610RB-4": {
+      "url": "https://boley.de/en/case-parts/casio/25212.gw-m5610rb-4",
+      "listed_model": "GW-M5610RB-4",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "cd2c102b6bddd4c29ec220be3894256e605186367a8a42b182e190ce821cd755",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "3159"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "GW-5000-1": {
+      "url": "https://boley.de/en/case-parts/casio/20166.gw-5000-1",
+      "listed_model": "GW-5000-1",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "1208da96797364894ea691fa544e8a0b109586b5c8d610b9c180e5b24274bfd4",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "3159"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "GW-5000U-1": {
+      "url": "https://boley.de/en/case-parts/casio/25086.gw-5000u-1",
+      "listed_model": "GW-5000U-1",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "dcbc85f6501410c7e0a8e738c4c8db3ae46e51a053f01b1bbed0e9d3b0fa13bf",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "3495"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "GW-M5610NV-2": {
+      "url": "https://boley.de/en/case-parts/casio/25209.gw-m5610nv-2",
+      "listed_model": "GW-M5610NV-2",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "987628867e2494b52caf84c0fd189cd43905205c319fe882fe7d19e0a10951eb",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "3159"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "GW-5000B-1": {
+      "url": "https://boley.de/en/case-parts/casio/20167.gw-5000b-1",
+      "listed_model": "GW-5000B-1",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "a8728f3f48ca90f25913e70220aec4e001e56b1c972c4b1ecb8b29d72304e2a3",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "3159"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "GW-5000HR-1": {
+      "url": "https://boley.de/en/case-parts/casio/25085.gw-5000hr-1",
+      "listed_model": "GW-5000HR-1",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "f200d4b68f04713985682e008011da19ec1a9df8ea50276970390e794879c2fe",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "3159"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "GW-5035A-1": {
+      "url": "https://boley.de/en/case-parts/casio/25087.gw-5035a-1",
+      "listed_model": "GW-5035A-1",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "c0486bc7cf103587ce8260bde5299447635d109225c2b3a06543d38cd71553ab",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "3159"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "GW-M5610B-1": {
+      "url": "https://boley.de/en/case-parts/casio/20282.gw-m5610b-1",
+      "listed_model": "GW-M5610B-1",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "abc0553e4c0bfd2770bdbb6c5e4fb1ac396c8a15a31a9cd4e1c5121c61f3d8de",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "3159"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "GW-M5610BB-1": {
+      "url": "https://boley.de/en/case-parts/casio/25197.gw-m5610bb-1",
+      "listed_model": "GW-M5610BB-1",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "1ca619c1429967cf75885ff58c027a0cf9e04bb74b9822cdf3aeb80dfa4c791e",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "3159"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "GW-M5610BW-7": {
+      "url": "https://boley.de/en/case-parts/casio/25199.gw-m5610bw-7",
+      "listed_model": "GW-M5610BW-7",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "b63bb6c5b1f5138cd50a3eef024d5c5d9ac6ffa8c42e411e2f00e3bd34cd5141",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "3159"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "GW-M5610BY-1": {
+      "url": "https://boley.de/en/case-parts/casio/25200.gw-m5610by-1",
+      "listed_model": "GW-M5610BY-1",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "ebb1b0c4bc8840a90d6810c9dab0a51d02573ffaade7fb562614f245ce8f83ad",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "3159"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "GW-M5610CC-2": {
+      "url": "https://boley.de/en/case-parts/casio/20283.gw-m5610cc-2",
+      "listed_model": "GW-M5610CC-2",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "278daddf90a08352d9849217a308dd756ef26b7b11b0a3c0479891e96a4acf39",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "3159"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "GW-M5610CC-3": {
+      "url": "https://boley.de/en/case-parts/casio/20284.gw-m5610cc-3",
+      "listed_model": "GW-M5610CC-3",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "dfabc14625d59c49f8165b18f7d221221910f83e4ac1e1713f93d4c0ba926744",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "3159"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "GW-M5610K-1": {
+      "url": "https://boley.de/en/case-parts/casio/25201.gw-m5610k-1",
+      "listed_model": "GW-M5610K-1",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "3942d1d0fdde8763ea8e5dc8cfa0263aa4248f41dfa8f6183893aef7ca4b8811",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "3159"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "GW-M5610KG-3": {
+      "url": "https://boley.de/en/case-parts/casio/20285.gw-m5610kg-3",
+      "listed_model": "GW-M5610KG-3",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "4b95dd2b3015c0cdf61fe661ec9b3483ceb00e60e97d1e9efdd0e83ef9f53564",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "3159"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "GW-M5610LG-8": {
+      "url": "https://boley.de/en/case-parts/casio/25202.gw-m5610lg-8",
+      "listed_model": "GW-M5610LG-8",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "4809c62dc453c7cd4e6426382c3bf5ceaf68774a24cc1eac130f77f3a453779d",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "3159"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "GW-M5610LY-1": {
+      "url": "https://boley.de/en/case-parts/casio/25203.gw-m5610ly-1",
+      "listed_model": "GW-M5610LY-1",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "687fa047dd5d32ea02bf3a4f61ef6244e12d15f1f47ff0e573944f5baa9d450b",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "3159"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "GW-M5610MD-2": {
+      "url": "https://boley.de/en/case-parts/casio/25204.gw-m5610md-2",
+      "listed_model": "GW-M5610MD-2",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "e16ad62b41fc6eb30cd709c0808b0b745ca1c521cd365b950509610b6056ce70",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "3159"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "GW-M5610MD-9": {
+      "url": "https://boley.de/en/case-parts/casio/25206.gw-m5610md-9",
+      "listed_model": "GW-M5610MD-9",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "02f40ab39d4a71b27bc97122f45dece15b35666501224ec9b1d7e9a6ac5bafda",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "3159"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "GW-M5610MR-4": {
+      "url": "https://boley.de/en/case-parts/casio/25207.gw-m5610mr-4",
+      "listed_model": "GW-M5610MR-4",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "29711deebca620a7dd9185cba4cfb122b0f83542523bd9286ec02855300f1cf6",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "3159"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "GW-M5610MW-7": {
+      "url": "https://boley.de/en/case-parts/casio/25208.gw-m5610mw-7",
+      "listed_model": "GW-M5610MW-7",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "3e99a34b7bb33847a39bcb6b58528b40d2adc85dddc3f168a926a62aa22b5e88",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "3159"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "GW-M5610PC-1": {
+      "url": "https://boley.de/en/case-parts/casio/25210.gw-m5610pc-1",
+      "listed_model": "GW-M5610PC-1",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "2f98d44d037e48deac0c889a98cff0f2571a113a4bcd120bcdf304fd59af3528",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "3159"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "GW-M5610SD-8": {
+      "url": "https://boley.de/en/case-parts/casio/25213.gw-m5610sd-8",
+      "listed_model": "GW-M5610SD-8",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "172c58e398bc48354e544127c0fff4b59f5744e0499656b2b751b5f1e413c29d",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "3159"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "GW-M5610TH-1": {
+      "url": "https://boley.de/en/case-parts/casio/25214.gw-m5610th-1",
+      "listed_model": "GW-M5610TH-1",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "c9b23709655cb1890ebeffc17bde95d9b31bde381a7e52086660706e921ec73b",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "3159"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    },
+    "GW-M5610TR-7": {
+      "url": "https://boley.de/en/case-parts/casio/25215.gw-m5610tr-7",
+      "listed_model": "GW-M5610TR-7",
+      "accessed": "2026-11-15",
+      "snapshot_sha256": "58aa60b19d5a6260519d599e876d1af44fb0d0e547eec9114acc21eb0f71e27d",
+      "observed_qw_codes": [],
+      "observed_module_ids": [],
+      "recorded_module_ids": [
+        "3159"
+      ],
+      "module_comparison": "no_explicit_qw_code",
+      "evidence_status": "supplier_listing_checked; not independent specification verification"
+    }
+  },
+  "failures": [],
+  "unmatched": [
+    "A168WA-1W",
+    "AE-1200WH-1AV",
+    "AE-1500WH-1AV",
+    "AMW320R-1EV",
+    "AW80-1AV",
+    "CA-53W-1",
+    "DB36-1AV",
+    "DW-5600UE-1",
+    "DW-6900U-1",
+    "EF503D-1AV",
+    "EF527D-1AV",
+    "EFB108D-1AV",
+    "EQS500DB-1A1",
+    "F-91W-1",
+    "G100-1BV",
+    "G300-3AV",
+    "GA-100-1A1",
+    "GA-2100-1A1",
+    "GD-010-1",
+    "GD-010-1A1",
+    "GD-010-3",
+    "GD-010-4",
+    "GD-010BEG-1",
+    "GD-010CE-5",
+    "GD-010GB-1A9",
+    "GW-5000HS-1",
+    "GW-5000HS-7",
+    "GW-9500-1",
+    "GW-M5610EW-4",
+    "GW-M5610U-1C",
+    "GW-M5610U-2",
+    "GW-M5610UBC-1",
+    "LCW-M100DE-7AJF",
+    "LCW-M100TSE-1A2",
+    "LCW-M100TSE-1AJF",
+    "LCW-M170D-1AJF",
+    "LCW-M170TD-1AJF",
+    "LCW-M170TD-2A",
+    "LCW-M500TD-1AJF",
+    "LIW-120DEJ-1A2JF",
+    "LIW-120DEJ-1AJF",
+    "LIW-120DEJ-7A2JF",
+    "LIW-M610D-1AJF",
+    "LIW-M610DB-1AJF",
+    "LIW-M610TSE-1AJF",
+    "LIW-M700D-1AJF",
+    "LWA-M145-1AJF",
+    "LWA-M145-4AJF",
+    "LWA-M145L-4AJF",
+    "LWA-M145L-8A2JF",
+    "LWA-M145L-8AJF",
+    "LWA-M160L-4A2JF",
+    "LWA-M160L-7A2JF",
+    "LWA-M160L-8A2JF",
+    "LWQ-10DJ-7A1JF",
+    "MRW-200H-1BV",
+    "MTP-1302D-1A1V",
+    "MTP4500D-1AV",
+    "OCW-S100-1AJF",
+    "OCW-S6000-1AJF",
+    "OCW-S7000-1A2JF",
+    "OCW-S7000-1AJF",
+    "OCW-S7000A-2AJF",
+    "OCW-S7000AP-1AJF",
+    "OCW-S7000B-2AJF",
+    "OCW-S7000BV-2AJR",
+    "OCW-S7000C-2AJF",
+    "OCW-S7000CN-1AJF",
+    "OCW-S7000D-7AJF",
+    "OCW-S7000E-2AJF",
+    "OCW-S7000PW-7AJF",
+    "OCW-T150-1AJF",
+    "OCW-T200S-1AJF",
+    "OCW-T200S-2AJF",
+    "OCW-T200S-3AJF",
+    "OCW-T200S-7AJF",
+    "OCW-T2600-1AJF",
+    "OCW-T4000-1AJF",
+    "OCW-T5000-1AJF",
+    "OCW-T6000-1AJF",
+    "PRJ-B001-1",
+    "PRJ-B001-5",
+    "PRJ-B001-7",
+    "PRJ-B001B-1",
+    "PRJ-B001B-2",
+    "PRJ-B001B-5",
+    "PRJ-B001WM-1",
+    "PRW-35-1A",
+    "W-218H-1AV",
+    "W-800H-1AV",
+    "WV-58R-1A",
+    "WV-59R-1A",
+    "WV200A-1AV",
+    "WV58A-1AV",
+    "WVA-M630D-1AJF",
+    "WVA-M630D-7A2JF",
+    "WVA-M640-1AJF",
+    "WVA-M650-1AJF",
+    "WVA-M650D-1A2JF",
+    "WVQ-M410-1AJF",
+    "WVQ-M410-2AJF",
+    "WVQ-M410B-1AJF",
+    "WVQ-M410DE-1A3JF"
+  ],
+  "ambiguous": {},
+  "not_checked": [],
+  "complete_for_manifest": true
+}
