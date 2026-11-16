@@ -22,7 +22,7 @@
     "english.mjs": "273347dd491b69629be7b793d598e2f5046232a2ef72b20b12e77e7f279c3440",
     "guide-interpretations.mjs": "7ba095a01b6337165c6b459ab4602f80ac5bb4ee2557eb2af2c5ae585128ce3b",
     "historical-review.mjs": "443e38e042656cbd26322c67fd78f0bc3949ddb47df9940c57f99b25408a4018",
-    "index.html": "c8ff028e24f17a8fb709cd8f214f3905b6f59b01c63545e3a884d8abe83573ae",
+    "index.html": "33a7d216cb666be0cb3d6958135a54bdc473fa88cff7e56b917bc0cf2a7c1010",
     "master-research.json": "5c0a524bb267a838b7b649cfef27854307f66581d70432bf6d036901ac83143f",
     "master-research.mjs": "82f6b4e6b05fba6aa063fdac92d0314a5be76757d0e1f060cb0cf4e45b56f8dc",
     "model-references.json": "c573a356050bea4c0b8337ab21e9806dd2b12c34c62f528e5e6ec828b84b306c",
@@ -39,7 +39,7 @@
     "research-prefix-data.mjs": "225bd87a4622b3edd8a6db1eac7fcb5e3e76be6a435ef16a7502a1f24b2a1e7e",
     "search-index.json": "48179482a7af45facf0fcb165663a3c704cc7cb845f2013e19e85fc0426d6ae5",
     "specification-display.mjs": "9d2c78f7b1e86229ca3d01bd7cb70577738a6ded47bb0e86afef5e3275efebb9",
-    "style.css": "cf26ace47037ed39523fbc7a669752d8a1113fde724d3dae30bdf8848041427e",
+    "style.css": "8f9e9d9236c769e76415ab3c7aa8d9af4f9ffcddea626ae75ed58fe079a745cf",
     "unified-models.csv": "5c44b696f552b2d2a732de03c7ad9b2c88e1eea9774fc01182c794b36a9755ca",
     "unified-search.mjs": "d661e9a3bfa8944eb6402d6387ecea7f64687d0ddcd86d2d06af83053edbae98",
     "variant-interpretations.mjs": "65eee0ee326d5be8c36475811c1435a5b14f658eb835ac398b312a0f34c5e7c0",
@@ -50,6 +50,7 @@
   "public_overrides": [
     "Removed the beta badge and changed the initial status to Public reference. Backup beta remains unchanged.",
     "Moved ten decoder research panels into a collapsed Research and sources section below the main watch search; preserved panel contents and identifiers; updated navigation to open the section.",
-    "Removed bulk-download links from the public interface and enlarged the case-back decoder link. Browser-required public datasets remain accessible."
+    "Removed bulk-download links from the public interface and enlarged the case-back decoder link. Browser-required public datasets remain accessible.",
+    "Added the existing GoatCounter visitor badge with a separate canonical count for /watch-code-decoder/prefixes/."
   ]
 }
