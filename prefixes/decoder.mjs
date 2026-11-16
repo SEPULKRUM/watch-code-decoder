@@ -1,5 +1,5 @@
 import {normalizeAnniversary} from './anniversary.mjs?v=7c8896384ae6cc00';
-import {decodeAwgM520ua} from './awg-m520ua.mjs?v=ua-20261116';
+import {decodeAwgM520ua} from './awg-m520ua.mjs?v=ua-archive-20261116';
 import {ownerPattern} from './owner-prefix-readings.mjs?v=7c8896384ae6cc00';
 import {applyGuide} from './guide-interpretations.mjs?v=7c8896384ae6cc00';
 import {prefixMeaning} from './prefix-meanings.mjs?v=7c8896384ae6cc00';
