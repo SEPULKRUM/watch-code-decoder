@@ -8,7 +8,7 @@
   "files_sha256": {
     "anniversary-data.mjs": "80334d630ee95c82910cd5098f9d89e2d1cd866e96137abf1a35387444770ac1",
     "anniversary.mjs": "97f930e405b1b1fe557b89b266b1ff6d1ab8321e793b7701d7574e5755e4678a",
-    "app.mjs": "f0979dc085bcd262be6ec1f1e9d5b0e2698c6cde912a6af95a7da640eab326ab",
+    "app.mjs": "419a5339e97e5b72a6c4439fef4bcb266ce2f5e76a7d253b70e9be5b0fd1d238",
     "brand-emblem.svg": "83bd9517dc72df9d8cc459a58c0cd628af583e509aa9c413ce321248cfa2d7b3",
     "build-info.json": "0d6d3d47e31898cd7a924c4ca0cfb2233f8114b942a4c99cff6dca977aa93239",
     "catalog-2011-reference.mjs": "843b9e87ba7b132c6874f1ec215234fdb2af278879383812a82bff1f125de492",
@@ -22,7 +22,7 @@
     "english.mjs": "273347dd491b69629be7b793d598e2f5046232a2ef72b20b12e77e7f279c3440",
     "guide-interpretations.mjs": "7ba095a01b6337165c6b459ab4602f80ac5bb4ee2557eb2af2c5ae585128ce3b",
     "historical-review.mjs": "443e38e042656cbd26322c67fd78f0bc3949ddb47df9940c57f99b25408a4018",
-    "index.html": "16b0bc29db7904f980305aac0b597013305eef245511ca32307d87e72b621607",
+    "index.html": "44bcc0012bc6fef126066bfdcfbc259705751a9c0e590ed1e8fc00dc76d05314",
     "master-research.json": "5c0a524bb267a838b7b649cfef27854307f66581d70432bf6d036901ac83143f",
     "master-research.mjs": "82f6b4e6b05fba6aa063fdac92d0314a5be76757d0e1f060cb0cf4e45b56f8dc",
     "model-references.json": "c573a356050bea4c0b8337ab21e9806dd2b12c34c62f528e5e6ec828b84b306c",
@@ -48,6 +48,7 @@
     "watchnavi-search.mjs": "e8194ca938d514a5be09281cc4171bc40cf6b50a9eccc2543bffb6a20fadc8a8"
   },
   "public_overrides": [
-    "Removed the beta badge and changed the initial status to Public reference. Backup beta remains unchanged."
+    "Removed the beta badge and changed the initial status to Public reference. Backup beta remains unchanged.",
+    "Moved ten decoder research panels into a collapsed Research and sources section below the main watch search; preserved panel contents and identifiers; updated navigation to open the section."
   ]
 }
