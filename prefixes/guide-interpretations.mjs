@@ -1,5 +1,5 @@
-import {applyAnniversary,anniversaryReferenceSections} from './anniversary.mjs?v=7c8896384ae6cc00';
-import {applyOwnerModifier,ownerReadings} from './owner-prefix-readings.mjs?v=7c8896384ae6cc00';
+import {applyAnniversary,anniversaryReferenceSections} from './anniversary.mjs';
+import {applyOwnerModifier,ownerReadings} from './owner-prefix-readings.mjs';
 // Selected watch facts and scoped interpretations from the supplied five-page guide.
 // No PDF, advertising artwork or source-page reproduction is distributed.
 export const guideSource='https://github.com/SEPULKRUM/casio-watch-specs/blob/main/docs/full-guide-coverage.md';
@@ -51,7 +51,7 @@ export function applyGuide(result,{modifier,number,seriesTail,tail}){
  if(p==='GWF'&&modifier==='D'&&number==='1000'){const s=result.segments.find(s=>s.type==='modifier');if(s)Object.assign(s,note('D is associated by the watch community with the depth-measurement / diving-sensor GWF-D1000 FROGMAN series. It is a model-line reading, not the steel-bracelet D used in other positions.'));}
  for(const s of result.segments){
  if(context&&s.type==='variant'&&guideColours[s.token]&&!result.exact?.specs?.color&&s.status!=='official_observed')Object.assign(s,note(`The guide’s common colour reading is ${guideColours[s.token]}. Exact dial, case, strap, accents and LCD polarity vary by model.`));
- if(s.type==='market'&&guideMarkets[s.token])Object.assign(s,note(`${guideMarkets[s.token]} suffix in the guide / community reference. This indicates a sales-market association, not manufacturing country.`));
+ if(s.type==='market'&&guideMarkets[s.token])Object.assign(s,note(s.token==='JR'?'JR — Japan Release is an owner/community interpretation associated with Japanese-market limited or collaboration releases; JF is common on standard JDM models. This is not an official Casio expansion or a guarantee of limited status, packaging or manufacturing country.':`${guideMarkets[s.token]} suffix in the guide / community reference. This indicates a sales-market association, not manufacturing country.`));
  if(s.type==='order'&&/^A\d?$/.test(s.token))Object.assign(s,note('Variation / order marker within the colour code; following digits can distinguish shades. A1 / A2 / A3 do not have one universal shade meaning.'));
  }
  if(p==='MTP'&&modifier==='E'&&number==='735'&&seriesTail==='AR'){

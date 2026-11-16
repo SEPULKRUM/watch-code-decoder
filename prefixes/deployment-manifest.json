@@ -1,14 +1,14 @@
 {
   "source_repository": "SEPULKRUM/casio-watch-specs",
   "source_commit": "063db208a99c106ec555c849ac44303a5f5b8733",
-  "beta_source_commit": "09530699ed585835ffa4edcf5ede049a46833397",
+  "beta_source_commit": "0e4e25766f53613688186e2958e48d7971c8dee3",
   "destination": "https://sepulkrum.github.io/watch-code-decoder/prefixes/",
   "backup": "https://sepulkrum-casio-specs-beta.miniatureagave.chatgpt.site/",
   "individual_watch_identifiers": 29148,
   "files_sha256": {
     "anniversary-data.mjs": "80334d630ee95c82910cd5098f9d89e2d1cd866e96137abf1a35387444770ac1",
     "anniversary.mjs": "97f930e405b1b1fe557b89b266b1ff6d1ab8321e793b7701d7574e5755e4678a",
-    "app.mjs": "6abbfd787c1edb786f47146dc989e8fde96c389c4455ee69c881fc36386d965a",
+    "app.mjs": "6674533f76884c7e3beb06ecde6bd3c5aca2826482c86266e97b62e814fd5fb2",
     "brand-emblem.svg": "83bd9517dc72df9d8cc459a58c0cd628af583e509aa9c413ce321248cfa2d7b3",
     "build-info.json": "1e2c332b576830c93835c55dfb938279ad9af7cc5140a6ab0babb430c4d0cdb8",
     "catalog-2011-reference.mjs": "843b9e87ba7b132c6874f1ec215234fdb2af278879383812a82bff1f125de492",
@@ -18,11 +18,11 @@
     "core.mjs": "3e02152a5072251a7fcb9fdb242dd8764aaa7585464fd9512b48008b81bdab23",
     "decoder-presentation.mjs": "784fb3c2eecdafbb063391f7e2e4d0e8b4f4af50e8c978a07dbb326d83418a5c",
     "decoder-rules.mjs": "e5fc5bae67f26f5d8c2cf6b22071c951b98e34f6fc41503f69afe76cff764c5b",
-    "decoder.mjs": "4398842c679eec4c1e37c485584a8e27eb025cc38e8605d3e87095f9f41aea76",
+    "decoder.mjs": "2132caadd3ad067ce4659a35c1b0fd97b696b1c024240a8e33a3fc6764724b9e",
     "english.mjs": "273347dd491b69629be7b793d598e2f5046232a2ef72b20b12e77e7f279c3440",
-    "guide-interpretations.mjs": "7ba095a01b6337165c6b459ab4602f80ac5bb4ee2557eb2af2c5ae585128ce3b",
+    "guide-interpretations.mjs": "482fc5e78e4e9ccc91376189821f2ea6cf2cb175fd71a84ff91ff8b64242bd20",
     "historical-review.mjs": "443e38e042656cbd26322c67fd78f0bc3949ddb47df9940c57f99b25408a4018",
-    "index.html": "c455a6f6e01a9917d735a45f027fe5d7b9e95136545a046f127ad6a9d7681bd7",
+    "index.html": "1a76f8ac6b3b5faad407b1a2fd20b16d60d61da6a871adac3341348d06c63d78",
     "master-research.json": "5c0a524bb267a838b7b649cfef27854307f66581d70432bf6d036901ac83143f",
     "master-research.mjs": "82f6b4e6b05fba6aa063fdac92d0314a5be76757d0e1f060cb0cf4e45b56f8dc",
     "model-references.json": "c573a356050bea4c0b8337ab21e9806dd2b12c34c62f528e5e6ec828b84b306c",
@@ -39,14 +39,15 @@
     "research-prefix-data.mjs": "225bd87a4622b3edd8a6db1eac7fcb5e3e76be6a435ef16a7502a1f24b2a1e7e",
     "search-index.json": "d363c1c7ec9ca03acec69516f133008138573f1b6aaf5600812ed36b1b902b54",
     "specification-display.mjs": "9d2c78f7b1e86229ca3d01bd7cb70577738a6ded47bb0e86afef5e3275efebb9",
-    "style.css": "8f9e9d9236c769e76415ab3c7aa8d9af4f9ffcddea626ae75ed58fe079a745cf",
+    "style.css": "e24798ad74e6f9be677d99989305c360e31e49163ac1010527060638e65e6d86",
     "unified-models.csv": "5c44b696f552b2d2a732de03c7ad9b2c88e1eea9774fc01182c794b36a9755ca",
     "unified-search.mjs": "d661e9a3bfa8944eb6402d6387ecea7f64687d0ddcd86d2d06af83053edbae98",
     "variant-interpretations.mjs": "65eee0ee326d5be8c36475811c1435a5b14f658eb835ac398b312a0f34c5e7c0",
     "watches.csv": "b533f84b4415d587dcba5566efcd033550990a6c3614082bfba03850e53ac728",
     "watchnavi-reference.mjs": "ecf17e595a422767d8ec87db498c6f972d4d2b45607c73a02fce1fcfdd03736d",
     "watchnavi-search.mjs": "e8194ca938d514a5be09281cc4171bc40cf6b50a9eccc2543bffb6a20fadc8a8",
-    "awg-m520ua.mjs": "39122dbace311998e81241bd3cb9723470f09b193705eee7d017781cd6247baa"
+    "awg-m520ua.mjs": "79e3db2ab3451c427734a578b1c353e2486610351f39566d85ac0b4f608cee8e",
+    "creator-videos.mjs": "8e6bd3027758911e5b3f493a6541b853b11ab7f7cbeeda5a7559035192a18775"
   },
   "public_overrides": [
     "Removed the beta badge and changed the initial status to Public reference. Backup beta remains unchanged.",
@@ -54,7 +55,8 @@
     "Removed bulk-download links from the public interface and enlarged the case-back decoder link. Browser-required public datasets remain accessible.",
     "Added the existing GoatCounter visitor badge with a separate canonical count for /watch-code-decoder/prefixes/.",
     "Added the scoped AWG-M520UA collaboration interpretation and owner video after successful beta publication; retained public layout and counter.",
-    "Archived collaboration/base-model links and scoped measurement notes updated. Public catalog, search index, reconciliation and CSV datasets are intentionally unchanged."
+    "Archived collaboration/base-model links and scoped measurement notes updated. Public catalog, search index, reconciliation and CSV datasets are intentionally unchanged.",
+    "Preserve creator-videos.mjs exact owner-provided mappings and My video links on search rows and watch detail pages. JR = Japan Release remains an owner/community interpretation, not an official definition."
   ],
   "ui_notes_source_commit": "105b51ae6572b12cda9ae08682f73df58b6a655f"
 }
