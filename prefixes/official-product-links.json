@@ -1,0 +1,1383 @@
+{
+  "schema_version": 1,
+  "note": "Only exact-model official pages with recorded content checks qualify. No Casio product images are hosted.",
+  "models": {
+    "A158WA-1": {
+      "model": "A158WA-1",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "A168WA-1W": {
+      "model": "A168WA-1W",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "A700W-1A": {
+      "model": "A700W-1A",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "AE-1200WH-1AV": {
+      "model": "AE-1200WH-1AV",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "AE-1500WH-1AV": {
+      "model": "AE-1500WH-1AV",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "AMW320R-1EV": {
+      "model": "AMW320R-1EV",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "AW80-1AV": {
+      "model": "AW80-1AV",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "BA110-1A": {
+      "model": "BA110-1A",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "BG1006SA-1": {
+      "model": "BG1006SA-1",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "BG169R-1": {
+      "model": "BG169R-1",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "BG5601-1": {
+      "model": "BG5601-1",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "BGA-280-1A": {
+      "model": "BGA-280-1A",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "BGD565-1": {
+      "model": "BGD565-1",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "BGD565-7": {
+      "model": "BGD565-7",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "CA-53W-1": {
+      "model": "CA-53W-1",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "DB36-1AV": {
+      "model": "DB36-1AV",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "DBC-32-1A": {
+      "model": "DBC-32-1A",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "DW-5600UE-1": {
+      "model": "DW-5600UE-1",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "DW-6900U-1": {
+      "model": "DW-6900U-1",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "DW9052-1V": {
+      "model": "DW9052-1V",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "ECB-900DB-1A": {
+      "model": "ECB-900DB-1A",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "EF503D-1AV": {
+      "model": "EF503D-1AV",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "EF527D-1AV": {
+      "model": "EF527D-1AV",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "EFB108D-1AV": {
+      "model": "EFB108D-1AV",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "EFSS570D-1A": {
+      "model": "EFSS570D-1A",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "EQS500DB-1A1": {
+      "model": "EQS500DB-1A1",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "F-105W-1A": {
+      "model": "F-105W-1A",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "F-91W-1": {
+      "model": "F-91W-1",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "G-5600UE-1": {
+      "model": "G-5600UE-1",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "G-9300-1": {
+      "model": "G-9300-1",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "G100-1BV": {
+      "model": "G100-1BV",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "G2300B-1V": {
+      "model": "G2300B-1V",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "G2310R-1": {
+      "model": "G2310R-1",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "G2900F-1V": {
+      "model": "G2900F-1V",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "G300-3AV": {
+      "model": "G300-3AV",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "G7700-1": {
+      "model": "G7700-1",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "G7710-1": {
+      "model": "G7710-1",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "G9000-1V": {
+      "model": "G9000-1V",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "G9000MS-1": {
+      "model": "G9000MS-1",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "GA-100-1A1": {
+      "model": "GA-100-1A1",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "GA-110-1B": {
+      "model": "GA-110-1B",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "GA-2100-1A": {
+      "model": "GA-2100-1A",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "GA-2100-1A1": {
+      "model": "GA-2100-1A1",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "GA-2100-7A": {
+      "model": "GA-2100-7A",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "GA-700-1B": {
+      "model": "GA-700-1B",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "GA-B001-1A": {
+      "model": "GA-B001-1A",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "GA-B2100-1A": {
+      "model": "GA-B2100-1A",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "GBD-200-1": {
+      "model": "GBD-200-1",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "GBD-H2000-1A": {
+      "model": "GBD-H2000-1A",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "GBX-100-1": {
+      "model": "GBX-100-1",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "GD-010-1": {
+      "model": "GD-010-1",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "GD-010-1A1": {
+      "model": "GD-010-1A1",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "GD-010-3": {
+      "model": "GD-010-3",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "GD-010-4": {
+      "model": "GD-010-4",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "GD-010BEG-1": {
+      "model": "GD-010BEG-1",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "GD-010CE-5": {
+      "model": "GD-010CE-5",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "GD-010GB-1A9": {
+      "model": "GD-010GB-1A9",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "GMW-B5000D-1": {
+      "model": "GMW-B5000D-1",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "GST-B400D-1A": {
+      "model": "GST-B400D-1A",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "GST-B500D-1A": {
+      "model": "GST-B500D-1A",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "GW-5000-1": {
+      "model": "GW-5000-1",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "GW-5000B-1": {
+      "model": "GW-5000B-1",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "GW-5000HR-1": {
+      "model": "GW-5000HR-1",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "GW-5000HS-1": {
+      "model": "GW-5000HS-1",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "GW-5000HS-7": {
+      "model": "GW-5000HS-7",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "GW-5000U-1": {
+      "model": "GW-5000U-1",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "GW-5035A-1": {
+      "model": "GW-5035A-1",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "GW-9400-1": {
+      "model": "GW-9400-1",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "GW-9500-1": {
+      "model": "GW-9500-1",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "GW-B5600-2": {
+      "model": "GW-B5600-2",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "GW-M5610-1": {
+      "model": "GW-M5610-1",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "GW-M5610-1B": {
+      "model": "GW-M5610-1B",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "GW-M5610B-1": {
+      "model": "GW-M5610B-1",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "GW-M5610BA-1": {
+      "model": "GW-M5610BA-1",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "GW-M5610BB-1": {
+      "model": "GW-M5610BB-1",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "GW-M5610BC-1": {
+      "model": "GW-M5610BC-1",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "GW-M5610BW-7": {
+      "model": "GW-M5610BW-7",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "GW-M5610BY-1": {
+      "model": "GW-M5610BY-1",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "GW-M5610CC-2": {
+      "model": "GW-M5610CC-2",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "GW-M5610CC-3": {
+      "model": "GW-M5610CC-3",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "GW-M5610EW-4": {
+      "model": "GW-M5610EW-4",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "GW-M5610K-1": {
+      "model": "GW-M5610K-1",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "GW-M5610KG-3": {
+      "model": "GW-M5610KG-3",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "GW-M5610LG-8": {
+      "model": "GW-M5610LG-8",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "GW-M5610LY-1": {
+      "model": "GW-M5610LY-1",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "GW-M5610MD-2": {
+      "model": "GW-M5610MD-2",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "GW-M5610MD-7": {
+      "model": "GW-M5610MD-7",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "GW-M5610MD-9": {
+      "model": "GW-M5610MD-9",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "GW-M5610MR-4": {
+      "model": "GW-M5610MR-4",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "GW-M5610MW-7": {
+      "model": "GW-M5610MW-7",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "GW-M5610NV-2": {
+      "model": "GW-M5610NV-2",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "GW-M5610PC-1": {
+      "model": "GW-M5610PC-1",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "GW-M5610R-1": {
+      "model": "GW-M5610R-1",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "GW-M5610RB-4": {
+      "model": "GW-M5610RB-4",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "GW-M5610SD-8": {
+      "model": "GW-M5610SD-8",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "GW-M5610TH-1": {
+      "model": "GW-M5610TH-1",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "GW-M5610TR-7": {
+      "model": "GW-M5610TR-7",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "GW-M5610U-1": {
+      "model": "GW-M5610U-1",
+      "official_product_url": "https://www.casio.com/europe/watches/casio/product.GW-M5610U-1/",
+      "official_url_verified": true,
+      "verified_exact_model": "GW-M5610U-1",
+      "official_url_source": {
+        "url": "https://www.casio.com/europe/watches/casio/product.GW-M5610U-1/",
+        "title": "GW-M5610U-1",
+        "snapshot_sha256": "1e76d0767867f030f3769196181d6f3789ffe45e4364684b020137b36a383779",
+        "method": "Live HTTP 200; exact HTML title matches model identifier"
+      },
+      "official_url_checked_at": "2026-11-15"
+    },
+    "GW-M5610U-1B": {
+      "model": "GW-M5610U-1B",
+      "official_product_url": "https://www.casio.com/europe/watches/gshock/product.GW-M5610U-1B/",
+      "official_url_verified": true,
+      "verified_exact_model": "GW-M5610U-1B",
+      "official_url_source": {
+        "url": "https://www.casio.com/europe/watches/gshock/product.GW-M5610U-1B/",
+        "title": "GW-M5610U-1B",
+        "snapshot_sha256": "dfc1cda1623ddaadda901390e32bf38746f9ab84488e5261764494bde7dd9eb6",
+        "method": "Live HTTP 200; exact HTML title matches model identifier"
+      },
+      "official_url_checked_at": "2026-11-15"
+    },
+    "GW-M5610U-1C": {
+      "model": "GW-M5610U-1C",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "GW-M5610U-2": {
+      "model": "GW-M5610U-2",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "GW-M5610UBC-1": {
+      "model": "GW-M5610UBC-1",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "GW2500-1A": {
+      "model": "GW2500-1A",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "GW5600J-1": {
+      "model": "GW5600J-1",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "GW7900B-1": {
+      "model": "GW7900B-1",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "GW9100-1": {
+      "model": "GW9100-1",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "GW9200-1": {
+      "model": "GW9200-1",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "GX-56BB-1": {
+      "model": "GX-56BB-1",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "LCW-M100DE-7AJF": {
+      "model": "LCW-M100DE-7AJF",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "LCW-M100DSE-1A": {
+      "model": "LCW-M100DSE-1A",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "LCW-M100TSE-1A": {
+      "model": "LCW-M100TSE-1A",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "LCW-M100TSE-1A2": {
+      "model": "LCW-M100TSE-1A2",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "LCW-M100TSE-1AJF": {
+      "model": "LCW-M100TSE-1AJF",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "LCW-M170D-1AJF": {
+      "model": "LCW-M170D-1AJF",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "LCW-M170TD-1A": {
+      "model": "LCW-M170TD-1A",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "LCW-M170TD-1AJF": {
+      "model": "LCW-M170TD-1AJF",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "LCW-M170TD-2A": {
+      "model": "LCW-M170TD-2A",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "LCW-M500TD-1AJF": {
+      "model": "LCW-M500TD-1AJF",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "LIW-120DEJ-1A2JF": {
+      "model": "LIW-120DEJ-1A2JF",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "LIW-120DEJ-1AJF": {
+      "model": "LIW-120DEJ-1AJF",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "LIW-120DEJ-7A2JF": {
+      "model": "LIW-120DEJ-7A2JF",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "LIW-M610D-1AJF": {
+      "model": "LIW-M610D-1AJF",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "LIW-M610DB-1AJF": {
+      "model": "LIW-M610DB-1AJF",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "LIW-M610TSE-1AJF": {
+      "model": "LIW-M610TSE-1AJF",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "LIW-M700D-1AJF": {
+      "model": "LIW-M700D-1AJF",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "LWA-M145-1AJF": {
+      "model": "LWA-M145-1AJF",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "LWA-M145-4AJF": {
+      "model": "LWA-M145-4AJF",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "LWA-M145L-4AJF": {
+      "model": "LWA-M145L-4AJF",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "LWA-M145L-8A2JF": {
+      "model": "LWA-M145L-8A2JF",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "LWA-M145L-8AJF": {
+      "model": "LWA-M145L-8AJF",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "LWA-M160L-4A2JF": {
+      "model": "LWA-M160L-4A2JF",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "LWA-M160L-7A2JF": {
+      "model": "LWA-M160L-7A2JF",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "LWA-M160L-8A2JF": {
+      "model": "LWA-M160L-8A2JF",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "LWQ-10DJ-7A1JF": {
+      "model": "LWQ-10DJ-7A1JF",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "MRG-B5000D-1": {
+      "model": "MRG-B5000D-1",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "MRW-200H-1BV": {
+      "model": "MRW-200H-1BV",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "MTG-B3000D-1A": {
+      "model": "MTG-B3000D-1A",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "MTP-1302D-1A1V": {
+      "model": "MTP-1302D-1A1V",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "MTP4500D-1AV": {
+      "model": "MTP4500D-1AV",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "OCW-S100-1AJF": {
+      "model": "OCW-S100-1AJF",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "OCW-S6000-1AJF": {
+      "model": "OCW-S6000-1AJF",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "OCW-S7000-1A2JF": {
+      "model": "OCW-S7000-1A2JF",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "OCW-S7000-1AJF": {
+      "model": "OCW-S7000-1AJF",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "OCW-S7000A-2AJF": {
+      "model": "OCW-S7000A-2AJF",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "OCW-S7000AP-1AJF": {
+      "model": "OCW-S7000AP-1AJF",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "OCW-S7000B-2AJF": {
+      "model": "OCW-S7000B-2AJF",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "OCW-S7000BV-2AJR": {
+      "model": "OCW-S7000BV-2AJR",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "OCW-S7000C-2AJF": {
+      "model": "OCW-S7000C-2AJF",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "OCW-S7000CN-1AJF": {
+      "model": "OCW-S7000CN-1AJF",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "OCW-S7000D-7AJF": {
+      "model": "OCW-S7000D-7AJF",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "OCW-S7000E-2AJF": {
+      "model": "OCW-S7000E-2AJF",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "OCW-S7000PW-7AJF": {
+      "model": "OCW-S7000PW-7AJF",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "OCW-T150-1AJF": {
+      "model": "OCW-T150-1AJF",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "OCW-T200S-1AJF": {
+      "model": "OCW-T200S-1AJF",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "OCW-T200S-2AJF": {
+      "model": "OCW-T200S-2AJF",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "OCW-T200S-3AJF": {
+      "model": "OCW-T200S-3AJF",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "OCW-T200S-7AJF": {
+      "model": "OCW-T200S-7AJF",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "OCW-T2600-1AJF": {
+      "model": "OCW-T2600-1AJF",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "OCW-T4000-1AJF": {
+      "model": "OCW-T4000-1AJF",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "OCW-T5000-1AJF": {
+      "model": "OCW-T5000-1AJF",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "OCW-T6000-1AJF": {
+      "model": "OCW-T6000-1AJF",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "PAG240-1": {
+      "model": "PAG240-1",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "PAG80-1V": {
+      "model": "PAG80-1V",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "PAW1500-1V": {
+      "model": "PAW1500-1V",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "PAW2000-1": {
+      "model": "PAW2000-1",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "PRG-270-1": {
+      "model": "PRG-270-1",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "PRG-340-1": {
+      "model": "PRG-340-1",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "PRJ-B001-1": {
+      "model": "PRJ-B001-1",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "PRJ-B001-5": {
+      "model": "PRJ-B001-5",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "PRJ-B001-7": {
+      "model": "PRJ-B001-7",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "PRJ-B001B-1": {
+      "model": "PRJ-B001B-1",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "PRJ-B001B-2": {
+      "model": "PRJ-B001B-2",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "PRJ-B001B-5": {
+      "model": "PRJ-B001B-5",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "PRJ-B001WM-1": {
+      "model": "PRJ-B001WM-1",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "PRT-B50-1": {
+      "model": "PRT-B50-1",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "PRW-35-1A": {
+      "model": "PRW-35-1A",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "PRW3000-1A": {
+      "model": "PRW3000-1A",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "PRW3500-1": {
+      "model": "PRW3500-1",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "W-218H-1AV": {
+      "model": "W-218H-1AV",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "W-800H-1AV": {
+      "model": "W-800H-1AV",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "WV-58R-1A": {
+      "model": "WV-58R-1A",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "WV-59R-1A": {
+      "model": "WV-59R-1A",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "WV200A-1AV": {
+      "model": "WV200A-1AV",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "WV58A-1AV": {
+      "model": "WV58A-1AV",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "WVA-M630D-1AJF": {
+      "model": "WVA-M630D-1AJF",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "WVA-M630D-7A2JF": {
+      "model": "WVA-M630D-7A2JF",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "WVA-M640-1AJF": {
+      "model": "WVA-M640-1AJF",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "WVA-M650-1AJF": {
+      "model": "WVA-M650-1AJF",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "WVA-M650D-1A2JF": {
+      "model": "WVA-M650D-1A2JF",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "WVA430J-1A": {
+      "model": "WVA430J-1A",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "WVA470J-1A": {
+      "model": "WVA470J-1A",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "WVQ-M410-1AJF": {
+      "model": "WVQ-M410-1AJF",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "WVQ-M410-2AJF": {
+      "model": "WVQ-M410-2AJF",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "WVQ-M410B-1AJF": {
+      "model": "WVQ-M410B-1AJF",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    },
+    "WVQ-M410DE-1A3JF": {
+      "model": "WVQ-M410DE-1A3JF",
+      "official_product_url": null,
+      "official_url_verified": false,
+      "official_url_source": null,
+      "official_url_checked_at": null
+    }
+  }
+}

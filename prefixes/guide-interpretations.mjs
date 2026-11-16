@@ -1,0 +1,78 @@
+import {applyAnniversary,anniversaryReferenceSections} from './anniversary.mjs?v=7c8896384ae6cc00';
+import {applyOwnerModifier,ownerReadings} from './owner-prefix-readings.mjs?v=7c8896384ae6cc00';
+// Selected watch facts and scoped interpretations from the supplied five-page guide.
+// No PDF, advertising artwork or source-page reproduction is distributed.
+export const guideSource='https://github.com/SEPULKRUM/casio-watch-specs/blob/main/docs/full-guide-coverage.md';
+export const guideColours={'1':'Black','2':'Blue','3':'Green','4':'Red / pink','5':'Brown / beige','6':'Purple','7':'White / silver','8':'Gray / silver','9':'Gold / yellow'};
+export const guideMarkets={JF:'Japanese-market / Japan domestic market',J:'Japanese-market / Japan domestic market',JR:'Japan-market reference',CR:'North / South America',ER:'European-market / Europe',V:'International / export markets',VER:'International / export markets',DR:'International / export markets',DF:'International / export markets'};
+export const guideModifiers={D:'stainless-steel bracelet',T:'titanium case / bracelet',L:'leather strap',B:'nylon / cloth band, or a bezel / variant marker on MDV-106B',C:'cloth / nylon strap or coloured ion-plating, depending on position',G:'gold-tone / two-tone plating',V:'Velcro / fabric strap',E:'expansion band, or sapphire / slim trim in Lineage TSE / DSE',AR:'Arabic edition: Eastern Arabic numerals and English / Arabic day wheel'};
+const contexts={
+ WV:[2,'Digital Wave Ceptor examples: WV-58, WV-59, WV-200.'],WVA:[2,'Analog-digital examples: WVA-M630, M640, M650.'],WVQ:[2,'Analog chronograph example: WVQ-M410.'],
+ LCW:[2,'Analog hands with a digital LCD at 6 o’clock; examples LCW-M100TSE, M100DSE, M170TD. T denotes titanium and D steel in these trims; SE / TD trims are associated with sapphire, sometimes anti-reflective sapphire.'],LIW:[2,'Analog / chronograph Lineage examples LIW-M610 and M700.'],LIN:[2,'Earlier non-atomic / standard-battery Lineage association.'],
+ BG:[2,'Classic digital example BG-169.'],BGA:[2,'Analog-digital examples BGA-150, 250, 280, 290.'],BGD:[2,'Digital examples BGD-560, 565, 5000; the guide associates BGD-5000 with solar / Multi-Band 6.'],BGS:[2,'Fitness / step-tracker analog-digital association.'],BLX:[2,'G-LIDE tide-graph / surf-and-sport association.'],MSG:[2,'G-MS upscale metal-clad dress-sport association.'],
+ F:[3,'Basic resin digital examples F-91W, F-105W, F-84W, F-201WA.'],A:[3,'Vintage / metal-tone examples A158W, A168W, A500W, A700W, A1000. Metal-tone does not establish a solid-metal case.'],W:[3,'Sport-digital examples W-86, W-217H, W-800H. The guide describes 50–100 m as a family tendency; use the exact model rating.'],LA:[3,'Compact vintage digital examples LA670W and LA680W.'],CA:[3,'Calculator examples CA-53W and CA-500.'],DB:[3,'Data Bank / Telememo association.'],DBC:[3,'Data Bank / Telememo / calculator examples DBC-32 and DBC-611.'],MQ:[3,'Minimalist resin analog example MQ-24.'],LQ:[3,'Compact minimalist resin analog example LQ-139.'],
+ AE:[3,'World-time / multi-function digital examples AE-1000W, AE-1200WH (Casio Royale), AE-1300WH, AE-1400WH, AE-1500WH, AE-2000W, AE-3000W.'],AEQ:[3,'Analog-digital world-time / Telememo examples AEQ-100, AEQ-110, AEQ-200.'],
+ MDV:[3,'Marine Diver / Duro association; MTD and MRW are related marine-style families. MDV-106 carries the Marlin emblem on dial / caseback; MDV-107 is described as the international update without it, using WR 200M dial text.'],MTD:[3,'Related marine-style family; MDV specifications must not be transferred to MTD.'],MRW:[3,'Related marine-style family; MDV specifications must not be transferred to MRW.'],
+ MTP:[4,'Men’s Timepiece: everyday dress, casual and field-style analog models. Examples MTP-1302, MTP-V001, MTP-B145D, MTP-E735.'],LTP:[4,'Ladies’ Timepiece counterpart; examples LTP-V007 and LTP-B165.'],
+ CMK:[4,'Casio Automatic / mechanical field-watch family, introduced late 2026. CMK is a guide family association, not an official expansion of each letter.']
+};
+const note=text=>({description:text,status:'community_interpretation',source:guideSource});
+export function applyGuide(result,{modifier,number,seriesTail,tail}){
+ if(result.historicalReference)return result;
+ const p=result.prefix, context=contexts[p],notes=[];
+ if(context)notes.push({page:context[0],text:context[1]});
+ if(['WV','WVA','WVQ'].includes(p))notes.push({page:2,text:'Wave Ceptor uses terrestrial radio calibration (JJY, WWVB, MSF, DCF77, BPC). The guide describes Multi-Band 5 / 6 and frequent Tough Solar pairing, with resin, steel or lightweight composite cases. The guide reads M as a Tough Solar association in modern series; this is a suggested naming pattern, not a universal solar or reception rule.'});
+ if(['LCW','LIW'].includes(p))notes.push({page:2,text:'The guide describes slim, full-metal dress-casual Lineage designs, often Tough Solar and Multi-Band 6. These are family tendencies, not specifications for every variant.'});
+ if(['BG','BGA','BGD','BGS','BLX','MSG'].includes(p))notes.push({page:2,text:'The guide describes compact shock-resistant BABY-G watches with 100–200 m ratings across the family. Check each model; the prefix does not establish its rating or sensor features.'});
+ if(['AE','AEQ'].includes(p))notes.push({page:3,text:'Guide-listed family tendencies: 10-year CR2025 / CR2032 batteries, 100 m water resistance, world-time map / multi-city displays and five independent alarms. Availability and battery type vary; these are not assigned as exact-model facts.'});
+ if(p==='MDV'&&['106','107'].includes(number))notes.push({page:3,text:'The guide lists MDV-106 / 107 with 200 m resistance, screw-down crown and back, a 120-click unidirectional bezel, approximately 44 mm steel case, mineral glass and module 2784 / approximately three-year battery. Examples: MDV-106-1AV, 106B-2AV, 106B-1A2V (Batman), 106DD-1A2V, 107-1A1V, 107D-1A1V. 107 colourway examples include Pepsi, Batman, green, silver and brown. These guide claims require exact-model confirmation; the MDV-10 is rated 50 m and the prefix is not ISO dive certification.'});
+ if(p==='MTP'){
+ let sub=modifier==='V'&&/^00/.test(number)?'V00x: value dress / casual models; the guide suggests 30 m, but a generic Water Resistant marking must not be converted to 30 m.':/^13\d\d$/.test(number)?'13xx: classic fluted / smooth-bezel dress watches, often date / day-date; the guide suggests 50 m as a tendency.':modifier==='B'&&/^1\d\d$/.test(number)?'B1xx: retro-inspired integrated-bracelet or slim-case designs.':modifier==='E'&&/^[37]\d\d$/.test(number)?'E3xx / E7xx: multi-dial / chronograph-style calendar and octagonal integrated-bracelet designs.':modifier==='S'&&/^1\d\d$/.test(number)?'S1xx: solar-powered standard analog association.':null;
+ if(sub){notes.push({page:4,text:sub});const m=result.segments.find(s=>s.type==='modifier');if(m)Object.assign(m,note(sub));}
+ if(modifier==='E'&&number==='735'&&seriesTail==='AR')notes.push({page:4,text:'MTP-E735AR Arabic edition: Eastern Arabic numeral markers, arabesque textured dial and bilingual English / Arabic day wheel. Guide specifications: 44.5 × 37.5 × 8.4 mm, 89 g, steel case and integrated steel bracelet, mineral glass, 50 m, module 5768, approximately three-year SR920SW battery. Guide colourways: -1AV black; -2A1V deep blue; -2A2V ice blue; -2A3V turquoise / teal; -7AV white / silver. Exact physical specifications were separately checked against Casio’s MTP-E735AR-2A2V page; letter meanings remain guide interpretations.'});
+ }
+ if(p==='CMK'&&number==='100')notes.push({page:4,text:'Guide launch variants: TD-1A black textured dial / titanium bracelet; TC-1A black dial / black nylon; TCC-8A gray dial / ion-plated case / gray nylon; TL-1A black dial / black Tuscan vegetable-tanned leather; TCL-5A brown dial / ion-plated case / brown Tuscan leather. Guide shared specifications: 44.7 × 38 × 11.4 mm titanium case, TiC coating, sapphire, screw-down crown and screw-lock back, 100 m and magnetic resistance. Japanese automatic movement with hand winding and hacking, 21 jewels, 21,600 vph, approximately 42 hours, -20/+40 seconds/day. Guide claims are kept separate from verified specifications.'});
+ // Split documented configuration portions without inventing meanings for every letter.
+ const scoped=['LCW','LIW','MTP','LTP','CMK','MDV','MTD','MRW'].includes(p);
+ if(scoped&&seriesTail&&!seriesTail.endsWith('BC')){
+ const s=result.segments.find(s=>s.type==='series');if(s){s.token=number;s.description=`${number} series / base-model identifier; not a module or production date.`;}
+ const tokens=seriesTail==='AR'?['AR']:['TSE','DSE'].includes(seriesTail)?[seriesTail[0],'SE']:seriesTail.split('');
+ let insert=result.segments.findIndex(s=>s.type==='series')+1;
+ tokens.forEach((token,i)=>{
+ let meaning=token==='SE'?'Sapphire crystal / slim Lineage trim association':p==='MDV'&&token==='B'?'Variant / bezel or band marker on MDV-106B':p==='CMK'&&token==='C'?(seriesTail==='TC'||seriesTail==='TCC'&&i===1?'Cloth / nylon strap':'Coloured ion-plated case'):guideModifiers[token];
+ result.segments.splice(insert++,0,{type:'series-suffix',token,title:'Material / feature / edition modifier',...note(meaning?`The supplied guide reads ${token} here as: ${meaning}. Confirm against the exact model; this is not a universal Casio definition.`:'Additional configuration marker; no exact meaning established in the guide.')});
+ });
+ }
+ if(['LCW','LIW','WVA','WVQ'].includes(p)&&modifier==='M'){const s=result.segments.find(s=>s.type==='modifier');if(s)Object.assign(s,note('The supplied guide associates M in modern Wave Ceptor / Lineage series with Tough Solar and radio-controlled timekeeping. For LCW-M100, M100 identifies the base series associated with Multi-Band 6; M alone does not prove solar power or a particular reception system.'));}
+ if(p==='GW'&&modifier==='M'&&['5600','5610'].includes(number)){
+ const segment=result.segments.find(s=>s.type==='modifier'&&s.token==='M');
+ if(segment)Object.assign(segment,{title:'Multi-Band reception',description:'M is understood by the watch community as Multi-Band in the GW-M5600 / GW-M5610 lines, specifically Multi-Band 6 radio reception. The six transmitters are Japan ×2, United States, United Kingdom, Germany and China. This scoped reading also applies to GW-M5610U; it differs from the metal association inside GMW and Bluetooth B in GW-B5600. Casio documents the reception system; the letter expansion is a community interpretation.',status:'community_interpretation',source:'https://support.casio.com/storage/en/manual/pdf/EN/009/qw3159.pdf'});
+ }
+ if(p==='GWF'&&modifier==='D'&&number==='1000'){const s=result.segments.find(s=>s.type==='modifier');if(s)Object.assign(s,note('D is associated by the watch community with the depth-measurement / diving-sensor GWF-D1000 FROGMAN series. It is a model-line reading, not the steel-bracelet D used in other positions.'));}
+ for(const s of result.segments){
+ if(context&&s.type==='variant'&&guideColours[s.token]&&!result.exact?.specs?.color&&s.status!=='official_observed')Object.assign(s,note(`The guide’s common colour reading is ${guideColours[s.token]}. Exact dial, case, strap, accents and LCD polarity vary by model.`));
+ if(s.type==='market'&&guideMarkets[s.token])Object.assign(s,note(`${guideMarkets[s.token]} suffix in the guide / community reference. This indicates a sales-market association, not manufacturing country.`));
+ if(s.type==='order'&&/^A\d?$/.test(s.token))Object.assign(s,note('Variation / order marker within the colour code; following digits can distinguish shades. A1 / A2 / A3 do not have one universal shade meaning.'));
+ }
+ if(p==='MTP'&&modifier==='E'&&number==='735'&&seriesTail==='AR'){
+ const shade={'1A':'Black','2A1':'Deep blue','2A2':'Ice blue','2A3':'Turquoise / teal','7A':'White / silver'}[tail.replace(/(?:VER|ER|JF|CR|DR|DF|J|V)$/,'')];
+ if(shade)notes.push({page:4,text:`For this MTP-E735AR variant, the guide identifies the dial colour as ${shade}.`});
+ }
+ result.guideNotes=notes;return applyAnniversary(applyOwnerModifier(result,modifier));
+}
+
+// Complete interpreted coverage is browsable without knowing a model to search.
+export function guideReferenceSections(){
+ const samples=[['Wave Ceptor','WVA','M','630',''],['Lineage','LCW','M','100','TSE'],['BABY-G','BGD','','5000',''],['Classic digital and analog','F','','91','W'],['World time / multi-function','AE','','1200','WH'],['Duro / MDV-106 and MDV-107','MDV','','106','B'],['MTP / LTP','MTP','','1302','D'],['Arabic edition','MTP','E','735','AR'],['Mechanical / automatic','CMK','','100','TCC']];
+ const sections=[{title:'Code structure and worked examples',items:['Family prefix → base series → material / feature modifier → colour → variation / order → market. A model identifier and the separately boxed 3- or 4-digit module number are distinct; placement on a caseback varies.','LCW-M100TSE-1AJF: LCW Lineage Wave Ceptor; M100 Multi-Band 6 / base series; T titanium; SE sapphire / slim; 1 black; A variation; JF Japan.','MDV-106B-2AV: MDV Marine Diver / Duro; 106 base series; B bezel / band variant; 2 blue; A variation; V export.','MTP-E735AR-2A2V: MTP Men’s Timepiece; E735 octagonal integrated-bracelet series; AR Arabic edition; 2A2 ice blue; V export.','CMK-100TCC-8AER: CMK mechanical / automatic field family; 100 base; T titanium case; first C cloth / nylon; second C coloured ion plating; 8 gray; A variation; ER Europe.']}];
+ for(const [title,p,modifier,number,seriesTail] of samples){
+ const prefixes=title==='Wave Ceptor'?['WV','WVA','WVQ']:title==='Lineage'?['LCW','LIW','LIN']:title==='BABY-G'?['BG','BGA','BGD','BGS','BLX','MSG']:title==='Classic digital and analog'?['F','A','W','LA','CA','DB','DBC','MQ','LQ']:title==='World time / multi-function'?['AE','AEQ']:title==='MTP / LTP'?['MTP','LTP']:[];
+ const base={prefix:p,segments:[]};const notes=applyGuide(base,{modifier,number,seriesTail,tail:''}).guideNotes||[];
+ const items=[...prefixes.map(prefix=>prefix+': '+contexts[prefix][1]),...notes.map(n=>n.text)];
+ if(title==='MTP / LTP')items.push('V00x: value dress / casual (guide suggests 30 m; do not infer from generic Water Resistant). 13xx: classic dress / date or day-date (guide suggests 50 m). B1xx: retro / integrated or slim. E3xx / E7xx: multi-dial, calendar / chronograph-style or octagonal integrated. S1xx: solar association.');
+ sections.push({title,items:[...new Set(items)]});
+ }
+ sections.push({title:'Material / edition modifiers before the final hyphen',items:Object.entries(guideModifiers).map(([token,text])=>token+': '+text+'. Context and exact model take precedence.')},{title:'Colour digits and variation markers',items:[...Object.entries(guideColours).map(([token,text])=>token+': '+text),'A is a variation / order marker. 2A1 / 2A2 / 2A3 can distinguish blue shades; deep blue / ice blue / turquoise are scoped to MTP-E735AR, not universal shades.']},{title:'Market suffixes at the end',items:Object.entries(guideMarkets).map(([token,text])=>token+': '+text+'. Sales market, not manufacturing country.')});
+ sections.push({title:'Owner-supplied G-SHOCK prefix and modifier interpretations',items:ownerReadings.map(r=>r.code+': '+r.meaning+'. '+r.context+' Community interpretation; exact-model features take precedence.')});
+ return [...sections,...anniversaryReferenceSections()];
+}

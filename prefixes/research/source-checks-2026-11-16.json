@@ -1,0 +1,308 @@
+{
+  "checked_on": "2026-11-16",
+  "method": "automated_source_cross_check",
+  "reviewer": "Codex automated source cross-check",
+  "scope": "Selected physical fields and G-SHOCK family only; not a human audit. Existing base records retain their cited Japanese-market scope. Module assignments, release days and unreviewed variants are not approved by this pass.",
+  "models": [
+    {
+      "id": "GW-M5610-1",
+      "source_url": "https://www.casio.com/jp/watches/gshock/product.GW-M5610-1/",
+      "displayed_model": "GW-M5610-1JF",
+      "snapshot_sha256": "4a0ccd006f8875612086bec61dbddec887623042bb8b7eca29d875758523b31b",
+      "selected_source_values": {
+        "dimensions_mm": {
+          "length": 46.7,
+          "width": 43.2,
+          "thickness": 12.7
+        },
+        "weight_g": 51.7,
+        "case_material": "樹脂",
+        "band_material": "樹脂バンド",
+        "glass": "無機ガラス",
+        "water_resistance": "20気圧防水"
+      },
+      "field_checks": [
+        {
+          "field": "dimensions_mm",
+          "catalog_value": {
+            "length": 46.7,
+            "width": 43.2,
+            "thickness": 12.7
+          },
+          "result": "matched",
+          "candidate_sha256": "2cb57f30b5ad7e967eb21dc31046deab5dc6eb2cf95c63ecc2cb102ff98a62b7"
+        },
+        {
+          "field": "weight_g",
+          "catalog_value": 51.7,
+          "result": "matched",
+          "candidate_sha256": "2cb57f30b5ad7e967eb21dc31046deab5dc6eb2cf95c63ecc2cb102ff98a62b7"
+        },
+        {
+          "field": "case_material",
+          "catalog_value": "Resin",
+          "result": "matched",
+          "candidate_sha256": "2cb57f30b5ad7e967eb21dc31046deab5dc6eb2cf95c63ecc2cb102ff98a62b7"
+        },
+        {
+          "field": "band_material",
+          "catalog_value": "Resin",
+          "result": "matched",
+          "candidate_sha256": "2cb57f30b5ad7e967eb21dc31046deab5dc6eb2cf95c63ecc2cb102ff98a62b7"
+        },
+        {
+          "field": "glass",
+          "catalog_value": "Mineral glass",
+          "result": "matched",
+          "candidate_sha256": "2cb57f30b5ad7e967eb21dc31046deab5dc6eb2cf95c63ecc2cb102ff98a62b7"
+        },
+        {
+          "field": "water_resistance_rating",
+          "catalog_value": "20気圧防水",
+          "result": "matched",
+          "candidate_sha256": "2cb57f30b5ad7e967eb21dc31046deab5dc6eb2cf95c63ecc2cb102ff98a62b7"
+        },
+        {
+          "field": "water_resistance_bar",
+          "catalog_value": 20,
+          "result": "matched",
+          "candidate_sha256": "2cb57f30b5ad7e967eb21dc31046deab5dc6eb2cf95c63ecc2cb102ff98a62b7"
+        },
+        {
+          "field": "series",
+          "catalog_value": "G-SHOCK",
+          "result": "matched",
+          "candidate_sha256": "2cb57f30b5ad7e967eb21dc31046deab5dc6eb2cf95c63ecc2cb102ff98a62b7"
+        }
+      ]
+    },
+    {
+      "id": "GW-M5610U-1",
+      "source_url": "https://www.casio.com/jp/watches/gshock/product.GW-M5610U-1/",
+      "displayed_model": "GW-M5610U-1JF",
+      "snapshot_sha256": "240c555cb7e1e473bbafd0914c0518188d1afc37d50a65361c4a2ce7d86eb868",
+      "selected_source_values": {
+        "dimensions_mm": {
+          "length": 46.7,
+          "width": 43.2,
+          "thickness": 12.7
+        },
+        "weight_g": 52.0,
+        "case_material": "樹脂",
+        "band_material": "樹脂バンド",
+        "glass": "無機ガラス",
+        "water_resistance": "20気圧防水"
+      },
+      "field_checks": [
+        {
+          "field": "dimensions_mm",
+          "catalog_value": {
+            "length": 46.7,
+            "width": 43.2,
+            "thickness": 12.7
+          },
+          "result": "matched",
+          "candidate_sha256": "b4f4bfeef802a793d44035616a6fa3c2dbc371cd750488b3208622b30e615c82"
+        },
+        {
+          "field": "weight_g",
+          "catalog_value": 52.0,
+          "result": "matched",
+          "candidate_sha256": "b4f4bfeef802a793d44035616a6fa3c2dbc371cd750488b3208622b30e615c82"
+        },
+        {
+          "field": "case_material",
+          "catalog_value": "Resin",
+          "result": "matched",
+          "candidate_sha256": "b4f4bfeef802a793d44035616a6fa3c2dbc371cd750488b3208622b30e615c82"
+        },
+        {
+          "field": "band_material",
+          "catalog_value": "Resin Band",
+          "result": "matched",
+          "candidate_sha256": "b4f4bfeef802a793d44035616a6fa3c2dbc371cd750488b3208622b30e615c82"
+        },
+        {
+          "field": "glass",
+          "catalog_value": "Mineral Glass",
+          "result": "matched",
+          "candidate_sha256": "b4f4bfeef802a793d44035616a6fa3c2dbc371cd750488b3208622b30e615c82"
+        },
+        {
+          "field": "water_resistance_rating",
+          "catalog_value": "200-metre water resistance",
+          "result": "matched",
+          "candidate_sha256": "b4f4bfeef802a793d44035616a6fa3c2dbc371cd750488b3208622b30e615c82"
+        },
+        {
+          "field": "water_resistance_bar",
+          "catalog_value": 20,
+          "result": "matched",
+          "candidate_sha256": "8d36e238739cfb7c9ed553cb0fdcaf5826358eab5a5717d114a71b91fb3e2ba8"
+        },
+        {
+          "field": "water_resistance_m",
+          "catalog_value": 200,
+          "result": "matched",
+          "candidate_sha256": "b4f4bfeef802a793d44035616a6fa3c2dbc371cd750488b3208622b30e615c82"
+        },
+        {
+          "field": "series",
+          "catalog_value": "G-SHOCK",
+          "result": "matched",
+          "candidate_sha256": "b4f4bfeef802a793d44035616a6fa3c2dbc371cd750488b3208622b30e615c82"
+        }
+      ]
+    },
+    {
+      "id": "GW-5000-1",
+      "source_url": "https://www.casio.com/jp/watches/gshock/product.GW-5000-1/",
+      "displayed_model": "GW-5000-1JF",
+      "snapshot_sha256": "80e960e9c715556c0884451eb4665384f8e71732a8979e89f6eeff856ecd4511",
+      "selected_source_values": {
+        "dimensions_mm": {
+          "length": 48.9,
+          "width": 42.8,
+          "thickness": 13.5
+        },
+        "weight_g": 73.8,
+        "case_material": "ステンレススチール／樹脂",
+        "band_material": "樹脂バンド",
+        "glass": "無機ガラス",
+        "water_resistance": "20気圧防水"
+      },
+      "field_checks": [
+        {
+          "field": "dimensions_mm",
+          "catalog_value": {
+            "length": 48.9,
+            "width": 42.8,
+            "thickness": 13.5
+          },
+          "result": "matched",
+          "candidate_sha256": "c16070e961265ea17a4bb37b10116d814f77338747e44f759d3195d20165aa1c"
+        },
+        {
+          "field": "weight_g",
+          "catalog_value": 73.8,
+          "result": "matched",
+          "candidate_sha256": "c16070e961265ea17a4bb37b10116d814f77338747e44f759d3195d20165aa1c"
+        },
+        {
+          "field": "case_material",
+          "catalog_value": "ステンレススチール／樹脂",
+          "result": "matched",
+          "candidate_sha256": "c16070e961265ea17a4bb37b10116d814f77338747e44f759d3195d20165aa1c"
+        },
+        {
+          "field": "band_material",
+          "catalog_value": "Resin",
+          "result": "matched",
+          "candidate_sha256": "c16070e961265ea17a4bb37b10116d814f77338747e44f759d3195d20165aa1c"
+        },
+        {
+          "field": "glass",
+          "catalog_value": "Mineral glass",
+          "result": "matched",
+          "candidate_sha256": "c16070e961265ea17a4bb37b10116d814f77338747e44f759d3195d20165aa1c"
+        },
+        {
+          "field": "water_resistance_rating",
+          "catalog_value": "20気圧防水",
+          "result": "matched",
+          "candidate_sha256": "c16070e961265ea17a4bb37b10116d814f77338747e44f759d3195d20165aa1c"
+        },
+        {
+          "field": "water_resistance_bar",
+          "catalog_value": 20,
+          "result": "matched",
+          "candidate_sha256": "c16070e961265ea17a4bb37b10116d814f77338747e44f759d3195d20165aa1c"
+        },
+        {
+          "field": "series",
+          "catalog_value": "G-SHOCK",
+          "result": "matched",
+          "candidate_sha256": "c16070e961265ea17a4bb37b10116d814f77338747e44f759d3195d20165aa1c"
+        }
+      ]
+    },
+    {
+      "id": "GW-5000U-1",
+      "source_url": "https://www.casio.com/jp/watches/gshock/product.GW-5000U-1/",
+      "displayed_model": "GW-5000U-1JF",
+      "snapshot_sha256": "a5d067078c5f9d79a61407f8627d984ff5da663d32808450535ef64e29dbcaf0",
+      "selected_source_values": {
+        "dimensions_mm": {
+          "length": 48.9,
+          "width": 42.8,
+          "thickness": 13.5
+        },
+        "weight_g": 74.0,
+        "case_material": "ステンレススチール／樹脂",
+        "band_material": "樹脂バンド",
+        "glass": "無機ガラス",
+        "water_resistance": "20気圧防水"
+      },
+      "field_checks": [
+        {
+          "field": "dimensions_mm",
+          "catalog_value": {
+            "length": 48.9,
+            "width": 42.8,
+            "thickness": 13.5
+          },
+          "result": "matched",
+          "candidate_sha256": "80d340560d86975ed8e3ca8a5c1dadbea36c454077562d6d6e479bf444367bfb"
+        },
+        {
+          "field": "weight_g",
+          "catalog_value": 74.0,
+          "result": "matched",
+          "candidate_sha256": "80d340560d86975ed8e3ca8a5c1dadbea36c454077562d6d6e479bf444367bfb"
+        },
+        {
+          "field": "case_material",
+          "catalog_value": "ステンレススチール／樹脂",
+          "result": "matched",
+          "candidate_sha256": "80d340560d86975ed8e3ca8a5c1dadbea36c454077562d6d6e479bf444367bfb"
+        },
+        {
+          "field": "band_material",
+          "catalog_value": "Resin",
+          "result": "matched",
+          "candidate_sha256": "80d340560d86975ed8e3ca8a5c1dadbea36c454077562d6d6e479bf444367bfb"
+        },
+        {
+          "field": "glass",
+          "catalog_value": "Mineral glass",
+          "result": "matched",
+          "candidate_sha256": "80d340560d86975ed8e3ca8a5c1dadbea36c454077562d6d6e479bf444367bfb"
+        },
+        {
+          "field": "water_resistance_rating",
+          "catalog_value": "20気圧防水",
+          "result": "matched",
+          "candidate_sha256": "80d340560d86975ed8e3ca8a5c1dadbea36c454077562d6d6e479bf444367bfb"
+        },
+        {
+          "field": "water_resistance_bar",
+          "catalog_value": 20,
+          "result": "matched",
+          "candidate_sha256": "80d340560d86975ed8e3ca8a5c1dadbea36c454077562d6d6e479bf444367bfb"
+        },
+        {
+          "field": "series",
+          "catalog_value": "G-SHOCK",
+          "result": "matched",
+          "candidate_sha256": "80d340560d86975ed8e3ca8a5c1dadbea36c454077562d6d6e479bf444367bfb"
+        }
+      ]
+    }
+  ],
+  "field_count": 33,
+  "additional_primary_source": {
+    "url": "https://www.casio.com/europe/watches/casio/product.GW-M5610U-1/",
+    "snapshot_sha256": "9c5c4345b6ebe763866b3fa2c3f6db8541f1885333bb4a1d828ce723fd803008",
+    "selected_fact": "GW-M5610U-1: 200-meter water resistance; 52 g; 46.7 × 43.2 × 12.7 mm; resin band; mineral glass."
+  }
+}
