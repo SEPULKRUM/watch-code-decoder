@@ -172,6 +172,16 @@ function appendRegionalReferences(body,id){
  for(const base of group.base_reference_ids){const b=el('button','Family context: '+base,'text-button detail-link');b.type='button';b.addEventListener('click',()=>openModel(base));section.append(b)}body.append(section);
 }
 
+function appendDwHeritage(body,id,model){
+ const record=dwHeritage.records.find(r=>r.kind==='model'&&r.id===id),label=dwHeritage.collector_labels.find(r=>r.id===id);const evidence=record?.specs.series_pdf_evidence||label;if(!evidence)return;
+ const section=el('section',undefined,'detail-section');section.append(el('h3','DW-5000 heritage research'),el('p','Owner specimen observations, factory/model claims and service associations have separate evidence scopes.','detail-description'));
+ const detail=el('details');detail.open=true;detail.append(el('summary','Reference, decoder, measurements and service research'));structured(evidence,detail);section.append(detail);
+ const family=evidence.case_family_reference;if(family){const parent=dwHeritage.records.find(r=>r.kind==='model'&&r.id===family)?.specs.series_pdf_evidence;if(parent?.specimen_observation){const observation=el('details');observation.append(el('summary','Related owner specimen — exact color suffix not identified'));structured(parent.specimen_observation,observation);section.append(observation)}}
+ for(const note of dwHeritage.cautions)section.append(el('p',note,'detail-description'));
+ if(label?.related_reference){const b=el('button','View underlying family '+label.related_reference,'text-button detail-link');b.type='button';b.addEventListener('click',()=>openModel(label.related_reference));section.append(b)}
+ section.append(link('Technical transcription and source citations ↗',`${repo}/blob/main/${dwHeritage.source_reference}`));body.append(section);
+}
+
 function appendCreatorVideos(body,id,modules=[],family=''){
  const videos=creatorVideosForModel(id,modules,family);if(!videos.length)return;
  const section=el('section',undefined,'detail-section creator-videos');section.append(el('h3','My videos'));

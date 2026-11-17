@@ -1,14 +1,14 @@
 {
   "source_repository": "SEPULKRUM/casio-watch-specs",
   "source_commit": "063db208a99c106ec555c849ac44303a5f5b8733",
-  "beta_source_commit": "9acab9d506cffae7f10623ba098fe92958da49dc",
+  "beta_source_commit": "0e7a4e0678ad00ee438db1fa84c3739d0d9b101d",
   "destination": "https://sepulkrum.github.io/watch-code-decoder/prefixes/",
   "backup": "https://sepulkrum-casio-specs-beta.miniatureagave.chatgpt.site/",
   "individual_watch_identifiers": 29297,
   "files_sha256": {
     "anniversary-data.mjs": "80334d630ee95c82910cd5098f9d89e2d1cd866e96137abf1a35387444770ac1",
     "anniversary.mjs": "3f1756090253ac4ae1a6dbd51922e7f88e30588dc19a6ab4e4060086de715e33",
-    "app.mjs": "aade37aa5d9329f5249469e67c666586589f9ecdcffe4852abf05c5871811174",
+    "app.mjs": "2ee4767b1260fedd8300b319525592c5520849763ee88b3ff2ece87c7d155557",
     "brand-emblem.svg": "83bd9517dc72df9d8cc459a58c0cd628af583e509aa9c413ce321248cfa2d7b3",
     "build-info.json": "1e2c332b576830c93835c55dfb938279ad9af7cc5140a6ab0babb430c4d0cdb8",
     "catalog-2011-reference.mjs": "843b9e87ba7b132c6874f1ec215234fdb2af278879383812a82bff1f125de492",
@@ -22,7 +22,7 @@
     "english.mjs": "273347dd491b69629be7b793d598e2f5046232a2ef72b20b12e77e7f279c3440",
     "guide-interpretations.mjs": "36b7023c29f0db6f42a0c1bc03be8d0fcf52ba5d70c6fcad7212c9288420d60f",
     "historical-review.mjs": "443e38e042656cbd26322c67fd78f0bc3949ddb47df9940c57f99b25408a4018",
-    "index.html": "d55bd91fb3a9613bfbe6db757b1f71e494b5e4474a3fbdf2a7ce0f70de380a2a",
+    "index.html": "861cbeb801266cfdbb60a3d5ea35074c34cafa629ef42a2d02d0c7e1a2ed87aa",
     "master-research.json": "5c0a524bb267a838b7b649cfef27854307f66581d70432bf6d036901ac83143f",
     "master-research.mjs": "82f6b4e6b05fba6aa063fdac92d0314a5be76757d0e1f060cb0cf4e45b56f8dc",
     "model-references.json": "c573a356050bea4c0b8337ab21e9806dd2b12c34c62f528e5e6ec828b84b306c",
@@ -216,5 +216,10 @@
     "source_reference": "research/official-support-fallbacks-2026-11-17.json",
     "exact_owner_provided_links": 4,
     "scope": "Exact official support/manual fallback when verified product/specification page unavailable; links do not verify physical specifications."
+  },
+  "detail_opening_fix": {
+    "source_commit": "fe3522123d33db263658b21621e30467ada64981",
+    "cause": "Missing appendDwHeritage renderer prevented specification dialogs from opening.",
+    "validation": "359 tests passed; all 1801 catalog model detail-rendering paths completed."
   }
 }
