@@ -1,4 +1,4 @@
-import {normalizeAnniversary} from './anniversary.mjs?v=7c8896384ae6cc00';
+import {normalizeAnniversary} from './anniversary.mjs?v=gpw2017-playlist';
 import {decodeAwgM520ua} from './awg-m520ua.mjs?v=creator-20261116';
 import {ownerPattern} from './owner-prefix-readings.mjs?v=7c8896384ae6cc00';
 import {applyGuide} from './guide-interpretations.mjs?v=creator-20261116';

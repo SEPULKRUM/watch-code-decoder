@@ -1,4 +1,4 @@
-import {anniversaryDirectory} from './anniversary-data.mjs?v=7c8896384ae6cc00';
+import {anniversaryDirectory} from './anniversary-data.mjs';
 export {anniversaryDirectory};
 const compact=s=>s.replace(/[^A-Z0-9]/g,'');
 const source='https://github.com/SEPULKRUM/casio-watch-specs/blob/main/docs/anniversary-interpretations.md';
@@ -19,6 +19,14 @@ export function applyAnniversary(result){
  if(existing)Object.assign(existing,{title:'Commemorative edition suffix',description,status:'secondary_reported',source});
  else{const series=result.segments.find(s=>s.type==='series');if(series?.token.endsWith(suffix)){series.token=series.token.slice(0,-suffix.length);series.description=series.token+' series identifier; not a module or production date.';result.segments.splice(result.segments.indexOf(series)+1,0,{type:'series-suffix',token:suffix,title:'Commemorative edition suffix',description,status:'secondary_reported',source});}}
  }
+ }
+ if(key==='GPW2000TFB1A'){
+  const archive='https://web.archive.org/web/20171210224041/http://www.casio.com/products/watches/g-shock/gpw2000tfb-1a';
+  const suffix=result.segments.find(s=>s.type==='series-suffix'&&s.token==='TFB');
+  if(suffix)Object.assign(suffix,{title:'Gold Tornado edition',description:'TFB identifies this Gold Tornado 35th-anniversary edition on the archived GPW-2000TFB-1A page. A letter-by-letter expansion of TFB is not established.',status:'official_observed',source:archive});
+  result.officialFeatures={source:archive,description:'The December 10, 2017 Casio edition page lists module 5502, Tough Solar, Bluetooth mobile link, GPS reception and Multi-Band atomic timekeeping. These are historical product-page claims, not an assessment of present-day connected services.'};
+  result.editionNotes.push({title:'GPW-2000TFB-1A — archived specifications',description:'Archived Casio page: 200 m water resistance, 66.0 × 57.1 × 18.2 mm, 120 g, module 5502. Gold Tornado black/red/gold accents, anniversary case-back engraving, a star-emblem band keeper and special packaging. The size row is labeled GPW-2000 on this edition page; its measurements remain source claims, not independent measurements.',status:'official_observed',source:archive});
+  result.editionNotes.push({title:'Additional 2017 G-SHOCK references',description:'The December 8, 2017 category snapshot contains 197 distinct product links. Listing-only identifiers are research discoveries; they do not establish technical specifications or 197 newly discovered physical watch variants.',status:'official_observed',source:'https://web.archive.org/web/20171208233205/http://www.casio.com/products/watches/g-shock'});
  }
  if(!frog)return result;
  const i=result.segments.findIndex(s=>s.type==='modifier'&&s.token==='D');

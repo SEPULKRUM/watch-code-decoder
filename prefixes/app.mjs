@@ -1,4 +1,4 @@
-import {creatorVideosForModel} from './creator-videos.mjs?v=creator-20261116';
+import {creatorVideosForModel} from './creator-videos.mjs?v=gpw2017-playlist';
 import {validateSearchIndex,searchUnified,indexedModel,exactIndexedModels,modelForDetail,indexedStatus,unifiedFamilyCounts,inSearchMode,fitmentContext} from './unified-search.mjs?v=7c8896384ae6cc00';
 import {englishText,nonEnglishScript} from './english.mjs?v=7c8896384ae6cc00';
 import {presentationFacts} from './specification-display.mjs?v=7c8896384ae6cc00';
@@ -13,7 +13,7 @@ import {historicalReview} from './historical-review.mjs?v=7c8896384ae6cc00';
 import {guideReferenceSections} from './guide-interpretations.mjs?v=7c8896384ae6cc00';
 import {decoderDisclosure,decoderRules,evidenceName} from './decoder-rules.mjs?v=7c8896384ae6cc00';
 import {value,moduleIds,findModels,stats,safeUrl,validateData,label,display,evidenceLabel,recordEvidenceLabel} from './core.mjs?v=ua-archive-20261116';
-import {decodeModel,entries} from './decoder.mjs?v=creator-20261116';
+import {decodeModel,entries} from './decoder.mjs?v=gpw2017-playlist';
 import {validateReferences,findReferences,referenceStatus} from './model-references.mjs?v=7c8896384ae6cc00';
 import {modelColor,officialProductLink} from './decoder-presentation.mjs?v=7c8896384ae6cc00';
 import {validateParts,partsForModel} from './parts.mjs?v=7c8896384ae6cc00';
@@ -81,7 +81,7 @@ function openModel(id,write=true){
 function appendCreatorVideos(body,id){
  const videos=creatorVideosForModel(id);if(!videos.length)return;
  const section=el('section',undefined,'detail-section creator-videos');section.append(el('h3','My videos'));
- for(const video of videos){const a=link('▶ Watch my video ↗',video.url);a.className='creator-video-link';a.setAttribute('aria-label','Watch SEPULKRUM video about '+id);section.append(a,el('p',video.title),el('small',video.attribution))}body.append(section);
+ for(const video of videos){const a=link(video.kind==='playlist'?'▶ View my playlist ↗':'▶ Watch my video ↗',video.url);a.className='creator-video-link';a.setAttribute('aria-label','Watch SEPULKRUM video about '+id);section.append(a,el('p',video.title),el('small',video.attribution))}body.append(section);
 }
 
 function appendFitmentContext(body,entry){
@@ -176,7 +176,7 @@ function render(){
  const list=$('#results');list.replaceChildren();
  for(const entry of found.records){
   const model=entry.catalog_id?data.models[entry.catalog_id]:null,tr=el('tr'),td=el('td'),button=el('button',undefined,'model-button');button.type='button';button.setAttribute('aria-label',`Open ${entry.id}`);
-  const mark=el('span','C','watch-mark');mark.setAttribute('aria-hidden','true');const title=el('span');const identifier=el('strong');identifier.textContent=entry.id;title.append(identifier,el('small',indexedStatus(entry)));button.append(mark,title);button.addEventListener('click',()=>openModel(entry.id));td.append(button);const videos=creatorVideosForModel(entry.id);if(videos.length){const a=link('▶ My video ↗',videos[0].url);a.className='creator-video-row';a.setAttribute('aria-label','Watch SEPULKRUM video about '+entry.id);td.append(a)}tr.append(td,el('td',entry.family));
+  const mark=el('span','C','watch-mark');mark.setAttribute('aria-hidden','true');const title=el('span');const identifier=el('strong');identifier.textContent=entry.id;title.append(identifier,el('small',indexedStatus(entry)));button.append(mark,title);button.addEventListener('click',()=>openModel(entry.id));td.append(button);const videos=creatorVideosForModel(entry.id);if(videos.length){const a=link(videos[0].kind==='playlist'?'▶ My playlist ↗':'▶ My video ↗',videos[0].url);a.className='creator-video-row';a.setAttribute('aria-label','Watch SEPULKRUM video about '+entry.id);td.append(a)}tr.append(td,el('td',entry.family));
   const module=el('td');module.append(el('span',entry.module_ids.length?entry.module_ids.join(' / '):'Unknown','module-tag'+(entry.module_ids.length>1?' ambiguous':'')));
   const water=model?presentationFacts(model,{verified:state.verified}).find(([field])=>field==='water_resistance')?.[1].value:null;
   const weight=model&&(!state.verified||model.specs.weight_g?.status==='verified')&&(value(model,'weight_g')!==null?display(value(model,'weight_g'),'weight_g'):value(model,'indexed_weight_g')!==null?display(value(model,'indexed_weight_g'),'indexed_weight_g')+' · index':null);
