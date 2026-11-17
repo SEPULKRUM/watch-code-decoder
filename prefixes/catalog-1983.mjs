@@ -38,7 +38,7 @@ export function applyCatalog1983(catalog,index,report,patch=catalog1983,evidence
  }
  for(const pending of patch.unresolved_records||[]){let row=byId.get(pending.id);if(!row){row={id:pending.id,family:'G-SHOCK',category:'uncertain',catalog_id:null,module_ids:[],origins:[],has_specifications:false};search.records.push(row);byId.set(row.id,row)}row.origins.push([sourceIndex,'/unresolved_records/'+pending.id,'unconfirmed_source_label','uncertain']);}
  for(const id of uncertain)if(byId.get(id)?.category!=='uncertain')throw Error('Unconfirmed identifier miscategorized: '+id);
- for(const [id,category]of Object.entries(patch.category_resolutions||{})){const row=byId.get(id);if(!row||!['watch','package','uncertain'].includes(category))throw Error('Invalid source category resolution: '+id);row.category=category;}
+ for(const [id,category]of Object.entries(patch.category_resolutions||{})){const row=byId.get(id);if(!row||!['watch','family','package','uncertain'].includes(category))throw Error('Invalid source category resolution: '+id);row.category=category;}
  for(const id of patch.package_identifiers||[])if(byId.get(id)?.category!=='package')throw Error('Retail package miscategorized: '+id);
  for(const id of watches)if(!byId.has(id)||!['watch','family'].includes(byId.get(id).category))throw Error('Catalog watch omitted: '+id);
  for(const id of clocks)if(byId.get(id)?.category!=='clock')throw Error('Catalog clock not categorized: '+id);
