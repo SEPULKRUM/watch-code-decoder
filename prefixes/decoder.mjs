@@ -1,7 +1,8 @@
+import {canonical2026Reference} from './master-2026.mjs';
 import {normalizeAnniversary} from './anniversary.mjs?v=recrystallized-20261117';
 import {decodeAwgM520ua} from './awg-m520ua.mjs?v=creator-20261116';
 import {ownerPattern} from './owner-prefix-readings.mjs?v=7c8896384ae6cc00';
-import {applyGuide} from './guide-interpretations.mjs?v=worldwide-registers-20261117';
+import {applyGuide} from './guide-interpretations.mjs?v=master26-20261117';
 import {prefixMeaning} from './prefix-meanings.mjs?v=7c8896384ae6cc00';
 import {appearanceForModel,variantOrderInterpretation} from './variant-interpretations.mjs?v=7c8896384ae6cc00';
 import {normalizeKnownModel,normalizeBCModel,modelRule,splitVariant,ruleSources} from './decoder-rules.mjs?v=7c8896384ae6cc00';
@@ -11,7 +12,7 @@ export {entries};
 export const referenceUrl='https://github.com/SEPULKRUM/watch-code-decoder/blob/main/prefixes/index.html';
 const compact=s=>String(s).toUpperCase().replace(/[^A-Z0-9]/g,'');
 export function decodeModel(input,data=null,references=null){
- const cleaned=String(input||'').trim().toUpperCase().replace(/[−–—]/g,'-').replace(/\s+/g,'');
+ const cleaned=canonical2026Reference(String(input||'').trim().toUpperCase().replace(/[−–—]/g,'-').replace(/\s+/g,''));
  if(!cleaned)return {recognized:false,empty:true,segments:[]};
  if(!/^[A-Z0-9-]+$/.test(cleaned))return {recognized:false,reason:'Enter a Casio model or prefix using letters, numbers and hyphens.',segments:[]};
  const key=compact(cleaned),exact=data?(Object.values(data.models).find(m=>compact(m.id)===key)||Object.values(data.models).find(m=>(m.specs?.supplied_aliases?.value||[]).some(alias=>compact(alias)===key))):null;

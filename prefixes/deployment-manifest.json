@@ -1,14 +1,14 @@
 {
   "source_repository": "SEPULKRUM/casio-watch-specs",
   "source_commit": "063db208a99c106ec555c849ac44303a5f5b8733",
-  "beta_source_commit": "62bd564961fc0be82731e9fe84db5555177eafdd",
+  "beta_source_commit": "7e7699e3d45e0e5abc2f14572e171b96b7285bbc",
   "destination": "https://sepulkrum.github.io/watch-code-decoder/prefixes/",
   "backup": "https://sepulkrum-casio-specs-beta.miniatureagave.chatgpt.site/",
-  "individual_watch_identifiers": 29861,
+  "individual_watch_identifiers": 29866,
   "files_sha256": {
     "anniversary-data.mjs": "80334d630ee95c82910cd5098f9d89e2d1cd866e96137abf1a35387444770ac1",
     "anniversary.mjs": "3f1756090253ac4ae1a6dbd51922e7f88e30588dc19a6ab4e4060086de715e33",
-    "app.mjs": "91008a7da3fb47c071fa6dacc8b281fe26c8bbc9546ce54d9424cb9304f4f3aa",
+    "app.mjs": "b1e9e2ed14c36f82335406d703e2619de4c2ce74f2a65574049fac7f8064db0b",
     "brand-emblem.svg": "83bd9517dc72df9d8cc459a58c0cd628af583e509aa9c413ce321248cfa2d7b3",
     "build-info.json": "1e2c332b576830c93835c55dfb938279ad9af7cc5140a6ab0babb430c4d0cdb8",
     "catalog-2011-reference.mjs": "843b9e87ba7b132c6874f1ec215234fdb2af278879383812a82bff1f125de492",
@@ -18,11 +18,11 @@
     "core.mjs": "3e02152a5072251a7fcb9fdb242dd8764aaa7585464fd9512b48008b81bdab23",
     "decoder-presentation.mjs": "784fb3c2eecdafbb063391f7e2e4d0e8b4f4af50e8c978a07dbb326d83418a5c",
     "decoder-rules.mjs": "e5fc5bae67f26f5d8c2cf6b22071c951b98e34f6fc41503f69afe76cff764c5b",
-    "decoder.mjs": "78206db08ad4a772646b0ea0424ef18387b662150c5aea24b545016a75248bca",
+    "decoder.mjs": "617bdb102ba750d2b376a2c08537b117139ef3743ce1ad40d083a57fbb93fa0f",
     "english.mjs": "273347dd491b69629be7b793d598e2f5046232a2ef72b20b12e77e7f279c3440",
-    "guide-interpretations.mjs": "44400b1f5109b58a2fcdb502db024433e62ed3318f9c64dea0a14b25c10d22d7",
+    "guide-interpretations.mjs": "25d25fa3253137b9e63c0b93cc34a921e4820bb4a5782c9e7462ec2c4ab09f03",
     "historical-review.mjs": "443e38e042656cbd26322c67fd78f0bc3949ddb47df9940c57f99b25408a4018",
-    "index.html": "53855949967812f6f1354721946f0018a076f3b9f511cd37a81baa331c2a9a72",
+    "index.html": "ca8056c7ac866697df7267f4f75409265407d48efd77762d2553b57029a255e4",
     "master-research.json": "5c0a524bb267a838b7b649cfef27854307f66581d70432bf6d036901ac83143f",
     "master-research.mjs": "82f6b4e6b05fba6aa063fdac92d0314a5be76757d0e1f060cb0cf4e45b56f8dc",
     "model-references.json": "c573a356050bea4c0b8337ab21e9806dd2b12c34c62f528e5e6ec828b84b306c",
@@ -41,7 +41,7 @@
     "specification-display.mjs": "9d2c78f7b1e86229ca3d01bd7cb70577738a6ded47bb0e86afef5e3275efebb9",
     "style.css": "f8953ae3cf33313f6ad535a31d2bca8dc5f5254030d6fba65f479a1b208051a2",
     "unified-models.csv": "5c44b696f552b2d2a732de03c7ad9b2c88e1eea9774fc01182c794b36a9755ca",
-    "unified-search.mjs": "9855f0ed87ece8d7efb03f63438da8e1d7e70b4d66bf6542f1cfc535152dbec3",
+    "unified-search.mjs": "0b30198a768f07346441c2d90642b23f0f73fed4617362b7a82850a8d5340c18",
     "variant-interpretations.mjs": "65eee0ee326d5be8c36475811c1435a5b14f658eb835ac398b312a0f34c5e7c0",
     "watches.csv": "b533f84b4415d587dcba5566efcd033550990a6c3614082bfba03850e53ac728",
     "watchnavi-reference.mjs": "ecf17e595a422767d8ec87db498c6f972d4d2b45607c73a02fce1fcfdd03736d",
@@ -63,13 +63,15 @@
     "ocean-wave-data.mjs": "85a8fd4fb4527bbee1ea699e72fc1d60a5745621dfc872d9f9afe576762cd083",
     "ocean-wave-interpretations.mjs": "790f3f27146b5bf223b26cff7fddd3295b88f2cecf6a0283f1db5fa22e5c4865",
     "family-classification.mjs": "bf67f6c6981950223fc8c2638aaa8852978d2c1bd526157d048c7ec908a66e5a",
-    "regional-models.mjs": "10675e0120739b9fa1288d9130a2d34c9754e458674ba0c6016a39ac26857ec6",
+    "regional-models.mjs": "fd9fe532552373f3409f1c3869833db3b8d6e181d8499b39ffa95289a3f266bb",
     "dw-heritage-data.mjs": "af2d6bc0311105fc4439e9614ad200ee24f826fd7678940af3c8cddec77ff5c3",
     "dw-heritage-interpretations.mjs": "86582b29ab65e94772f2b00933b9b4951c911231a00f46340bbf240178afd3ef",
-    "model-identity-data.mjs": "f29e9674877de4b6065472fa75d3b3988e87854350a50f3b27e13707651e3744",
+    "model-identity-data.mjs": "fc28d10ca06c2fc182e6f6637fa28d772775288ea2c1b933d494790c0ffc9c7b",
     "official-support.mjs": "fd89ce16243784e4694853262825582cee8feb1697be1619207bfb1f70d33900",
     "worldwide.mjs": "deeca04ae82886369a37921e14ad9e98fc0313b784965a86d4e122b605c3c774",
-    "worldwide-data.mjs": "8be856fd79d623a8a2568e5d7b7a07f239c3bc1730edc7d588abc83f96255d40"
+    "worldwide-data.mjs": "8be856fd79d623a8a2568e5d7b7a07f239c3bc1730edc7d588abc83f96255d40",
+    "master-2026.mjs": "1e2400cdf79d99f70ebd1332dc6823b42823aacb99b877f98a6cb5638c71db9b",
+    "master-2026-data.mjs": "fdbc29027d4313d0b1335fb21deb94ea06f0882b0007867b574ccb3a77cda723"
   },
   "public_overrides": [
     "Removed the beta badge and changed the initial status to Public reference. Backup beta remains unchanged.",
@@ -185,19 +187,19 @@
   "regional_reference_presentation": {
     "source_commit": "020bee5fdf63b77810e011232496c76d1fa61f59",
     "watch_groups": 29156,
-    "watch_identifiers": 29861,
-    "regional_groups": 426,
-    "grouped_identifiers": 863,
+    "watch_identifiers": 29866,
+    "regional_groups": 430,
+    "grouped_identifiers": 872,
     "conflicting_groups_kept_separate": 0,
     "base_reference_contexts": 599,
-    "documented_aliases": 7,
+    "documented_aliases": 8,
     "identity_rules": {
       "source_reference": "research/model-identity-rules-2026-11-17.json",
-      "sha256": "fa8e9976c8e6bee9c84c6227f4714280b8960297c38e679ecfedb64d92d738f3"
+      "sha256": "9313a176b35e7c547e5914fbe9440cbd5c21dcbae7d986ab80b2d71382464b65"
     },
     "scope": "Watch results group documented spellings and market endings. Base-family references remain linked as context instead of additional variants. Every original identifier and fact is retained. Source disagreements stay attached to their exact references within a single regional group; color and edition codes remain distinct.",
     "corrected_families": 6173,
-    "groups_with_source_disagreements": 91
+    "groups_with_source_disagreements": 92
   },
   "family_classification_source_commit": "e4fce6a778b9466c564e5a481a3c93acd2bd87dc",
   "dw_heritage_addendum": {
@@ -261,5 +263,21 @@
     "retained_exact_watch_identifiers": 29861,
     "scope": "Presentation identity and availability only; exact observations, module alternatives, color/edition variants and source verification provenance retained.",
     "validation": "All catalog regional counterparts share one presentation group. Actual published-base GWF-D1000 pair renders once with Specifications available, both exact records accessible, 141 g observation retained."
+  },
+  "master_2026_corrections": {
+    "source_commit": "65becd0e199187cb45f1380103cde42a84412407",
+    "source_reference": "research/supplied-2026-master-corrections-2026-11-17.json",
+    "current_records": 203,
+    "individual_watch_references": 202,
+    "paired_watch_packages": 1,
+    "documented_additional_regional_references": 4,
+    "audited_models": 36,
+    "dated_field_changes": 78,
+    "documented_XG_merges": 2,
+    "corrected_reference": {
+      "GMA-S110XG-4": "GMA-S110XG-4A"
+    },
+    "validation": "378 tests passed; all current references and additional regional references accessible; old spelling redirects; previous duplicate/status regression cases pass.",
+    "publication_method": "Dated technical correction layer; superseded values preserved as history. Original uploads, bulk base datasets and root case-back decoder unchanged."
   }
 }

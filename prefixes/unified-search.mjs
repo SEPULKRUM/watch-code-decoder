@@ -1,4 +1,4 @@
-import {groupRegionalMatches,isBaseReference} from './regional-models.mjs?v=regional-identity-20261117';
+import {groupRegionalMatches,isBaseReference} from './regional-models.mjs?v=master26-20261117';
 import {englishText} from './english.mjs';
 import {moduleIds} from './core.mjs';
 const compact=value=>String(value).toUpperCase().replace(/[^A-Z0-9]/g,'');
@@ -36,11 +36,11 @@ function prepared(index,catalog,master){
   const byId=new Map(),exact=new Map();
   const rows=index.records.map(row=>{
    const model=row.catalog_id?catalog.models[row.catalog_id]:null,key=compact(row.id);
-   const ownFacts=model?Object.fromEntries(Object.entries(model.specs).map(([k,f])=>[k,f.value])):{};
+   const ownFacts=model?Object.fromEntries(Object.entries(model.specs).filter(([k])=>!model.specs.master_2026_evidence||!['worldwide_evidence','master_research_reference'].includes(k)).map(([k,f])=>[k,k==='master_2026_evidence'?Object.fromEntries(Object.entries(f.value.current_record).filter(([field])=>field!=='historical_field_values')):f.value])):{};
    const checkedFacts=model?Object.fromEntries(Object.entries(model.specs).filter(([,f])=>f.status==='verified').map(([k,f])=>[k,f.value])):{};
    const candidate=master&&row.master_row!==undefined?master.models[row.master_row]:null;const raw=candidate?.model_id===row.id?candidate:null;
    const modules=row.module_ids.map(id=>catalog.modules[id]?.specs).filter(Boolean);
-   const item={row,key,text:englishText(row.id+' '+row.family+' '+row.module_ids.join(' ')+' '+JSON.stringify(ownFacts)+' '+JSON.stringify(raw||{})+' '+JSON.stringify(modules)).toUpperCase(),checkedText:englishText(row.id+' '+JSON.stringify(checkedFacts)).toUpperCase()};
+   const item={row,key,text:englishText(row.id+' '+row.family+' '+row.module_ids.join(' ')+' '+JSON.stringify(ownFacts)+' '+JSON.stringify(model?.specs.master_2026_evidence?{}:raw||{})+' '+JSON.stringify(modules)).toUpperCase(),checkedText:englishText(row.id+' '+JSON.stringify(checkedFacts)).toUpperCase()};
    byId.set(row.id,row);if(!exact.has(key))exact.set(key,[]);exact.get(key).push(row);return item;
   }).sort((a,b)=>collator.compare(a.row.id,b.row.id));
   saved={catalog,master,rows,byId,exact};cache.set(index,saved);
