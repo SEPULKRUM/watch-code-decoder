@@ -1,7 +1,7 @@
 import {worldwide} from './worldwide-data.mjs';
 import {officialSupportForModel} from './official-support.mjs?v=model-identity-20261117';
 import {dwHeritage} from './dw-heritage-data.mjs?v=dw-heritage-20261117';
-import {regionalGroupFor,regionalModelSummary} from './regional-models.mjs?v=jr-grouping-20261117';
+import {regionalGroupFor,regionalModelSummary} from './regional-models.mjs?v=regional-identity-20261117';
 import {reconcileFamilyLabels} from './family-classification.mjs?v=regional-groups-20261117';
 import {oceanWave} from './ocean-wave-data.mjs?v=ocean-wave-20261117';
 import {mudFrog} from './mud-frog-data.mjs?v=mud-frog-20261117';
@@ -11,7 +11,7 @@ import {metalSquares} from './metal-squares-data.mjs?v=metal-squares-20261117';
 import {moduleComparison} from './module-comparison-data.mjs?v=module-comparison-20261117';
 import {researchPdfs} from './research-pdfs-data.mjs?v=three-pdfs-20261117';
 import {applyCatalog1983,catalog1983EvidenceForModel,catalog1983} from './catalog-1983.mjs?v=regional-groups-20261117';
-import {validateSearchIndex,searchUnified,indexedModel,exactIndexedModels,modelForDetail,indexedStatus,unifiedFamilyCounts,inSearchMode,fitmentContext} from './unified-search.mjs?v=jr-grouping-20261117';
+import {validateSearchIndex,searchUnified,indexedModel,exactIndexedModels,modelForDetail,indexedStatus,unifiedFamilyCounts,inSearchMode,fitmentContext} from './unified-search.mjs?v=regional-identity-20261117';
 import {englishText,nonEnglishScript} from './english.mjs?v=7c8896384ae6cc00';
 import {creatorVideosForModel} from './creator-videos.mjs?v=ocean-wave-20261117';
 import {presentationFacts} from './specification-display.mjs?v=7c8896384ae6cc00';
@@ -77,7 +77,7 @@ function watchCard(model){
  return card;
 }
 function openModel(id,write=true){
- const resolved=searchIndex?modelForDetail(searchIndex,data,id):null;const model=resolved?.model||data.models[id];if(!model)return;const entry=resolved?.entry;const familyContext=searchIndex?Boolean(regionalGroupFor(searchIndex,data,id)?.is_base_reference):false;const index2011=String(value(model,'reference_scope')||'').startsWith('2011');activeModel=id;const body=$('#detail-body');body.replaceChildren();body.append(el('div',value(model,'series')||entry?.family||'Casio','detail-family'),el('h2',id));body.querySelector('h2').id='detail-title';body.querySelector('h2').textContent=id;body.append(el('span',entry?indexedStatus(familyContext?{...entry,category:'family'}:entry):recordEvidenceLabel(model),'pill'));if(entry&&!entry.has_specifications)body.append(el('p',entry.category==='watch'?'Specifications pending verification':indexedStatus(entry),'review-note'));if(entry&&(familyContext||['fitment','uncertain','family','clock','package'].includes(entry.category)))body.append(el('p','This record is categorized separately and is not counted as an individual watch variant.','review-note'));
+ const resolved=searchIndex?modelForDetail(searchIndex,data,id):null;const model=resolved?.model||data.models[id];if(!model)return;const entry=resolved?.entry;const familyContext=searchIndex?Boolean(regionalGroupFor(searchIndex,data,id)?.is_base_reference):false;const index2011=String(value(model,'reference_scope')||'').startsWith('2011');activeModel=id;const body=$('#detail-body');body.replaceChildren();body.append(el('div',value(model,'series')||entry?.family||'Casio','detail-family'),el('h2',id));body.querySelector('h2').id='detail-title';body.querySelector('h2').textContent=id;body.append(el('span',entry?indexedStatus(familyContext?{...entry,category:'family'}:entry):recordEvidenceLabel(model),'pill'));if(entry&&!entry.has_specifications)body.append(el('p',indexedStatus(entry),'review-note'));if(entry&&(familyContext||['fitment','uncertain','family','clock','package'].includes(entry.category)))body.append(el('p','This record is categorized separately and is not counted as an individual watch variant.','review-note'));
  if(entry?.master_row!==undefined&&masterResearch){const raw=masterResearch.models[entry.master_row];if(raw?.model_id===id){const report=el('details',undefined,'guide-reference');report.append(el('summary','Supplied research for this exact identifier'));const fields=el('div',undefined,'structured');structured(Object.fromEntries(Object.entries(expandMasterModel(masterResearch,raw)).filter(([,v])=>v!=='')),fields);report.append(el('p','Source claims only; no measurements are inherited from another variant or module.'),fields);body.append(report)}}
  const share=el('button','Copy model link','text-button detail-link');share.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(location.href);share.textContent='Link copied'}catch{share.textContent='Copy the address from your browser'}});body.append(share);if(!entry||entry.category==='watch')body.append(watchCard(model),partsSection(model));if(index2011)body.append(el('p',value(model,'reference_scope')==='2011_clock_index'?'2011 clock index reference. Technical fields not established by the source remain blank.':'2011 watch-family/base-label index reference, not a complete colour or regional SKU. Indexed sizes and mass retain their printed label or suffix-group scope.','review-note'));
  appendWorldwide(body,id,model);appendRegionalReferences(body,id);appendCreatorVideos(body,id,resolved?.module_ids||moduleIds(model),entry?.family||value(model,'series')||'');appendCatalog1983(body,id);appendPdfResearch(body,id,model);appendModuleComparison(body,id,model);appendSpecialVariants(body,id,model);appendSeriesPdfs(body,id,model);appendMudFrog(body,id,model);appendOceanWave(body,id,model);appendDwHeritage(body,id,model);appendMetalSquares(body,id,model);
@@ -175,6 +175,7 @@ function appendRegionalReferences(body,id){
  }
  if(group.members.length<2&&!group.base_reference_ids.length)return;
  const section=el('section',undefined,'detail-section');section.append(el('h3','Stored references for this watch'),el('p','Shown as one search result. Each exact reference retains its own source evidence and recorded specifications.','detail-description'));
+ if(group.source_disagreements)section.append(el('p','Some source descriptions or recorded values differ between these references. The original observations remain available below; they do not create an additional watch variant.','review-note'));
  for(const row of group.members){const b=el('button',row.id+(row.id===id?' · viewing':''),'text-button detail-link');b.type='button';b.addEventListener('click',()=>openModel(row.id));section.append(b)}
  for(const base of group.base_reference_ids){const b=el('button','Family context: '+base,'text-button detail-link');b.type='button';b.addEventListener('click',()=>openModel(base));section.append(b)}body.append(section);
 }

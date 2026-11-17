@@ -1,4 +1,4 @@
-import {groupRegionalMatches,isBaseReference} from './regional-models.mjs?v=jr-grouping-20261117';
+import {groupRegionalMatches,isBaseReference} from './regional-models.mjs?v=regional-identity-20261117';
 import {englishText} from './english.mjs';
 import {moduleIds} from './core.mjs';
 const compact=value=>String(value).toUpperCase().replace(/[^A-Z0-9]/g,'');
@@ -66,7 +66,7 @@ export function unifiedFamilyCounts(index,mode='models',catalog=null){
  const filtered=index.records.filter(row=>inSearchMode(row,mode)||catalog&&mode==='family'&&isBaseReference(index,catalog,row.id)),rows=catalog?groupRegionalMatches(index,catalog,filtered):filtered;const counts={};for(const row of rows)counts[row.family]=(counts[row.family]||0)+1;return counts;
 }
 export function indexedStatus(row){
- if(row.category==='watch')return row.has_checked_fields?'Selected facts source checked · other fields pending':'Specifications pending verification';
+ if(row.category==='watch')return row.has_checked_fields?'Source-checked specifications':row.has_specifications?'Specifications available':'Specifications not yet recorded';
  return {package:'Documented retail package · not an additional watch design',family:'Family / base reference · not an exact variant',clock:'Clock reference',fitment:'Combined parts-fitment reference · not one watch',uncertain:'Uncertain source reading · verification required'}[row.category];
 }
 export function modelForDetail(index,catalog,id){

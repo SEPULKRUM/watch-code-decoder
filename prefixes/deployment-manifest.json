@@ -1,14 +1,14 @@
 {
   "source_repository": "SEPULKRUM/casio-watch-specs",
   "source_commit": "063db208a99c106ec555c849ac44303a5f5b8733",
-  "beta_source_commit": "cc47dcfb88bb6cc6d07d7ecab1d38c15b73797d7",
+  "beta_source_commit": "62bd564961fc0be82731e9fe84db5555177eafdd",
   "destination": "https://sepulkrum.github.io/watch-code-decoder/prefixes/",
   "backup": "https://sepulkrum-casio-specs-beta.miniatureagave.chatgpt.site/",
   "individual_watch_identifiers": 29861,
   "files_sha256": {
     "anniversary-data.mjs": "80334d630ee95c82910cd5098f9d89e2d1cd866e96137abf1a35387444770ac1",
     "anniversary.mjs": "3f1756090253ac4ae1a6dbd51922e7f88e30588dc19a6ab4e4060086de715e33",
-    "app.mjs": "e61ef4e9c765cab57804b19b5a216a318a1a7b10cfe37df2bba5bfa1e82d34cc",
+    "app.mjs": "91008a7da3fb47c071fa6dacc8b281fe26c8bbc9546ce54d9424cb9304f4f3aa",
     "brand-emblem.svg": "83bd9517dc72df9d8cc459a58c0cd628af583e509aa9c413ce321248cfa2d7b3",
     "build-info.json": "1e2c332b576830c93835c55dfb938279ad9af7cc5140a6ab0babb430c4d0cdb8",
     "catalog-2011-reference.mjs": "843b9e87ba7b132c6874f1ec215234fdb2af278879383812a82bff1f125de492",
@@ -22,7 +22,7 @@
     "english.mjs": "273347dd491b69629be7b793d598e2f5046232a2ef72b20b12e77e7f279c3440",
     "guide-interpretations.mjs": "44400b1f5109b58a2fcdb502db024433e62ed3318f9c64dea0a14b25c10d22d7",
     "historical-review.mjs": "443e38e042656cbd26322c67fd78f0bc3949ddb47df9940c57f99b25408a4018",
-    "index.html": "d0a6619ff921be8ae92c0446f5cece139bb7b074c0378bb0ea39ab50832ab7fb",
+    "index.html": "53855949967812f6f1354721946f0018a076f3b9f511cd37a81baa331c2a9a72",
     "master-research.json": "5c0a524bb267a838b7b649cfef27854307f66581d70432bf6d036901ac83143f",
     "master-research.mjs": "82f6b4e6b05fba6aa063fdac92d0314a5be76757d0e1f060cb0cf4e45b56f8dc",
     "model-references.json": "c573a356050bea4c0b8337ab21e9806dd2b12c34c62f528e5e6ec828b84b306c",
@@ -41,7 +41,7 @@
     "specification-display.mjs": "9d2c78f7b1e86229ca3d01bd7cb70577738a6ded47bb0e86afef5e3275efebb9",
     "style.css": "f8953ae3cf33313f6ad535a31d2bca8dc5f5254030d6fba65f479a1b208051a2",
     "unified-models.csv": "5c44b696f552b2d2a732de03c7ad9b2c88e1eea9774fc01182c794b36a9755ca",
-    "unified-search.mjs": "7a30cd62966c4a01cc771d59e0c00d31c8c90987d60730d8bc85e9f73d740bd3",
+    "unified-search.mjs": "9855f0ed87ece8d7efb03f63438da8e1d7e70b4d66bf6542f1cfc535152dbec3",
     "variant-interpretations.mjs": "65eee0ee326d5be8c36475811c1435a5b14f658eb835ac398b312a0f34c5e7c0",
     "watches.csv": "b533f84b4415d587dcba5566efcd033550990a6c3614082bfba03850e53ac728",
     "watchnavi-reference.mjs": "ecf17e595a422767d8ec87db498c6f972d4d2b45607c73a02fce1fcfdd03736d",
@@ -63,7 +63,7 @@
     "ocean-wave-data.mjs": "85a8fd4fb4527bbee1ea699e72fc1d60a5745621dfc872d9f9afe576762cd083",
     "ocean-wave-interpretations.mjs": "790f3f27146b5bf223b26cff7fddd3295b88f2cecf6a0283f1db5fa22e5c4865",
     "family-classification.mjs": "bf67f6c6981950223fc8c2638aaa8852978d2c1bd526157d048c7ec908a66e5a",
-    "regional-models.mjs": "822b436af52977a99998dbd786f8e343dbdfe05727905684265384fd95fc1bf3",
+    "regional-models.mjs": "10675e0120739b9fa1288d9130a2d34c9754e458674ba0c6016a39ac26857ec6",
     "dw-heritage-data.mjs": "af2d6bc0311105fc4439e9614ad200ee24f826fd7678940af3c8cddec77ff5c3",
     "dw-heritage-interpretations.mjs": "86582b29ab65e94772f2b00933b9b4951c911231a00f46340bbf240178afd3ef",
     "model-identity-data.mjs": "f29e9674877de4b6065472fa75d3b3988e87854350a50f3b27e13707651e3744",
@@ -181,22 +181,23 @@
     "status": "Supplied research pending archive verification; incomplete codes, nominal dimensions and mass, family-assigned modules, battery assemblies and runtime contradictions retain scope.",
     "publication_method": "Bounded technical addendum; no original PDFs, root decoder changes or replacement bulk base artifacts."
   },
-  "displayed_watch_groups": 29249,
+  "displayed_watch_groups": 29156,
   "regional_reference_presentation": {
-    "source_commit": "e7d93aa39c640d248ac04021e3e44dea3600a293",
-    "watch_groups": 29249,
+    "source_commit": "020bee5fdf63b77810e011232496c76d1fa61f59",
+    "watch_groups": 29156,
     "watch_identifiers": 29861,
-    "regional_groups": 335,
-    "grouped_identifiers": 679,
-    "conflicting_groups_kept_separate": 91,
+    "regional_groups": 426,
+    "grouped_identifiers": 863,
+    "conflicting_groups_kept_separate": 0,
     "base_reference_contexts": 599,
     "documented_aliases": 7,
     "identity_rules": {
       "source_reference": "research/model-identity-rules-2026-11-17.json",
       "sha256": "fa8e9976c8e6bee9c84c6227f4714280b8960297c38e679ecfedb64d92d738f3"
     },
-    "scope": "Watch results group documented spellings and market endings. Base-family references remain linked as context instead of additional variants. Every original identifier and fact is retained. Conflicting physical/module records remain separate.",
-    "corrected_families": 6173
+    "scope": "Watch results group documented spellings and market endings. Base-family references remain linked as context instead of additional variants. Every original identifier and fact is retained. Source disagreements stay attached to their exact references within a single regional group; color and edition codes remain distinct.",
+    "corrected_families": 6173,
+    "groups_with_source_disagreements": 91
   },
   "family_classification_source_commit": "e4fce6a778b9466c564e5a481a3c93acd2bd87dc",
   "dw_heritage_addendum": {
@@ -250,5 +251,15 @@
     "consolidated_duplicate_rows": 33,
     "validation": "162 JavaScript tests passed; actual published-base TLC pair renders as one result; both exact model links open.",
     "scope": "Presentation grouping only; exact source records, colors, editions, physical/module conflicts and citations remain separate and accessible."
+  },
+  "regional_identity_and_availability_fix": {
+    "source_commit": "020bee5fdf63b77810e011232496c76d1fa61f59",
+    "regression_test_commit": "7876af3fd7a7c7e5527f148fe80815874f095e40",
+    "cause": "Source prose/physical disagreements split identical regional reference roots. Status labels incorrectly treated specifications present but not independently checked as unavailable.",
+    "source_disagreement_groups": 91,
+    "consolidated_duplicate_rows": 93,
+    "retained_exact_watch_identifiers": 29861,
+    "scope": "Presentation identity and availability only; exact observations, module alternatives, color/edition variants and source verification provenance retained.",
+    "validation": "All catalog regional counterparts share one presentation group. Actual published-base GWF-D1000 pair renders once with Specifications available, both exact records accessible, 141 g observation retained."
   }
 }
