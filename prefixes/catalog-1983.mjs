@@ -1,3 +1,4 @@
+import {familyForModel} from './family-classification.mjs?v=regional-groups-20261117';
 import {catalog1983} from './catalog-1983-data.mjs?v=seven-special-20261117';
 import {moduleIds} from './core.mjs?v=seven-special-20261117';
 export {catalog1983};
@@ -31,6 +32,7 @@ export function applyCatalog1983(catalog,index,report,patch=catalog1983,evidence
   if(uncertain.has(record.id))row.category='uncertain';
   else if(clocks.has(record.id))row.category='clock';
   else if(row.category==='uncertain'&&watches.has(record.id))row.category='watch';
+  row.family=familyForModel(record.id,row.family,target.specs.series?.value);
   row.catalog_id=record.id;
   row.module_ids=[...new Set([...row.module_ids,...moduleIds(target)])];
   row.has_specifications=Boolean(row.has_specifications||record.specs.catalog_material_finish!==undefined||record.specs.water_resistance_m!==undefined||record.specs.dimensions_mm!==undefined||record.specs.color!==undefined);

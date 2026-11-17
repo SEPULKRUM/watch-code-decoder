@@ -1,5 +1,6 @@
-import {englishText} from './english.mjs?v=seven-special-20261117';
-import {moduleIds} from './core.mjs?v=seven-special-20261117';
+import {groupRegionalMatches} from './regional-models.mjs?v=regional-groups-20261117';
+import {englishText} from './english.mjs';
+import {moduleIds} from './core.mjs';
 const compact=value=>String(value).toUpperCase().replace(/[^A-Z0-9]/g,'');
 const categories=new Set(['watch','family','clock','fitment','uncertain','package']);
 const cache=new WeakMap(),identityCache=new WeakMap();
@@ -49,17 +50,18 @@ function prepared(index,catalog,master){
 export function indexedModel(index,id){return index?identities(index).byId.get(id)||null:null}
 export function exactIndexedModels(index,input){if(!index)return [];const literal=String(input).trim().toUpperCase(),key=compact(input),maps=identities(index),exact=maps.byId.get(literal);return exact?[exact]:maps.byCompact.get(key)||[]}
 export function fitmentContext(index,id){return (index.fitment_resolutions||[]).filter(r=>r.model_id===id||r.related_models.includes(id))}
-export function searchUnified(index,catalog,{query='',family='',verified=false,mode='models',page=1,pageSize=50}={},master=null){
+export function searchUnified(index,catalog,{query='',family='',verified=false,mode='models',page=1,pageSize=50,groupRegional=false}={},master=null){
  const q=String(query).trim().toUpperCase(),terms=q.split(/\s+/).filter(Boolean),key=compact(q);
  const explicitMembers=new Set((index.fitment_resolutions||[]).filter(r=>key&&compact(r.model_id)===key).flatMap(r=>r.related_models));
  const size=[25,50,100].includes(Number(pageSize))?Number(pageSize):50;
  let found=prepared(index,catalog,master).rows.filter(item=>inSearchMode(item.row,mode)&&(!family||item.row.family===family)&&(!verified||item.row.has_checked_fields)&&(explicitMembers.has(item.row.id)||terms.every(term=>{const text=verified?item.checkedText:item.text;return text.includes(term)||compact(term)&&item.key.includes(compact(term))})));
  if(q){const exact=[],rest=[];for(const item of found)(item.row.id.toUpperCase()===q||item.key===key?exact:rest).push(item);found=exact.concat(rest)}
+ const referenceTotal=found.length;if(groupRegional)found=groupRegionalMatches(index,catalog,found.map(item=>item.row),{verified}).map(row=>({row}));
  const pageCount=Math.max(1,Math.ceil(found.length/size)),current=Math.min(pageCount,Math.max(1,Math.floor(Number(page)||1))),offset=(current-1)*size;
- return {total:found.length,records:found.slice(offset,offset+size).map(item=>item.row),page:current,pageCount,pageSize:size,offset};
+ return {total:found.length,referenceTotal,records:found.slice(offset,offset+size).map(item=>item.row),page:current,pageCount,pageSize:size,offset};
 }
-export function unifiedFamilyCounts(index,mode='models'){
- const counts={};for(const row of index.records)if(inSearchMode(row,mode))counts[row.family]=(counts[row.family]||0)+1;return counts;
+export function unifiedFamilyCounts(index,mode='models',catalog=null){
+ const filtered=index.records.filter(row=>inSearchMode(row,mode)),rows=catalog?groupRegionalMatches(index,catalog,filtered):filtered;const counts={};for(const row of rows)counts[row.family]=(counts[row.family]||0)+1;return counts;
 }
 export function indexedStatus(row){
  if(row.category==='watch')return row.has_checked_fields?'Selected facts source checked · other fields pending':'Specifications pending verification';
