@@ -16,7 +16,7 @@ export function applyAnniversary(result){
  if(suffix&&['SS','ZE','FR','GEM','PG','PS','RE','RX','UN','EH','TFB','TF'].includes(suffix)){
  const existing=result.segments.find(s=>s.type==='series-suffix'&&s.token===suffix);
  const description=`The supplied directory associates ${suffix} on this exact model with ${matches[0].collection}. This is a scoped edition reference, not a universal suffix definition.`;
- if(existing)Object.assign(existing,{title:'Commemorative edition suffix',description,status:'secondary_reported',source});
+ if(existing){if(!existing.scopedInterpretation)Object.assign(existing,{title:'Commemorative edition suffix',description,status:'secondary_reported',source});}
  else{const series=result.segments.find(s=>s.type==='series');if(series?.token.endsWith(suffix)){series.token=series.token.slice(0,-suffix.length);series.description=series.token+' series identifier; not a module or production date.';result.segments.splice(result.segments.indexOf(series)+1,0,{type:'series-suffix',token:suffix,title:'Commemorative edition suffix',description,status:'secondary_reported',source});}}
  }
  }

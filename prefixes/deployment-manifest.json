@@ -1,14 +1,14 @@
 {
   "source_repository": "SEPULKRUM/casio-watch-specs",
   "source_commit": "063db208a99c106ec555c849ac44303a5f5b8733",
-  "beta_source_commit": "256a63d3d13f60ba22858e919f6ef6b2c2b829ee",
+  "beta_source_commit": "035030cfe703f5408881cc1348e0ac722fd0af0b",
   "destination": "https://sepulkrum.github.io/watch-code-decoder/prefixes/",
   "backup": "https://sepulkrum-casio-specs-beta.miniatureagave.chatgpt.site/",
   "individual_watch_identifiers": 29246,
   "files_sha256": {
     "anniversary-data.mjs": "80334d630ee95c82910cd5098f9d89e2d1cd866e96137abf1a35387444770ac1",
-    "anniversary.mjs": "f0d0a0f9b16e2a42f08810f0840cb77654c53c98113da3e90f7d7c0f72467781",
-    "app.mjs": "9a521b166d4b1df1999320923c3f978ec1f34b957eb0aa271ac5aa105c858b18",
+    "anniversary.mjs": "3f1756090253ac4ae1a6dbd51922e7f88e30588dc19a6ab4e4060086de715e33",
+    "app.mjs": "528859eac9905880f8b0a27c21061ad6ba36cd63d02451f0da8ef0dac52d6d57",
     "brand-emblem.svg": "83bd9517dc72df9d8cc459a58c0cd628af583e509aa9c413ce321248cfa2d7b3",
     "build-info.json": "1e2c332b576830c93835c55dfb938279ad9af7cc5140a6ab0babb430c4d0cdb8",
     "catalog-2011-reference.mjs": "843b9e87ba7b132c6874f1ec215234fdb2af278879383812a82bff1f125de492",
@@ -18,11 +18,11 @@
     "core.mjs": "3e02152a5072251a7fcb9fdb242dd8764aaa7585464fd9512b48008b81bdab23",
     "decoder-presentation.mjs": "784fb3c2eecdafbb063391f7e2e4d0e8b4f4af50e8c978a07dbb326d83418a5c",
     "decoder-rules.mjs": "e5fc5bae67f26f5d8c2cf6b22071c951b98e34f6fc41503f69afe76cff764c5b",
-    "decoder.mjs": "cd986c21186bf7b9626a2f8a299195a571bbaf86eb5cf56bd58099f8f7b7aa5f",
+    "decoder.mjs": "07749d651e5c82743c0579ecf66bbbff7295ecdb0b9ab3c534954f49b7c37f33",
     "english.mjs": "273347dd491b69629be7b793d598e2f5046232a2ef72b20b12e77e7f279c3440",
-    "guide-interpretations.mjs": "482fc5e78e4e9ccc91376189821f2ea6cf2cb175fd71a84ff91ff8b64242bd20",
+    "guide-interpretations.mjs": "7ee704e7f5cab70b8389190e82c162bf732f8f0985cc865115ff4140cf741a56",
     "historical-review.mjs": "443e38e042656cbd26322c67fd78f0bc3949ddb47df9940c57f99b25408a4018",
-    "index.html": "5a3a40602bb289eabdca96ff329f70e1dedf96a0c5dfc007cd2f8ae31c02f634",
+    "index.html": "f0f6c107137b545776e01a62b5e104930af4c9055096d2d660cb8518d1aacfc3",
     "master-research.json": "5c0a524bb267a838b7b649cfef27854307f66581d70432bf6d036901ac83143f",
     "master-research.mjs": "82f6b4e6b05fba6aa063fdac92d0314a5be76757d0e1f060cb0cf4e45b56f8dc",
     "model-references.json": "c573a356050bea4c0b8337ab21e9806dd2b12c34c62f528e5e6ec828b84b306c",
@@ -71,7 +71,8 @@
     "Apply technical research from three supplied PDFs after successful private beta publication: exact variants, separate module functions, production estimates and related-model parts scope; preserve existing verified facts, root decoder and bulk base artifacts.",
     "Apply the supplied 3159/3495 comparison, scoped variant weights, explicit regional references, qualified MOYC derived measurements and collaboration suffix after beta verification. Preserve checked facts and original root/bulk files.",
     "Apply four-module GMW-B5000/GW-B5600 research after beta publication: all 58 exact source entries accessible, six unconfirmed regional identifiers and one unresolved label excluded from watch counts; preserve existing verified physical facts and unit-level module caveats.",
-    "Apply seven-reference supplement after beta publication: two watch variants, five retail packages, corrected documented spellings and links from older uncertain labels; Gem Accents 98 g/resin/mineral specification, Rock for People base-weight qualification; add package category and preserve prior evidence."
+    "Apply seven-reference supplement after beta publication: two watch variants, five retail packages, corrected documented spellings and links from older uncertain labels; Gem Accents 98 g/resin/mineral specification, Rock for People base-weight qualification; add package category and preserve prior evidence.",
+    "Decode PS/PG separately from 5000 for the 2023 Recrystallized silver/gold pair and the PS festival reference. P/S/G expansions are scoped owner/community interpretations; confirmed Casio edition construction is distinguished. Preserve specific readings from generic anniversary-directory replacement and avoid duplicate suffix cards."
   ],
   "ui_notes_source_commit": "8ffd8c52f7eb1c2fe0bab4798638b76ce8286cf6",
   "base_individual_watch_identifiers": 29148,
@@ -120,5 +121,6 @@
     "retail_packages": 5,
     "status": "Documented references and package classifications; individual technical claims retain verification and derivation limits",
     "publication_method": "Bounded technical addendum; original PDF, root decoder and bulk base datasets unchanged."
-  }
+  },
+  "recrystallized_suffix_source_commit": "d75ff212ad6a48354383d6744058e947b009ebdf"
 }

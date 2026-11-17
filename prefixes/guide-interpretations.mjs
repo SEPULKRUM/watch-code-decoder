@@ -1,4 +1,4 @@
-import {applyAnniversary,anniversaryReferenceSections} from './anniversary.mjs';
+import {applyAnniversary,anniversaryReferenceSections} from './anniversary.mjs?v=recrystallized-20261117';
 import {applyOwnerModifier,ownerReadings} from './owner-prefix-readings.mjs';
 // Selected watch facts and scoped interpretations from the supplied five-page guide.
 // No PDF, advertising artwork or source-page reproduction is distributed.
