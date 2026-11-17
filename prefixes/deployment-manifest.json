@@ -1,14 +1,14 @@
 {
   "source_repository": "SEPULKRUM/casio-watch-specs",
   "source_commit": "063db208a99c106ec555c849ac44303a5f5b8733",
-  "beta_source_commit": "2243b91477e318de534ceb7ddf70f88e27227b3d",
+  "beta_source_commit": "c629957a8efde0dc428aaed63525a61d15e72e60",
   "destination": "https://sepulkrum.github.io/watch-code-decoder/prefixes/",
   "backup": "https://sepulkrum-casio-specs-beta.miniatureagave.chatgpt.site/",
   "individual_watch_identifiers": 29215,
   "files_sha256": {
     "anniversary-data.mjs": "80334d630ee95c82910cd5098f9d89e2d1cd866e96137abf1a35387444770ac1",
     "anniversary.mjs": "f0d0a0f9b16e2a42f08810f0840cb77654c53c98113da3e90f7d7c0f72467781",
-    "app.mjs": "7b0b9aee921f7d94ecc5833bd6b32c60a997a4195eba40d35881fa936b2b105e",
+    "app.mjs": "77972f69f0a15e14bc5772bd6919f5c1942aaabb9264fddba71f021155a14886",
     "brand-emblem.svg": "83bd9517dc72df9d8cc459a58c0cd628af583e509aa9c413ce321248cfa2d7b3",
     "build-info.json": "1e2c332b576830c93835c55dfb938279ad9af7cc5140a6ab0babb430c4d0cdb8",
     "catalog-2011-reference.mjs": "843b9e87ba7b132c6874f1ec215234fdb2af278879383812a82bff1f125de492",
@@ -22,7 +22,7 @@
     "english.mjs": "273347dd491b69629be7b793d598e2f5046232a2ef72b20b12e77e7f279c3440",
     "guide-interpretations.mjs": "482fc5e78e4e9ccc91376189821f2ea6cf2cb175fd71a84ff91ff8b64242bd20",
     "historical-review.mjs": "443e38e042656cbd26322c67fd78f0bc3949ddb47df9940c57f99b25408a4018",
-    "index.html": "1231e5d0626c95f9e45347568fb486e55d2bfbbc4c2b573c89a8da5b8e624eef",
+    "index.html": "51e917ca7713f5a1261d70efaf869ac2cd2c571fbd684bd70ef54a80839cd28e",
     "master-research.json": "5c0a524bb267a838b7b649cfef27854307f66581d70432bf6d036901ac83143f",
     "master-research.mjs": "82f6b4e6b05fba6aa063fdac92d0314a5be76757d0e1f060cb0cf4e45b56f8dc",
     "model-references.json": "c573a356050bea4c0b8337ab21e9806dd2b12c34c62f528e5e6ec828b84b306c",
@@ -47,7 +47,7 @@
     "watchnavi-reference.mjs": "ecf17e595a422767d8ec87db498c6f972d4d2b45607c73a02fce1fcfdd03736d",
     "watchnavi-search.mjs": "e8194ca938d514a5be09281cc4171bc40cf6b50a9eccc2543bffb6a20fadc8a8",
     "awg-m520ua.mjs": "79e3db2ab3451c427734a578b1c353e2486610351f39566d85ac0b4f608cee8e",
-    "creator-videos.mjs": "4b8fa5a35bdb6046889e2c46513a91a66cd6d6cf15de9985f6f2c83df33c9312",
+    "creator-videos.mjs": "e19bc7bd1aa87b91c5afc405b790385aa9cc9bb6dfcac4f9624e0399155920f8",
     "catalog-1983-data.mjs": "e5611b5f1dc419060f36e42120e7182e0d4dada0368e988fdfb31324c796307a",
     "catalog-1983.mjs": "14709595137030bce40359d7a7d5f183cc061d65f27c0afb0bc267cd203ec4f4"
   },
@@ -62,7 +62,8 @@
     "Add exact GPW-2000TFB-1A archived Casio notes and owner-provided public playlist; preserve bulk datasets and root decoder.",
     "Show owner playlist for every watch with a recorded module 3159 or 3495 association; do not infer module from model family.",
     "Add owner-supplied vintage-square restoration videos, scoped C suffix interpretations, and module 240/691/901 playlist. Notes remain owner claims, not archived Casio verification; preserve root decoder and bulk datasets.",
-    "Apply the complete 24-image supplied catalog's technical transcription: exact-reference search, separately scoped watch/module facts and clocks, source/service notes, and recalculated composite reconciliation. Preserve original bulk base files and root decoder."
+    "Apply the complete 24-image supplied catalog's technical transcription: exact-reference search, separately scoped watch/module facts and clocks, source/service notes, and recalculated composite reconciliation. Preserve original bulk base files and root decoder.",
+    "Add owner-provided LCW-M200DJ-2AJF video and show exact video mappings in decoded results even before specifications exist. Shared-chat contents were unavailable; no specifications or parts inferred."
   ],
   "ui_notes_source_commit": "8ffd8c52f7eb1c2fe0bab4798638b76ce8286cf6",
   "base_individual_watch_identifiers": 29148,
@@ -73,5 +74,6 @@
     "module_profiles": 29,
     "clocks": 5,
     "publication_method": "Validated base snapshot plus bounded pending technical source addendum; no uploaded scans or bulk base artifact replacements."
-  }
+  },
+  "creator_video_source_commit": "4da32c3173550b1ee4f04c9fa2bb05e9d3d36579"
 }

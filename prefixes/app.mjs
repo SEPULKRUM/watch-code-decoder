@@ -1,5 +1,5 @@
 import {applyCatalog1983,catalog1983EvidenceForModel,catalog1983} from './catalog-1983.mjs?v=catalog1983-final';
-import {creatorVideosForModel} from './creator-videos.mjs?v=vintage-owner1711';
+import {creatorVideosForModel} from './creator-videos.mjs?v=lineage-video';
 import {validateSearchIndex,searchUnified,indexedModel,exactIndexedModels,modelForDetail,indexedStatus,unifiedFamilyCounts,inSearchMode,fitmentContext} from './unified-search.mjs?v=7c8896384ae6cc00';
 import {englishText,nonEnglishScript} from './english.mjs?v=7c8896384ae6cc00';
 import {presentationFacts} from './specification-display.mjs?v=7c8896384ae6cc00';
@@ -171,7 +171,7 @@ function renderPrefix(query,force=false){
  const coverage=el('div',undefined,'decode-coverage');
  if(result.exact){coverage.append(el('div',`Model record available: ${result.exact.id}`));const button=el('button','Open watch specifications','primary');button.addEventListener('click',()=>openModel(result.exact.id));coverage.append(button)}
  else if(searchIndex&&exactIndexedModels(searchIndex,query).length===1){const entry=exactIndexedModels(searchIndex,query)[0];coverage.append(el('div',`${entry.id} · ${indexedStatus(entry)}`));const view=el('button','Open indexed model record','primary');view.addEventListener('click',()=>openModel(entry.id));coverage.append(view)}
- else coverage.append(el('div',result.prefixOnly?'Family decoded. Enter a complete model to check for an exact specification record.':`Prefix decoded. This exact model is not yet in the ${data?Object.keys(data.models).length:'current'}-model specification catalog. The model-family interpretation is available independently.`));root.append(coverage);return result;
+ else coverage.append(el('div',result.prefixOnly?'Family decoded. Enter a complete model to check for an exact specification record.':`Prefix decoded. This exact model is not yet in the ${data?Object.keys(data.models).length:'current'}-model specification catalog. The model-family interpretation is available independently.`));root.append(coverage);const videoModel=data?.models?.[result.normalized];appendCreatorVideos(root,result.normalized,videoModel?moduleIds(videoModel):[]);return result;
 }
 function submitPrefix(model){$('#prefix-input').value=model;state.query=model;state.page=1;$('#search').value=model;if(data)render();renderPrefix(model,true)}
 
