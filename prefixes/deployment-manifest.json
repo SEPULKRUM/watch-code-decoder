@@ -1,14 +1,14 @@
 {
   "source_repository": "SEPULKRUM/casio-watch-specs",
   "source_commit": "063db208a99c106ec555c849ac44303a5f5b8733",
-  "beta_source_commit": "0e7a4e0678ad00ee438db1fa84c3739d0d9b101d",
+  "beta_source_commit": "2d3a17814d9ec58f79c10b9555123f7bc544e9aa",
   "destination": "https://sepulkrum.github.io/watch-code-decoder/prefixes/",
   "backup": "https://sepulkrum-casio-specs-beta.miniatureagave.chatgpt.site/",
-  "individual_watch_identifiers": 29297,
+  "individual_watch_identifiers": 29861,
   "files_sha256": {
     "anniversary-data.mjs": "80334d630ee95c82910cd5098f9d89e2d1cd866e96137abf1a35387444770ac1",
     "anniversary.mjs": "3f1756090253ac4ae1a6dbd51922e7f88e30588dc19a6ab4e4060086de715e33",
-    "app.mjs": "2ee4767b1260fedd8300b319525592c5520849763ee88b3ff2ece87c7d155557",
+    "app.mjs": "81c4fefa2353dc1fb9bc6a6926d2b17e3a758a2b88ec2033287f9656660f2703",
     "brand-emblem.svg": "83bd9517dc72df9d8cc459a58c0cd628af583e509aa9c413ce321248cfa2d7b3",
     "build-info.json": "1e2c332b576830c93835c55dfb938279ad9af7cc5140a6ab0babb430c4d0cdb8",
     "catalog-2011-reference.mjs": "843b9e87ba7b132c6874f1ec215234fdb2af278879383812a82bff1f125de492",
@@ -18,11 +18,11 @@
     "core.mjs": "3e02152a5072251a7fcb9fdb242dd8764aaa7585464fd9512b48008b81bdab23",
     "decoder-presentation.mjs": "784fb3c2eecdafbb063391f7e2e4d0e8b4f4af50e8c978a07dbb326d83418a5c",
     "decoder-rules.mjs": "e5fc5bae67f26f5d8c2cf6b22071c951b98e34f6fc41503f69afe76cff764c5b",
-    "decoder.mjs": "47391ff1c53a2112068a49883d12df7ebdde4e7575995fb0745270ff49197638",
+    "decoder.mjs": "78206db08ad4a772646b0ea0424ef18387b662150c5aea24b545016a75248bca",
     "english.mjs": "273347dd491b69629be7b793d598e2f5046232a2ef72b20b12e77e7f279c3440",
-    "guide-interpretations.mjs": "36b7023c29f0db6f42a0c1bc03be8d0fcf52ba5d70c6fcad7212c9288420d60f",
+    "guide-interpretations.mjs": "44400b1f5109b58a2fcdb502db024433e62ed3318f9c64dea0a14b25c10d22d7",
     "historical-review.mjs": "443e38e042656cbd26322c67fd78f0bc3949ddb47df9940c57f99b25408a4018",
-    "index.html": "861cbeb801266cfdbb60a3d5ea35074c34cafa629ef42a2d02d0c7e1a2ed87aa",
+    "index.html": "a16742f98388e8a57a05f19314c231031bfed357e3731c5d948b51316c4255fb",
     "master-research.json": "5c0a524bb267a838b7b649cfef27854307f66581d70432bf6d036901ac83143f",
     "master-research.mjs": "82f6b4e6b05fba6aa063fdac92d0314a5be76757d0e1f060cb0cf4e45b56f8dc",
     "model-references.json": "c573a356050bea4c0b8337ab21e9806dd2b12c34c62f528e5e6ec828b84b306c",
@@ -67,7 +67,9 @@
     "dw-heritage-data.mjs": "af2d6bc0311105fc4439e9614ad200ee24f826fd7678940af3c8cddec77ff5c3",
     "dw-heritage-interpretations.mjs": "86582b29ab65e94772f2b00933b9b4951c911231a00f46340bbf240178afd3ef",
     "model-identity-data.mjs": "f29e9674877de4b6065472fa75d3b3988e87854350a50f3b27e13707651e3744",
-    "official-support.mjs": "fd89ce16243784e4694853262825582cee8feb1697be1619207bfb1f70d33900"
+    "official-support.mjs": "fd89ce16243784e4694853262825582cee8feb1697be1619207bfb1f70d33900",
+    "worldwide.mjs": "deeca04ae82886369a37921e14ad9e98fc0313b784965a86d4e122b605c3c774",
+    "worldwide-data.mjs": "8be856fd79d623a8a2568e5d7b7a07f239c3bc1730edc7d588abc83f96255d40"
   },
   "public_overrides": [
     "Removed the beta badge and changed the initial status to Public reference. Backup beta remains unchanged.",
@@ -135,7 +137,7 @@
     "status": "Supplied technical research; series templates and approximate weights remain qualified; ambiguous identifiers categorized separately",
     "publication_method": "Bounded technical addendum, not original PDFs or replacement bulk base artifacts."
   },
-  "retail_package_identifiers": 7,
+  "retail_package_identifiers": 12,
   "seven_special_reference_addendum": {
     "source_commit": "fdf08d796a868619a43f247f52bef1431a061395",
     "source_reference": "research/supplied-seven-special-variants-2026-11-17.json",
@@ -179,15 +181,15 @@
     "status": "Supplied research pending archive verification; incomplete codes, nominal dimensions and mass, family-assigned modules, battery assemblies and runtime contradictions retain scope.",
     "publication_method": "Bounded technical addendum; no original PDFs, root decoder changes or replacement bulk base artifacts."
   },
-  "displayed_watch_groups": 28780,
+  "displayed_watch_groups": 29282,
   "regional_reference_presentation": {
     "source_commit": "377da40249e406b7a6091b41e8e36696ec1e5b5d",
-    "watch_groups": 28780,
-    "watch_identifiers": 29297,
-    "regional_groups": 283,
-    "grouped_identifiers": 574,
-    "conflicting_groups_kept_separate": 46,
-    "base_reference_contexts": 517,
+    "watch_groups": 29282,
+    "watch_identifiers": 29861,
+    "regional_groups": 303,
+    "grouped_identifiers": 614,
+    "conflicting_groups_kept_separate": 67,
+    "base_reference_contexts": 599,
     "documented_aliases": 7,
     "identity_rules": {
       "source_reference": "research/model-identity-rules-2026-11-17.json",
@@ -221,5 +223,21 @@
     "source_commit": "fe3522123d33db263658b21621e30467ada64981",
     "cause": "Missing appendDwHeritage renderer prevented specification dialogs from opening.",
     "validation": "359 tests passed; all 1801 catalog model detail-rendering paths completed."
+  },
+  "worldwide_register_addendum": {
+    "source_commit": "772d82033d73731ae4a96f364bac78d852426230",
+    "source_reference": "research/supplied-worldwide-2020-2026-2026-11-17.json",
+    "documents": 11,
+    "source_records": 931,
+    "distinct_identifiers": 924,
+    "individual_watch_identifiers": 865,
+    "partial_family_references": 54,
+    "paired_watch_packages": 5,
+    "overlapping_exact_observations": 7,
+    "new_raw_watch_identifiers": 564,
+    "missing_eligible_references": 0,
+    "status": "Supplied source claims pending independent archived-source verification; existing facts and citations preserved.",
+    "validation": "366 tests passed; every register reference searched and opened against published base data; zero omissions.",
+    "publication_method": "Bounded technical addendum; original uploads, bulk base datasets and root case-back decoder are unchanged."
   }
 }
