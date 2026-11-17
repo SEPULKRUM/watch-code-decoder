@@ -1,3 +1,4 @@
+import {applyLineageInterpretation,lineageConfigurations} from './lineage-interpretations.mjs?v=lineage-20261117';
 import {applyAnniversary,anniversaryReferenceSections} from './anniversary.mjs?v=recrystallized-20261117';
 import {applyOwnerModifier,ownerReadings} from './owner-prefix-readings.mjs';
 // Selected watch facts and scoped interpretations from the supplied five-page guide.
@@ -58,7 +59,7 @@ export function applyGuide(result,{modifier,number,seriesTail,tail}){
  const shade={'1A':'Black','2A1':'Deep blue','2A2':'Ice blue','2A3':'Turquoise / teal','7A':'White / silver'}[tail.replace(/(?:VER|ER|JF|CR|DR|DF|J|V)$/,'')];
  if(shade)notes.push({page:4,text:`For this MTP-E735AR variant, the guide identifies the dial colour as ${shade}.`});
  }
- result.guideNotes=notes;return applyAnniversary(applyOwnerModifier(result,modifier));
+ result.guideNotes=notes;return applyLineageInterpretation(applyAnniversary(applyOwnerModifier(result,modifier)),{modifier,number,seriesTail,tail});
 }
 
 // Complete interpreted coverage is browsable without knowing a model to search.
@@ -74,5 +75,6 @@ export function guideReferenceSections(){
  }
  sections.push({title:'Material / edition modifiers before the final hyphen',items:Object.entries(guideModifiers).map(([token,text])=>token+': '+text+'. Context and exact model take precedence.')},{title:'Colour digits and variation markers',items:[...Object.entries(guideColours).map(([token,text])=>token+': '+text),'A is a variation / order marker. 2A1 / 2A2 / 2A3 can distinguish blue shades; deep blue / ice blue / turquoise are scoped to MTP-E735AR, not universal shades.']},{title:'Market suffixes at the end',items:Object.entries(guideMarkets).map(([token,text])=>token+': '+text+'. Sales market, not manufacturing country.')});
  sections.push({title:'Owner-supplied G-SHOCK prefix and modifier interpretations',items:ownerReadings.map(r=>r.code+': '+r.meaning+'. '+r.context+' Community interpretation; exact-model features take precedence.')});
+ sections.push({title:'Scoped Lineage DJ / DE / DSE / TD interpretations',items:[...lineageConfigurations.map(r=>r.scope+' — '+r.suffix+': '+r.interpretation),'LCW-M200DJ: M is read as Multi-Band; existing module 4709 research records Multi-Band 5. The 200 series number is not a module or a production date.','LCW-M200DJ-2AJF: 2 identifies the blue dial; A is a variation marker, not a universal silver-accent definition. JF is a Japanese retail-market reference, not proof of manufacture or packaging language.']});
  return [...sections,...anniversaryReferenceSections()];
 }
