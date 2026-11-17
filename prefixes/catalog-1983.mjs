@@ -1,4 +1,4 @@
-import {catalog1983} from './catalog-1983-data.mjs?v=catalog1983';
+import {catalog1983} from './catalog-1983-data.mjs?v=catalog1983-final';
 import {moduleIds} from './core.mjs?v=catalog1983';
 export {catalog1983};
 

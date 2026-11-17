@@ -1,4 +1,4 @@
-import {applyCatalog1983,catalog1983EvidenceForModel,catalog1983} from './catalog-1983.mjs?v=catalog1983';
+import {applyCatalog1983,catalog1983EvidenceForModel,catalog1983} from './catalog-1983.mjs?v=catalog1983-final';
 import {creatorVideosForModel} from './creator-videos.mjs?v=vintage-owner1711';
 import {validateSearchIndex,searchUnified,indexedModel,exactIndexedModels,modelForDetail,indexedStatus,unifiedFamilyCounts,inSearchMode,fitmentContext} from './unified-search.mjs?v=7c8896384ae6cc00';
 import {englishText,nonEnglishScript} from './english.mjs?v=7c8896384ae6cc00';
