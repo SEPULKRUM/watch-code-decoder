@@ -1,5 +1,5 @@
 import {catalog1983} from './catalog-1983-data.mjs?v=catalog1983-final';
-import {moduleIds} from './core.mjs?v=three-pdfs-20261117';
+import {moduleIds} from './core.mjs?v=module-comparison-20261117';
 export {catalog1983};
 
 // A bounded source addendum lets production retain its existing base artifacts.
@@ -23,7 +23,7 @@ export function applyCatalog1983(catalog,index,report,patch=catalog1983,evidence
    if(field==='module_id'&&(target.module&&String(target.module)!==String(value)||target.specs.module_candidates))continue;
    const current=target.specs[field];
    if(current){if(JSON.stringify(current.value)!==JSON.stringify(value))withheld.push({kind:record.kind,id:record.id,field});continue;}
-   target.specs[field]={value,status:'pending_review',uncertainty:evidenceField==='research_pdf_evidence'?'Owner-supplied research conversation; pending independent verification; retain exact model, estimate and fitment scope.':'Supplied catalog transcription; not independently archive-verified. Exact printed model scope only.',sources:[{kind:'user_provided',provided_by:'SEPULKRUM',permission:'user_provided',reference:patch.source_reference,source_sha256:patch.source_sha256,accessed:patch.received,locator:record.kind==='module'?`Module ${record.id} technical table; see scoped page references`:`${record.id} caption; see scoped image/page references`,evidence:`${record.id}: ${field} = ${JSON.stringify(value)}`} ]};
+   target.specs[field]={value,status:'pending_review',uncertainty:evidenceField!=='catalog_1983_evidence'?'Owner-supplied technical research; pending independent verification; retain exact model, estimate and fitment scope.':'Supplied catalog transcription; not independently archive-verified. Exact printed model scope only.',sources:[{kind:'user_provided',provided_by:'SEPULKRUM',permission:'user_provided',reference:patch.source_reference,source_sha256:patch.source_sha256,accessed:patch.received,locator:record.kind==='module'?`Module ${record.id} technical table; see scoped page references`:`${record.id} caption; see scoped image/page references`,evidence:`${record.id}: ${field} = ${JSON.stringify(value)}`} ]};
   }
   if(record.kind==='module')continue;
   let row=byId.get(record.id);

@@ -1,5 +1,6 @@
+import {moduleComparison} from './module-comparison-data.mjs?v=module-comparison-20261117';
 import {researchPdfs} from './research-pdfs-data.mjs?v=three-pdfs-20261117';
-import {applyCatalog1983,catalog1983EvidenceForModel,catalog1983} from './catalog-1983.mjs?v=three-pdfs-20261117';
+import {applyCatalog1983,catalog1983EvidenceForModel,catalog1983} from './catalog-1983.mjs?v=module-comparison-20261117';
 import {creatorVideosForModel} from './creator-videos.mjs?v=lineage-video';
 import {validateSearchIndex,searchUnified,indexedModel,exactIndexedModels,modelForDetail,indexedStatus,unifiedFamilyCounts,inSearchMode,fitmentContext} from './unified-search.mjs?v=7c8896384ae6cc00';
 import {englishText,nonEnglishScript} from './english.mjs?v=7c8896384ae6cc00';
@@ -15,7 +16,7 @@ import {historicalReview} from './historical-review.mjs?v=7c8896384ae6cc00';
 import {guideReferenceSections} from './guide-interpretations.mjs?v=7c8896384ae6cc00';
 import {decoderDisclosure,decoderRules,evidenceName} from './decoder-rules.mjs?v=7c8896384ae6cc00';
 import {value,moduleIds,findModels,stats,safeUrl,validateData,label,display,evidenceLabel,recordEvidenceLabel} from './core.mjs?v=ua-archive-20261116';
-import {decodeModel,entries} from './decoder.mjs?v=vintage-owner1711';
+import {decodeModel,entries} from './decoder.mjs?v=module-comparison-20261117';
 import {validateReferences,findReferences,referenceStatus} from './model-references.mjs?v=7c8896384ae6cc00';
 import {modelColor,officialProductLink} from './decoder-presentation.mjs?v=7c8896384ae6cc00';
 import {validateParts,partsForModel} from './parts.mjs?v=7c8896384ae6cc00';
@@ -69,14 +70,14 @@ function openModel(id,write=true){
  const resolved=searchIndex?modelForDetail(searchIndex,data,id):null;const model=resolved?.model||data.models[id];if(!model)return;const entry=resolved?.entry;const index2011=String(value(model,'reference_scope')||'').startsWith('2011');activeModel=id;const body=$('#detail-body');body.replaceChildren();body.append(el('div',value(model,'series')||entry?.family||'Casio','detail-family'),el('h2',id));body.querySelector('h2').id='detail-title';body.querySelector('h2').textContent=id;body.append(el('span',entry?indexedStatus(entry):recordEvidenceLabel(model),'pill'));if(entry&&!entry.has_specifications)body.append(el('p',entry.category==='watch'?'Specifications pending verification':indexedStatus(entry),'review-note'));if(entry&&['fitment','uncertain','family','clock'].includes(entry.category))body.append(el('p','This record is categorized separately and is not counted as an individual watch variant.','review-note'));
  if(entry?.master_row!==undefined&&masterResearch){const raw=masterResearch.models[entry.master_row];if(raw?.model_id===id){const report=el('details',undefined,'guide-reference');report.append(el('summary','Supplied research for this exact identifier'));const fields=el('div',undefined,'structured');structured(Object.fromEntries(Object.entries(expandMasterModel(masterResearch,raw)).filter(([,v])=>v!=='')),fields);report.append(el('p','Source claims only; no measurements are inherited from another variant or module.'),fields);body.append(report)}}
  const share=el('button','Copy model link','text-button detail-link');share.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(location.href);share.textContent='Link copied'}catch{share.textContent='Copy the address from your browser'}});body.append(share);if(!entry||entry.category==='watch')body.append(watchCard(model),partsSection(model));if(index2011)body.append(el('p',value(model,'reference_scope')==='2011_clock_index'?'2011 clock index reference. Technical fields not established by the source remain blank.':'2011 watch-family/base-label index reference, not a complete colour or regional SKU. Indexed sizes and mass retain their printed label or suffix-group scope.','review-note'));
- appendCreatorVideos(body,id,resolved?.module_ids||moduleIds(model));appendCatalog1983(body,id);appendPdfResearch(body,id,model);
- const section=el('section',undefined,'detail-section');section.append(el('h3',index2011?'2011 catalog reference':entry&&entry.category!=='watch'?'Source reference':'Watch specifications'),el('p',index2011?'Printed index values and source scope are retained below.':'Case, materials and appearance belong to this model.','detail-description'));addFacts(section,model,['series','module_id','module_candidates','catalog_1983_evidence','research_pdf_evidence']);
+ appendCreatorVideos(body,id,resolved?.module_ids||moduleIds(model));appendCatalog1983(body,id);appendPdfResearch(body,id,model);appendModuleComparison(body,id,model);
+ const section=el('section',undefined,'detail-section');section.append(el('h3',index2011?'2011 catalog reference':entry&&entry.category!=='watch'?'Source reference':'Watch specifications'),el('p',index2011?'Printed index values and source scope are retained below.':'Case, materials and appearance belong to this model.','detail-description'));addFacts(section,model,['series','module_id','module_candidates','catalog_1983_evidence','research_pdf_evidence','module_comparison_evidence']);
  const missing=['dimensions_mm','weight_g','case_material','band_material','glass','water_resistance_rating'].filter(k=>!model.specs[k]);if(missing.length)section.append(el('p',(index2011?'Exact variant / clock fields not established by this index: ':'Not recorded: ')+missing.map(label).join(' · '),'unknowns'));body.append(section);
  const moduleSection=el('section',undefined,'detail-section'),ids=resolved?.module_ids||moduleIds(model),ambiguous=ids.length>1||Boolean(value(model,'module_candidates'));moduleSection.append(el('h3',index2011?'Indexed module information':ambiguous?'Module options':'Module functions'));
  moduleSection.append(el('p',index2011?'The 2011 index associates these numbers with a family label. A linked profile is separate research evidence, not confirmation of a fitted module or every retail variant.':ambiguous?'The cited source describes multiple module associations or historical production versions. The exact fitted module is unresolved; each recorded profile is shown separately.':'Module functions are stored separately from the watch case. The reference describes the available source evidence.','detail-description'));
  if(model.specs.module_id)moduleSection.append(fact('module_id',model.specs.module_id));if(model.specs.module_candidates)moduleSection.append(fact('module_candidates',model.specs.module_candidates));if(model.module)moduleSection.append(el('p',`Module ${model.module} · preserved legacy association; not independently reverified.`,'detail-description'));
  if(!ids.length)moduleSection.append(el('p','No module reference recorded.','unknowns'));
- for(const id of ids){const profile=data.modules[id],option=el('details',undefined,'module-option');if(!ambiguous)option.open=true;const sum=el('summary',`Module ${id}`);const polarity=value(profile,'display_polarity');if(polarity)sum.append(el('small',display(polarity,'display_polarity')));option.append(sum);if(profile){addFacts(option,profile,['catalog_1983_evidence','research_pdf_evidence']);const note=value(profile,'research_pdf_evidence');if(note){const detail=el('details');detail.append(el('summary','Supplied module research — pending verification'));structured(note,detail);option.append(detail)}}else option.append(el('p','This candidate module does not yet have a researched specification profile.','detail-description'));moduleSection.append(option)}
+ for(const id of ids){const profile=data.modules[id],option=el('details',undefined,'module-option');if(!ambiguous)option.open=true;const sum=el('summary',`Module ${id}`);const polarity=value(profile,'display_polarity');if(polarity)sum.append(el('small',display(polarity,'display_polarity')));option.append(sum);if(profile){addFacts(option,profile,['catalog_1983_evidence','research_pdf_evidence','module_comparison_evidence']);for(const field of ['research_pdf_evidence','module_comparison_evidence']){const note=value(profile,field);if(note){const detail=el('details');detail.append(el('summary',field==='module_comparison_evidence'?'Updated 3159 / 3495 comparison — source-qualified':'Supplied module research — pending verification'));structured(note,detail);option.append(detail)}}}else option.append(el('p','This candidate module does not yet have a researched specification profile.','detail-description'));moduleSection.append(option)}
  body.append(moduleSection);if(entry){appendFitmentContext(body,entry);body.append(indexedSources(entry))}if(write)history.replaceState(null,'',`#model=${encodeURIComponent(model.id)}`);if(!$('#detail').open)$('#detail').showModal();$('#detail').scrollTop=0;
 }
 
@@ -94,6 +95,16 @@ function appendPdfResearch(body,id,model){
  const own=el('details');own.append(el('summary','Watch, production and service-part evidence'));structured(evidence,own);section.append(own);
 
  section.append(link('Technical transcription and PDF page citations ↗',`${repo}/blob/main/${researchPdfs.source_reference}`));body.append(section);
+}
+
+function appendModuleComparison(body,id,model){
+ const record=moduleComparison.records.find(r=>r.kind==='model'&&r.id===id);
+ const evidence=record?.specs.module_comparison_evidence||value(model,'module_comparison_evidence');if(!evidence)return;
+ const section=el('section',undefined,'detail-section');section.append(el('h3','3159 / 3495 model comparison'),el('p','C and I describe the supplied document’s manufacturer or independent sources; they do not automatically mark database facts verified. D means base-derived dimensions and estimated weight. Exact variants remain separate.','detail-description'));
+ const details=el('details');details.append(el('summary','Measurements, source class and model-specific cautions'));structured(evidence,details);section.append(details);
+ if(evidence.reported_evidence_class==='D')section.append(el('p','Weight is an estimate from the base model, not a verified specification for this collaboration.','review-note'));
+ for(const note of moduleComparison.cautions)section.append(el('p',note,'detail-description'));
+ section.append(link('Technical transcription and source citations ↗',`${repo}/blob/main/${moduleComparison.source_reference}`));body.append(section);
 }
 
 function appendCreatorVideos(body,id,modules=[]){
@@ -211,7 +222,7 @@ function installFamilies(){
 function installData(next,index,report){
  validateData(next);validateSearchIndex(index,next);
  if(report.index_sha256!==index._sha256||report.missing_model_count!==0||report.distinct_individual_watch_identifiers!==index.counts.watch)throw Error('Search reconciliation does not match this index');
- let composed=applyCatalog1983(next,index,report);composed=applyCatalog1983(composed.catalog,composed.index,composed.report,researchPdfs,'research_pdf_evidence');next=composed.catalog;index=composed.index;report=composed.report;
+ let composed=applyCatalog1983(next,index,report);composed=applyCatalog1983(composed.catalog,composed.index,composed.report,researchPdfs,'research_pdf_evidence');composed=applyCatalog1983(composed.catalog,composed.index,composed.report,moduleComparison,'module_comparison_evidence');next=composed.catalog;index=composed.index;report=composed.report;
  const checkedData=validateData(next),checkedIndex=validateSearchIndex(index,checkedData);
  data=checkedData;searchIndex=checkedIndex;reconciliation=report;
  const summary=stats(data);$('#model-count').textContent=index.counts.watch.toLocaleString();$('#module-count').textContent=summary.modules;$('#fact-count').textContent=summary.fields.toLocaleString();
