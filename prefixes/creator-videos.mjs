@@ -1,4 +1,5 @@
-// Exact mappings provided by SEPULKRUM. Video links do not supply specifications.
+// Owner-provided exact-model, module and explicitly requested family mappings.
+// Video links do not supply specifications.
 export const creatorVideos=[
  {models:['LCW-M200DJ-2AJF'],title:'Casio LINEAGE LCW-M200DJ-2AJF',url:'https://www.youtube.com/watch?v=JE01UC2Usdg',attribution:'SEPULKRUM · owner-provided exact-model video'},
  {"models": ["DW-5000C", "DW-5000C-1A", "DW-5000C-1B"], "title": "DW-5000C restoration, history and Module 240 research", "url": "https://www.youtube.com/watch?v=1k5VMJY6Y-Y", "notes": ["Owner-supplied research, pending archived verification: April 1983 first G-SHOCK; module 240; 200 m; steel inner case and screw-back, resin/urethane bezel, resin band, mineral glass; approximate size 48.9 × 42.8 × 13.5 mm. Base-model claims are not independent measurements of each color variant.", "Owner reports MC6181 platform commonality between modules 106 and 240 and a physical test using a 106 board with a 240 LCD; the supplied description does not state the test outcome. This is not a confirmed interchangeability rule."], "attribution": "SEPULKRUM · owner-provided description; not independently archive-verified"},
@@ -9,10 +10,18 @@ export const creatorVideos=[
  {models:[],modules:['3159','3495'],title:'Modules 3159 and 3495 · SEPULKRUM playlist',url:'https://www.youtube.com/playlist?list=PLK00sRoqNZrA',kind:'playlist',attribution:'SEPULKRUM · owner-provided module playlist'},
  {models:['GPW-2000TFB-1A'],title:'GPW-2000TFB-1A · SEPULKRUM playlist',url:'https://www.youtube.com/playlist?list=PLDqbRJ4qDRs0',kind:'playlist',attribution:'SEPULKRUM · owner-provided'},
  {models:['AWG-M520UA','AWG-M520UA-1EJR'],title:'AWG-M520UA | The Modern Revival of the 1996 UNITED ARROWS G-Shock',url:'https://www.youtube.com/watch?v=qJTOpZHMlnw',attribution:'SEPULKRUM · owner-provided'},
- {models:['AWG-500J-1A','AWG-M510-1B','AWG-500J-9A'],title:'AWG-500J-1A, AWG-M510-1B and AWG-500J-9A',url:'https://www.youtube.com/watch?v=jGWa9HTgiIw',attribution:'SEPULKRUM · models identified by the owner'}
+ {models:['AWG-500J-1A','AWG-M510-1B','AWG-500J-9A'],title:'AWG-500J-1A, AWG-M510-1B and AWG-500J-9A',url:'https://www.youtube.com/watch?v=jGWa9HTgiIw',attribution:'SEPULKRUM · models identified by the owner'},
+ {models:[],families:['Pro Trek'],title:'Pro Trek · SEPULKRUM playlist',url:'https://www.youtube.com/playlist?list=PLaV8co9Dpnac',kind:'playlist',attribution:'SEPULKRUM · owner-provided Pro Trek family playlist'}
 ];
 const key=value=>String(value).trim().toUpperCase().replace(/[^A-Z0-9]/g,'');
-export function creatorVideosForModel(model,moduleIds=[]){
+export function isProTrekModel(model,family=''){
+ if(/^(?:CASIO)?PROTREK(?:SMART|PATHFINDER)?$/.test(key(family)))return true;
+ const id=String(model).trim().toUpperCase();
+ if(/^(?:PRW|PRG|PRT|PRX|PRJ|PAW|PAG)(?:-|(?=\d)|$)/.test(id))return true;
+ if(/^(?:PRW[SB]|PRTB)(?:\d|$)/.test(key(model)))return true;
+ return /^WSDF(?:20S?|21HR|30)(?=$|[A-Z])/.test(key(model));
+}
+export function creatorVideosForModel(model,moduleIds=[],family=''){
  const modules=new Set(moduleIds.map(String));
- return creatorVideos.filter(video=>video.models.some(id=>key(id)===key(model))||(video.modules||[]).some(id=>modules.has(id)));
+ return creatorVideos.filter(video=>video.models.some(id=>key(id)===key(model))||(video.modules||[]).some(id=>modules.has(id))||(video.families||[]).some(name=>key(name)==='PROTREK'&&isProTrekModel(model,family)));
 }

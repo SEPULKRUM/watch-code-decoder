@@ -1,14 +1,14 @@
 {
   "source_repository": "SEPULKRUM/casio-watch-specs",
   "source_commit": "063db208a99c106ec555c849ac44303a5f5b8733",
-  "beta_source_commit": "38f32985a8286157d97709cbd4b0f9f15548cf0b",
+  "beta_source_commit": "9d3b9ea31aebfc52081aea7d99d7657b310d6ec5",
   "destination": "https://sepulkrum.github.io/watch-code-decoder/prefixes/",
   "backup": "https://sepulkrum-casio-specs-beta.miniatureagave.chatgpt.site/",
   "individual_watch_identifiers": 29246,
   "files_sha256": {
     "anniversary-data.mjs": "80334d630ee95c82910cd5098f9d89e2d1cd866e96137abf1a35387444770ac1",
     "anniversary.mjs": "3f1756090253ac4ae1a6dbd51922e7f88e30588dc19a6ab4e4060086de715e33",
-    "app.mjs": "285bb7cdd12aef982e718ca34a02b8bb978cfaa96e94c842ce7139a394ea8130",
+    "app.mjs": "410de55e0e2bb45ee93ed95a4f2522b7a484a173f048c74b9533e98330ab5559",
     "brand-emblem.svg": "83bd9517dc72df9d8cc459a58c0cd628af583e509aa9c413ce321248cfa2d7b3",
     "build-info.json": "1e2c332b576830c93835c55dfb938279ad9af7cc5140a6ab0babb430c4d0cdb8",
     "catalog-2011-reference.mjs": "843b9e87ba7b132c6874f1ec215234fdb2af278879383812a82bff1f125de492",
@@ -22,7 +22,7 @@
     "english.mjs": "273347dd491b69629be7b793d598e2f5046232a2ef72b20b12e77e7f279c3440",
     "guide-interpretations.mjs": "7e95b564b6dfeabdc30d649dc11451e12c8d639622f88b714709f6a1ce8d0f0a",
     "historical-review.mjs": "443e38e042656cbd26322c67fd78f0bc3949ddb47df9940c57f99b25408a4018",
-    "index.html": "26d9682b505caede5179945bb9820e8b8a9cffd7e4577f6eecdd88b86135801a",
+    "index.html": "876d1a6afce5a8253a3a52c3225291047dd37bb2e22833e60f331308af1c1cf0",
     "master-research.json": "5c0a524bb267a838b7b649cfef27854307f66581d70432bf6d036901ac83143f",
     "master-research.mjs": "82f6b4e6b05fba6aa063fdac92d0314a5be76757d0e1f060cb0cf4e45b56f8dc",
     "model-references.json": "c573a356050bea4c0b8337ab21e9806dd2b12c34c62f528e5e6ec828b84b306c",
@@ -47,7 +47,7 @@
     "watchnavi-reference.mjs": "ecf17e595a422767d8ec87db498c6f972d4d2b45607c73a02fce1fcfdd03736d",
     "watchnavi-search.mjs": "e8194ca938d514a5be09281cc4171bc40cf6b50a9eccc2543bffb6a20fadc8a8",
     "awg-m520ua.mjs": "79e3db2ab3451c427734a578b1c353e2486610351f39566d85ac0b4f608cee8e",
-    "creator-videos.mjs": "e19bc7bd1aa87b91c5afc405b790385aa9cc9bb6dfcac4f9624e0399155920f8",
+    "creator-videos.mjs": "38264d9070df15386901863ba467b996684c65f3656b203934c522e26da5d346",
     "catalog-1983-data.mjs": "e5611b5f1dc419060f36e42120e7182e0d4dada0368e988fdfb31324c796307a",
     "catalog-1983.mjs": "2b19af89430d282afda5a5a8068f8a1d3da8cbd37717712c5bee750ddb3ec070",
     "research-pdfs-data.mjs": "dc67e28ba4f0a445d0ee4bd8cc0a1e6e4d64c666157561603aff957f9e0a7567",
@@ -74,7 +74,8 @@
     "Apply four-module GMW-B5000/GW-B5600 research after beta publication: all 58 exact source entries accessible, six unconfirmed regional identifiers and one unresolved label excluded from watch counts; preserve existing verified physical facts and unit-level module caveats.",
     "Apply seven-reference supplement after beta publication: two watch variants, five retail packages, corrected documented spellings and links from older uncertain labels; Gem Accents 98 g/resin/mineral specification, Rock for People base-weight qualification; add package category and preserve prior evidence.",
     "Decode PS/PG separately from 5000 for the 2023 Recrystallized silver/gold pair and the PS festival reference. P/S/G expansions are scoped owner/community interpretations; confirmed Casio edition construction is distinguished. Preserve specific readings from generic anniversary-directory replacement and avoid duplicate suffix cards.",
-    "Add scoped LCW-M200DJ Multi-Band 5, series/D/J/color/order/market explanations and DJ/DE/DSE/TD comparison. Separate owner/community letter readings from exact-model glass/material evidence; JF is not manufacturing/packaging proof, A is not a universal silver-accent code, and TD does not make D a steel-case claim. Existing specifications remain unchanged."
+    "Add scoped LCW-M200DJ Multi-Band 5, series/D/J/color/order/market explanations and DJ/DE/DSE/TD comparison. Separate owner/community letter readings from exact-model glass/material evidence; JF is not manufacturing/packaging proof, A is not a universal silver-accent code, and TD does not make D a steel-case claim. Existing specifications remain unchanged.",
+    "Add owner-provided Pro Trek family playlist to every classified Pro Trek reference, known Pro Trek/legacy Pathfinder prefixes and documented Pro Trek Smart identifiers. Pass explicit family metadata in search rows, model details and decoder results; preserve exact-model and module video mappings and all existing facts."
   ],
   "ui_notes_source_commit": "8ffd8c52f7eb1c2fe0bab4798638b76ce8286cf6",
   "base_individual_watch_identifiers": 29148,
@@ -86,7 +87,7 @@
     "clocks": 5,
     "publication_method": "Validated base snapshot plus bounded pending technical source addendum; no uploaded scans or bulk base artifact replacements."
   },
-  "creator_video_source_commit": "4da32c3173550b1ee4f04c9fa2bb05e9d3d36579",
+  "creator_video_source_commit": "1170249d665996a2588d843dc4d2f46c308d83f6",
   "technical_research_addendum": {
     "source_commit": "5fcbe5d8bccd176bd3349d291d40110b17a1eee4",
     "source_reference": "research/supplied-three-pdf-research-2026-11-17.json",
@@ -125,5 +126,6 @@
     "publication_method": "Bounded technical addendum; original PDF, root decoder and bulk base datasets unchanged."
   },
   "recrystallized_suffix_source_commit": "d75ff212ad6a48354383d6744058e947b009ebdf",
-  "lineage_interpretation_source_commit": "6050a336c60a3d0a322634a5ed85c87f7361f836"
+  "lineage_interpretation_source_commit": "6050a336c60a3d0a322634a5ed85c87f7361f836",
+  "pro_trek_playlist_source_commit": "1170249d665996a2588d843dc4d2f46c308d83f6"
 }
