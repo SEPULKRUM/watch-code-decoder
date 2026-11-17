@@ -1,14 +1,14 @@
 {
   "source_repository": "SEPULKRUM/casio-watch-specs",
   "source_commit": "063db208a99c106ec555c849ac44303a5f5b8733",
-  "beta_source_commit": "ea25d0ba836cac23309cf25c3d60ffaf2f7e0bbf",
+  "beta_source_commit": "9acab9d506cffae7f10623ba098fe92958da49dc",
   "destination": "https://sepulkrum.github.io/watch-code-decoder/prefixes/",
   "backup": "https://sepulkrum-casio-specs-beta.miniatureagave.chatgpt.site/",
   "individual_watch_identifiers": 29297,
   "files_sha256": {
     "anniversary-data.mjs": "80334d630ee95c82910cd5098f9d89e2d1cd866e96137abf1a35387444770ac1",
     "anniversary.mjs": "3f1756090253ac4ae1a6dbd51922e7f88e30588dc19a6ab4e4060086de715e33",
-    "app.mjs": "83481a6b42f9f5292a3e89a12442e3ea2d12e8c0e2f07c4bb43ae2ab3f28546e",
+    "app.mjs": "aade37aa5d9329f5249469e67c666586589f9ecdcffe4852abf05c5871811174",
     "brand-emblem.svg": "83bd9517dc72df9d8cc459a58c0cd628af583e509aa9c413ce321248cfa2d7b3",
     "build-info.json": "1e2c332b576830c93835c55dfb938279ad9af7cc5140a6ab0babb430c4d0cdb8",
     "catalog-2011-reference.mjs": "843b9e87ba7b132c6874f1ec215234fdb2af278879383812a82bff1f125de492",
@@ -22,7 +22,7 @@
     "english.mjs": "273347dd491b69629be7b793d598e2f5046232a2ef72b20b12e77e7f279c3440",
     "guide-interpretations.mjs": "36b7023c29f0db6f42a0c1bc03be8d0fcf52ba5d70c6fcad7212c9288420d60f",
     "historical-review.mjs": "443e38e042656cbd26322c67fd78f0bc3949ddb47df9940c57f99b25408a4018",
-    "index.html": "30582f2b3ec8d3f18381a6dedbf5d04a7aa69ce3845392fb0f350b83bedbb4db",
+    "index.html": "d55bd91fb3a9613bfbe6db757b1f71e494b5e4474a3fbdf2a7ce0f70de380a2a",
     "master-research.json": "5c0a524bb267a838b7b649cfef27854307f66581d70432bf6d036901ac83143f",
     "master-research.mjs": "82f6b4e6b05fba6aa063fdac92d0314a5be76757d0e1f060cb0cf4e45b56f8dc",
     "model-references.json": "c573a356050bea4c0b8337ab21e9806dd2b12c34c62f528e5e6ec828b84b306c",
@@ -41,7 +41,7 @@
     "specification-display.mjs": "9d2c78f7b1e86229ca3d01bd7cb70577738a6ded47bb0e86afef5e3275efebb9",
     "style.css": "f8953ae3cf33313f6ad535a31d2bca8dc5f5254030d6fba65f479a1b208051a2",
     "unified-models.csv": "5c44b696f552b2d2a732de03c7ad9b2c88e1eea9774fc01182c794b36a9755ca",
-    "unified-search.mjs": "838a554f4e5732d4718b4df030ffa5fe5a35e31160162f2bd50292c5ef6d7319",
+    "unified-search.mjs": "1ebb3094de243a63720635efb978b79a60d0bdd1935c00c42ef48f871db18ae2",
     "variant-interpretations.mjs": "65eee0ee326d5be8c36475811c1435a5b14f658eb835ac398b312a0f34c5e7c0",
     "watches.csv": "b533f84b4415d587dcba5566efcd033550990a6c3614082bfba03850e53ac728",
     "watchnavi-reference.mjs": "ecf17e595a422767d8ec87db498c6f972d4d2b45607c73a02fce1fcfdd03736d",
@@ -63,9 +63,11 @@
     "ocean-wave-data.mjs": "85a8fd4fb4527bbee1ea699e72fc1d60a5745621dfc872d9f9afe576762cd083",
     "ocean-wave-interpretations.mjs": "790f3f27146b5bf223b26cff7fddd3295b88f2cecf6a0283f1db5fa22e5c4865",
     "family-classification.mjs": "bf67f6c6981950223fc8c2638aaa8852978d2c1bd526157d048c7ec908a66e5a",
-    "regional-models.mjs": "fa29b9b7a8285c5b1848cee70b631ead3263c5020cc7137451e33e8486da62f2",
+    "regional-models.mjs": "deb9dbd0de55d91a0ddc622b2e67cbbec57b2586b844dae2935937d1f336d991",
     "dw-heritage-data.mjs": "af2d6bc0311105fc4439e9614ad200ee24f826fd7678940af3c8cddec77ff5c3",
-    "dw-heritage-interpretations.mjs": "86582b29ab65e94772f2b00933b9b4951c911231a00f46340bbf240178afd3ef"
+    "dw-heritage-interpretations.mjs": "86582b29ab65e94772f2b00933b9b4951c911231a00f46340bbf240178afd3ef",
+    "model-identity-data.mjs": "f29e9674877de4b6065472fa75d3b3988e87854350a50f3b27e13707651e3744",
+    "official-support.mjs": "fd89ce16243784e4694853262825582cee8feb1697be1619207bfb1f70d33900"
   },
   "public_overrides": [
     "Removed the beta badge and changed the initial status to Public reference. Backup beta remains unchanged.",
@@ -92,7 +94,8 @@
     "Apply Mudmaster/Frogman supplied research after beta verification: 46 watch references, one collector package and two uncertain labels; independent exact identifiers and separate release events; scoped decoder editions, module functions, nominal measurements and reported quantities. Preserve original bulk datasets and root decoder.",
     "Apply Oceanus 5141 / Overland-Lineage-Wave Ceptor 4319 supplied references after beta validation: 17 exact watch references, two incomplete LCW family identifiers, two unresolved LIW identifiers, separate module functions and battery research, scoped T/TDJ/J/E explanations, and Wave Ceptor playlist for the explicitly supplied references and recorded module 4319. Preserve trailing URL underscore, all previous video mappings, uncertain weights, runtime conflicts and root/bulk artifacts.",
     "Group matching JF/ER/DR/CR/DF market references into one main-search row with an expandable exact-reference list and source-specific detail navigation. Preserve all original identifiers and facts, distinct colors/editions and conflicts. Update pagination, sidebar totals and displayed watch-group count. Reconcile stale/addendum family labels and documented reference-only prefix families without inferring modules; preserve root decoder and original bulk data files.",
-    "Apply DW-5000 heritage reference after beta and CI validation: all 22 canonical record explanations, related 1993 homage, separate Honda collector descriptions and Thirty Stars package, owner specimen-only caliper/scale readings, modern model-specific measurements, module associations, and qualified service parts. Preserve 41.6/41.3 mm convention distinction, unmeasured original families, rejected gold crystal 79000433 and leading-zero replacement-stock code. Replace generic B blackout guesses only for supplied black/gold references. Preserve regional grouping and all prior evidence."
+    "Apply DW-5000 heritage reference after beta and CI validation: all 22 canonical record explanations, related 1993 homage, separate Honda collector descriptions and Thirty Stars package, owner specimen-only caliper/scale readings, modern model-specific measurements, module associations, and qualified service parts. Preserve 41.6/41.3 mm convention distinction, unmeasured original families, rejected gold crystal 79000433 and leading-zero replacement-stock code. Replace generic B blackout guesses only for supplied black/gold references. Preserve regional grouping and all prior evidence.",
+    "Move clean base references with indexed color-specific children into family context instead of extra watch rows. Consolidate owner-reported DW-5200 duplicate spellings and scoped reference-only vintage A spellings against canonical heritage references, preserving original evidence and genuine colors. Use precise identifier matching for model-number queries to avoid shared-source-note false matches. Add exact owner-provided Casio support fallbacks without promoting specs. Preserve raw IDs, source facts, regional grouping, root decoder and bulk base artifacts."
   ],
   "ui_notes_source_commit": "8ffd8c52f7eb1c2fe0bab4798638b76ce8286cf6",
   "base_individual_watch_identifiers": 29148,
@@ -176,17 +179,22 @@
     "status": "Supplied research pending archive verification; incomplete codes, nominal dimensions and mass, family-assigned modules, battery assemblies and runtime contradictions retain scope.",
     "publication_method": "Bounded technical addendum; no original PDFs, root decoder changes or replacement bulk base artifacts."
   },
-  "displayed_watch_groups": 29013,
+  "displayed_watch_groups": 28780,
   "regional_reference_presentation": {
-    "source_commit": "e4fce6a778b9466c564e5a481a3c93acd2bd87dc",
-    "watch_groups": 29013,
+    "source_commit": "377da40249e406b7a6091b41e8e36696ec1e5b5d",
+    "watch_groups": 28780,
     "watch_identifiers": 29297,
-    "regional_groups": 278,
-    "grouped_identifiers": 562,
+    "regional_groups": 283,
+    "grouped_identifiers": 574,
     "conflicting_groups_kept_separate": 46,
-    "scope": "Search-result groups combine matching market-reference endings only. Original identifiers and evidence remain separate; categories and identifier counts are unchanged. Recorded physical or module conflicts prevent grouping.",
-    "corrected_families": 6173,
-    "stats_source_commit": "a6dafcc12b7043c1b7c39cdec23a2c0fa59d64d7"
+    "base_reference_contexts": 517,
+    "documented_aliases": 7,
+    "identity_rules": {
+      "source_reference": "research/model-identity-rules-2026-11-17.json",
+      "sha256": "fa8e9976c8e6bee9c84c6227f4714280b8960297c38e679ecfedb64d92d738f3"
+    },
+    "scope": "Watch results group documented spellings and market endings. Base-family references remain linked as context instead of additional variants. Every original identifier and fact is retained. Conflicting physical/module records remain separate.",
+    "corrected_families": 6173
   },
   "family_classification_source_commit": "e4fce6a778b9466c564e5a481a3c93acd2bd87dc",
   "dw_heritage_addendum": {
@@ -201,5 +209,12 @@
     "module_profiles": 6,
     "status": "Owner specimen measurements, recorded service associations and exact model research; independent archived-source content review pending. Honda descriptions are not confirmed SKUs and the rejected crystal part is not assigned.",
     "publication_method": "Bounded technical transcription; no original PDF, photographs, reconstructed catalog artwork, root decoder changes or bulk base replacements."
+  },
+  "model_identity_source_commit": "377da40249e406b7a6091b41e8e36696ec1e5b5d",
+  "official_support_fallbacks": {
+    "source_commit": "377da40249e406b7a6091b41e8e36696ec1e5b5d",
+    "source_reference": "research/official-support-fallbacks-2026-11-17.json",
+    "exact_owner_provided_links": 4,
+    "scope": "Exact official support/manual fallback when verified product/specification page unavailable; links do not verify physical specifications."
   }
 }

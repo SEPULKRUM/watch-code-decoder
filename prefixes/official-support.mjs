@@ -1,0 +1,7 @@
+import {modelIdentityRules} from './model-identity-data.mjs?v=model-identity-20261117';
+export const officialSupportReferences={"schema_version":1,"provided_by":"SEPULKRUM","received":"2026-11-17","policy":"When an exact official specification/product page is unavailable, show an exact official Casio support/manual page as a fallback. A support link does not independently verify physical specifications. Do not fabricate support URLs.","models":{"DW-5000C-1A":"https://www.casio.com/in/watches/gshock/support.DW-5000C-1A/","DW-5000C-1B":"https://www.casio.com/in/watches/gshock/support.DW-5000C-1B/","DW-5200C-1":"https://www.casio.com/sg/watches/gshock/support.DW-5200C-1/","DW-5200C-9":"https://www.casio.com/sg/watches/gshock/support.DW-5200C-9/"},"source_scope":"Owner-provided official-domain URLs; no product specifications imported and no independent page-content verification claimed"};
+export function officialSupportForModel(id){
+ const target=officialSupportReferences.models[id]?id:modelIdentityRules.aliases[id];
+ const raw=officialSupportReferences.models[target];if(!raw)return null;
+ try{const u=new URL(raw),slug=u.pathname.match(/\/support\.([^/]+)\/?$/)?.[1];if(u.protocol!=='https:'||u.username||u.password||u.port||!(u.hostname==='casio.com'||u.hostname.endsWith('.casio.com'))||slug!==target)return null;return {url:u.href,model:target,kind:'support',source_reference:"research/official-support-fallbacks-2026-11-17.json"};}catch{return null}
+}
