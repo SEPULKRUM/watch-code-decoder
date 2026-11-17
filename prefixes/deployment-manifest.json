@@ -1,14 +1,14 @@
 {
   "source_repository": "SEPULKRUM/casio-watch-specs",
   "source_commit": "063db208a99c106ec555c849ac44303a5f5b8733",
-  "beta_source_commit": "e07fd66dd0868cd247f741767e3f2ce45f34efc9",
+  "beta_source_commit": "d752bae68dd4654392275347e0b80f1a6112c945",
   "destination": "https://sepulkrum.github.io/watch-code-decoder/prefixes/",
   "backup": "https://sepulkrum-casio-specs-beta.miniatureagave.chatgpt.site/",
-  "individual_watch_identifiers": 29148,
+  "individual_watch_identifiers": 29215,
   "files_sha256": {
     "anniversary-data.mjs": "80334d630ee95c82910cd5098f9d89e2d1cd866e96137abf1a35387444770ac1",
     "anniversary.mjs": "f0d0a0f9b16e2a42f08810f0840cb77654c53c98113da3e90f7d7c0f72467781",
-    "app.mjs": "8161ff55084edfc3428af1101c09cba3a1f7a86a9d1ed03918ba36d6f9aea0e9",
+    "app.mjs": "7fbc37dc213b6e76c4b62f4f2747e2d9c1ef8ad421e53fdcb807ff9fc898a4e1",
     "brand-emblem.svg": "83bd9517dc72df9d8cc459a58c0cd628af583e509aa9c413ce321248cfa2d7b3",
     "build-info.json": "1e2c332b576830c93835c55dfb938279ad9af7cc5140a6ab0babb430c4d0cdb8",
     "catalog-2011-reference.mjs": "843b9e87ba7b132c6874f1ec215234fdb2af278879383812a82bff1f125de492",
@@ -22,7 +22,7 @@
     "english.mjs": "273347dd491b69629be7b793d598e2f5046232a2ef72b20b12e77e7f279c3440",
     "guide-interpretations.mjs": "482fc5e78e4e9ccc91376189821f2ea6cf2cb175fd71a84ff91ff8b64242bd20",
     "historical-review.mjs": "443e38e042656cbd26322c67fd78f0bc3949ddb47df9940c57f99b25408a4018",
-    "index.html": "a6c0cac6b1f7f562155e78a98256b774589a45481d93b473fee8914f7e9c151c",
+    "index.html": "a3e8fa1eab3f337fced9aef29ba564e04e65687b69bc2e975f9d70a74c3d2287",
     "master-research.json": "5c0a524bb267a838b7b649cfef27854307f66581d70432bf6d036901ac83143f",
     "master-research.mjs": "82f6b4e6b05fba6aa063fdac92d0314a5be76757d0e1f060cb0cf4e45b56f8dc",
     "model-references.json": "c573a356050bea4c0b8337ab21e9806dd2b12c34c62f528e5e6ec828b84b306c",
@@ -47,7 +47,9 @@
     "watchnavi-reference.mjs": "ecf17e595a422767d8ec87db498c6f972d4d2b45607c73a02fce1fcfdd03736d",
     "watchnavi-search.mjs": "e8194ca938d514a5be09281cc4171bc40cf6b50a9eccc2543bffb6a20fadc8a8",
     "awg-m520ua.mjs": "79e3db2ab3451c427734a578b1c353e2486610351f39566d85ac0b4f608cee8e",
-    "creator-videos.mjs": "4b8fa5a35bdb6046889e2c46513a91a66cd6d6cf15de9985f6f2c83df33c9312"
+    "creator-videos.mjs": "4b8fa5a35bdb6046889e2c46513a91a66cd6d6cf15de9985f6f2c83df33c9312",
+    "catalog-1983-data.mjs": "95d66c5dda526af103be8f9f88e9dac4ff5d90355680c2c6dde268579dc6e3cf",
+    "catalog-1983.mjs": "af0d653f4a078bb1d631e24dcc0af001845999f8e892e4ea7c0d966ad1510c51"
   },
   "public_overrides": [
     "Removed the beta badge and changed the initial status to Public reference. Backup beta remains unchanged.",
@@ -59,7 +61,17 @@
     "Preserve creator-videos.mjs exact owner-provided mappings and My video links on search rows and watch detail pages. JR = Japan Release remains an owner/community interpretation, not an official definition.",
     "Add exact GPW-2000TFB-1A archived Casio notes and owner-provided public playlist; preserve bulk datasets and root decoder.",
     "Show owner playlist for every watch with a recorded module 3159 or 3495 association; do not infer module from model family.",
-    "Add owner-supplied vintage-square restoration videos, scoped C suffix interpretations, and module 240/691/901 playlist. Notes remain owner claims, not archived Casio verification; preserve root decoder and bulk datasets."
+    "Add owner-supplied vintage-square restoration videos, scoped C suffix interpretations, and module 240/691/901 playlist. Notes remain owner claims, not archived Casio verification; preserve root decoder and bulk datasets.",
+    "Apply the complete 24-image supplied catalog's technical transcription: exact-reference search, separately scoped watch/module facts and clocks, source/service notes, and recalculated composite reconciliation. Preserve original bulk base files and root decoder."
   ],
-  "ui_notes_source_commit": "105b51ae6572b12cda9ae08682f73df58b6a655f"
+  "ui_notes_source_commit": "1b359cbcc69fc0ca575079563f8e176306506888",
+  "base_individual_watch_identifiers": 29148,
+  "catalog_addendum": {
+    "source_commit": "1b359cbcc69fc0ca575079563f8e176306506888",
+    "source_reference": "research/supplied-casio-1983-catalog-2026-11-17.json",
+    "watch_references": 78,
+    "module_profiles": 29,
+    "clocks": 5,
+    "publication_method": "Validated base snapshot plus bounded pending technical source addendum; no uploaded scans or bulk base artifact replacements."
+  }
 }
