@@ -28,6 +28,12 @@ export function applyAnniversary(result){
   result.editionNotes.push({title:'GPW-2000TFB-1A — archived specifications',description:'Archived Casio page: 200 m water resistance, 66.0 × 57.1 × 18.2 mm, 120 g, module 5502. Gold Tornado black/red/gold accents, anniversary case-back engraving, a star-emblem band keeper and special packaging. The size row is labeled GPW-2000 on this edition page; its measurements remain source claims, not independent measurements.',status:'official_observed',source:archive});
   result.editionNotes.push({title:'Additional 2017 G-SHOCK references',description:'The December 8, 2017 category snapshot contains 197 distinct product links. Listing-only identifiers are research discoveries; they do not establish technical specifications or 197 newly discovered physical watch variants.',status:'official_observed',source:'https://web.archive.org/web/20171208233205/http://www.casio.com/products/watches/g-shock'});
  }
+ if(/^DW(?:5000|5200|5600)C(?:[0-9A-Z]*)$/.test(key)){
+  const source='https://www.youtube.com/watch?v=1k5VMJY6Y-Y';
+  const series=result.segments.find(s=>s.type==='series');
+  if(series?.token.endsWith('C')){series.token=series.token.slice(0,-1);series.description=series.token+' series identifier; not a module or production date.';result.segments.splice(result.segments.indexOf(series)+1,0,{type:'series-suffix',token:'C',title:'Original generation / casing revision',description:'Owner interpretation: C identifies the original generation or casing revision in DW-5000C, DW-5200C and DW-5600C, associated with their early steel screw-back construction. This is not an official universal suffix definition.',status:'community_interpretation',source});}
+  result.editionNotes.push({title:'DW and C — owner naming interpretation',description:'The owner reads DW as Digital Watch for these vintage battery-powered digital squares, and C as an original-generation / casing-revision suffix. Digital Water Resistant is another community reading of DW. No official universal letter-expansion key is established by these descriptions.',status:'community_interpretation',source});
+ }
  if(!frog)return result;
  const i=result.segments.findIndex(s=>s.type==='modifier'&&s.token==='D');
  if(i>=0){const end=result.segments.findIndex((s,n)=>n>i&&s.type==='series');if(end>=0){const hasB=/^GWFD1035B/.test(key);result.segments.splice(i,end-i+1,

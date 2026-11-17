@@ -1,4 +1,4 @@
-import {creatorVideosForModel} from './creator-videos.mjs?v=modules3159-3495';
+import {creatorVideosForModel} from './creator-videos.mjs?v=vintage-owner1711';
 import {validateSearchIndex,searchUnified,indexedModel,exactIndexedModels,modelForDetail,indexedStatus,unifiedFamilyCounts,inSearchMode,fitmentContext} from './unified-search.mjs?v=7c8896384ae6cc00';
 import {englishText,nonEnglishScript} from './english.mjs?v=7c8896384ae6cc00';
 import {presentationFacts} from './specification-display.mjs?v=7c8896384ae6cc00';
@@ -13,7 +13,7 @@ import {historicalReview} from './historical-review.mjs?v=7c8896384ae6cc00';
 import {guideReferenceSections} from './guide-interpretations.mjs?v=7c8896384ae6cc00';
 import {decoderDisclosure,decoderRules,evidenceName} from './decoder-rules.mjs?v=7c8896384ae6cc00';
 import {value,moduleIds,findModels,stats,safeUrl,validateData,label,display,evidenceLabel,recordEvidenceLabel} from './core.mjs?v=ua-archive-20261116';
-import {decodeModel,entries} from './decoder.mjs?v=gpw2017-playlist';
+import {decodeModel,entries} from './decoder.mjs?v=vintage-owner1711';
 import {validateReferences,findReferences,referenceStatus} from './model-references.mjs?v=7c8896384ae6cc00';
 import {modelColor,officialProductLink} from './decoder-presentation.mjs?v=7c8896384ae6cc00';
 import {validateParts,partsForModel} from './parts.mjs?v=7c8896384ae6cc00';
@@ -81,7 +81,7 @@ function openModel(id,write=true){
 function appendCreatorVideos(body,id,modules=[]){
  const videos=creatorVideosForModel(id,modules);if(!videos.length)return;
  const section=el('section',undefined,'detail-section creator-videos');section.append(el('h3','My videos'));
- for(const video of videos){const a=link(video.kind==='playlist'?'▶ View my playlist ↗':'▶ Watch my video ↗',video.url);a.className='creator-video-link';a.setAttribute('aria-label','Watch SEPULKRUM video about '+id);section.append(a,el('p',video.title),el('small',video.attribution))}body.append(section);
+ for(const video of videos){const a=link(video.kind==='playlist'?'▶ View my playlist ↗':'▶ Watch my video ↗',video.url);a.className='creator-video-link';a.setAttribute('aria-label','Watch SEPULKRUM video about '+id);section.append(a,el('p',video.title),el('small',video.attribution));for(const note of video.notes||[])section.append(el('p',note,'detail-description'))}body.append(section);
 }
 
 function appendFitmentContext(body,entry){

@@ -1,14 +1,14 @@
 {
   "source_repository": "SEPULKRUM/casio-watch-specs",
   "source_commit": "063db208a99c106ec555c849ac44303a5f5b8733",
-  "beta_source_commit": "6cafac630d80ba118e5beb0cfb0b8de7fc9ad098",
+  "beta_source_commit": "e07fd66dd0868cd247f741767e3f2ce45f34efc9",
   "destination": "https://sepulkrum.github.io/watch-code-decoder/prefixes/",
   "backup": "https://sepulkrum-casio-specs-beta.miniatureagave.chatgpt.site/",
   "individual_watch_identifiers": 29148,
   "files_sha256": {
     "anniversary-data.mjs": "80334d630ee95c82910cd5098f9d89e2d1cd866e96137abf1a35387444770ac1",
-    "anniversary.mjs": "ee1542511055de614b35c0e1e3e9fff1507076be994e8a2c0df4e16259015952",
-    "app.mjs": "8c540d141215b1d0c0fd6af7e28546f9fcae2fa1da8ef69fa3b731c42186481e",
+    "anniversary.mjs": "f0d0a0f9b16e2a42f08810f0840cb77654c53c98113da3e90f7d7c0f72467781",
+    "app.mjs": "8161ff55084edfc3428af1101c09cba3a1f7a86a9d1ed03918ba36d6f9aea0e9",
     "brand-emblem.svg": "83bd9517dc72df9d8cc459a58c0cd628af583e509aa9c413ce321248cfa2d7b3",
     "build-info.json": "1e2c332b576830c93835c55dfb938279ad9af7cc5140a6ab0babb430c4d0cdb8",
     "catalog-2011-reference.mjs": "843b9e87ba7b132c6874f1ec215234fdb2af278879383812a82bff1f125de492",
@@ -18,11 +18,11 @@
     "core.mjs": "3e02152a5072251a7fcb9fdb242dd8764aaa7585464fd9512b48008b81bdab23",
     "decoder-presentation.mjs": "784fb3c2eecdafbb063391f7e2e4d0e8b4f4af50e8c978a07dbb326d83418a5c",
     "decoder-rules.mjs": "e5fc5bae67f26f5d8c2cf6b22071c951b98e34f6fc41503f69afe76cff764c5b",
-    "decoder.mjs": "1619975fcb5209320473b41554fec9a75632f908bb7498cb58df93dabb23bf5c",
+    "decoder.mjs": "9ce6ca4a581c0c683a49b07da8226ca81756c5e3b96c2ed31b320e9a8df034b1",
     "english.mjs": "273347dd491b69629be7b793d598e2f5046232a2ef72b20b12e77e7f279c3440",
     "guide-interpretations.mjs": "482fc5e78e4e9ccc91376189821f2ea6cf2cb175fd71a84ff91ff8b64242bd20",
     "historical-review.mjs": "443e38e042656cbd26322c67fd78f0bc3949ddb47df9940c57f99b25408a4018",
-    "index.html": "b97d022fb95810f8426270ffe44cefe394bf50b9c0edbaae620144d95a4cb110",
+    "index.html": "a6c0cac6b1f7f562155e78a98256b774589a45481d93b473fee8914f7e9c151c",
     "master-research.json": "5c0a524bb267a838b7b649cfef27854307f66581d70432bf6d036901ac83143f",
     "master-research.mjs": "82f6b4e6b05fba6aa063fdac92d0314a5be76757d0e1f060cb0cf4e45b56f8dc",
     "model-references.json": "c573a356050bea4c0b8337ab21e9806dd2b12c34c62f528e5e6ec828b84b306c",
@@ -47,7 +47,7 @@
     "watchnavi-reference.mjs": "ecf17e595a422767d8ec87db498c6f972d4d2b45607c73a02fce1fcfdd03736d",
     "watchnavi-search.mjs": "e8194ca938d514a5be09281cc4171bc40cf6b50a9eccc2543bffb6a20fadc8a8",
     "awg-m520ua.mjs": "79e3db2ab3451c427734a578b1c353e2486610351f39566d85ac0b4f608cee8e",
-    "creator-videos.mjs": "7501a9a5ef028d5816b87135bae316ab4f511e3a7de0644e185f67c1c4847035"
+    "creator-videos.mjs": "4b8fa5a35bdb6046889e2c46513a91a66cd6d6cf15de9985f6f2c83df33c9312"
   },
   "public_overrides": [
     "Removed the beta badge and changed the initial status to Public reference. Backup beta remains unchanged.",
@@ -58,7 +58,8 @@
     "Archived collaboration/base-model links and scoped measurement notes updated. Public catalog, search index, reconciliation and CSV datasets are intentionally unchanged.",
     "Preserve creator-videos.mjs exact owner-provided mappings and My video links on search rows and watch detail pages. JR = Japan Release remains an owner/community interpretation, not an official definition.",
     "Add exact GPW-2000TFB-1A archived Casio notes and owner-provided public playlist; preserve bulk datasets and root decoder.",
-    "Show owner playlist for every watch with a recorded module 3159 or 3495 association; do not infer module from model family."
+    "Show owner playlist for every watch with a recorded module 3159 or 3495 association; do not infer module from model family.",
+    "Add owner-supplied vintage-square restoration videos, scoped C suffix interpretations, and module 240/691/901 playlist. Notes remain owner claims, not archived Casio verification; preserve root decoder and bulk datasets."
   ],
   "ui_notes_source_commit": "105b51ae6572b12cda9ae08682f73df58b6a655f"
 }
