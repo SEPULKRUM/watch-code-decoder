@@ -1,14 +1,14 @@
 {
   "source_repository": "SEPULKRUM/casio-watch-specs",
   "source_commit": "063db208a99c106ec555c849ac44303a5f5b8733",
-  "beta_source_commit": "9d3b9ea31aebfc52081aea7d99d7657b310d6ec5",
+  "beta_source_commit": "c9f989f825e745d5e4169531f20e89fd3c4d5d84",
   "destination": "https://sepulkrum.github.io/watch-code-decoder/prefixes/",
   "backup": "https://sepulkrum-casio-specs-beta.miniatureagave.chatgpt.site/",
-  "individual_watch_identifiers": 29246,
+  "individual_watch_identifiers": 29255,
   "files_sha256": {
     "anniversary-data.mjs": "80334d630ee95c82910cd5098f9d89e2d1cd866e96137abf1a35387444770ac1",
     "anniversary.mjs": "3f1756090253ac4ae1a6dbd51922e7f88e30588dc19a6ab4e4060086de715e33",
-    "app.mjs": "410de55e0e2bb45ee93ed95a4f2522b7a484a173f048c74b9533e98330ab5559",
+    "app.mjs": "2522e2a45eb6b327f4b9c2554bd1a4f1997784f87bbb94ffd292d13650db4104",
     "brand-emblem.svg": "83bd9517dc72df9d8cc459a58c0cd628af583e509aa9c413ce321248cfa2d7b3",
     "build-info.json": "1e2c332b576830c93835c55dfb938279ad9af7cc5140a6ab0babb430c4d0cdb8",
     "catalog-2011-reference.mjs": "843b9e87ba7b132c6874f1ec215234fdb2af278879383812a82bff1f125de492",
@@ -18,11 +18,11 @@
     "core.mjs": "3e02152a5072251a7fcb9fdb242dd8764aaa7585464fd9512b48008b81bdab23",
     "decoder-presentation.mjs": "784fb3c2eecdafbb063391f7e2e4d0e8b4f4af50e8c978a07dbb326d83418a5c",
     "decoder-rules.mjs": "e5fc5bae67f26f5d8c2cf6b22071c951b98e34f6fc41503f69afe76cff764c5b",
-    "decoder.mjs": "bcb48e140e57a3e785aea3a57a265edd40c4543b84f604c41337a6ff85380cbf",
+    "decoder.mjs": "149bcc032c4bf895a86795b35243828e9f9ef3a6b795ffcaa557d1cc18d6a46c",
     "english.mjs": "273347dd491b69629be7b793d598e2f5046232a2ef72b20b12e77e7f279c3440",
-    "guide-interpretations.mjs": "7e95b564b6dfeabdc30d649dc11451e12c8d639622f88b714709f6a1ce8d0f0a",
+    "guide-interpretations.mjs": "a748c9b74e2190d5960aadfddbe46b2c431af97e585ed174890be24720f4d8f8",
     "historical-review.mjs": "443e38e042656cbd26322c67fd78f0bc3949ddb47df9940c57f99b25408a4018",
-    "index.html": "876d1a6afce5a8253a3a52c3225291047dd37bb2e22833e60f331308af1c1cf0",
+    "index.html": "66275c361a747d6e6ac59b60e3de58234ea6cf965b12629de64243c0c71276d5",
     "master-research.json": "5c0a524bb267a838b7b649cfef27854307f66581d70432bf6d036901ac83143f",
     "master-research.mjs": "82f6b4e6b05fba6aa063fdac92d0314a5be76757d0e1f060cb0cf4e45b56f8dc",
     "model-references.json": "c573a356050bea4c0b8337ab21e9806dd2b12c34c62f528e5e6ec828b84b306c",
@@ -47,14 +47,17 @@
     "watchnavi-reference.mjs": "ecf17e595a422767d8ec87db498c6f972d4d2b45607c73a02fce1fcfdd03736d",
     "watchnavi-search.mjs": "e8194ca938d514a5be09281cc4171bc40cf6b50a9eccc2543bffb6a20fadc8a8",
     "awg-m520ua.mjs": "79e3db2ab3451c427734a578b1c353e2486610351f39566d85ac0b4f608cee8e",
-    "creator-videos.mjs": "38264d9070df15386901863ba467b996684c65f3656b203934c522e26da5d346",
+    "creator-videos.mjs": "2bbc3d4d123a908ffe4312ee57d28e93397d54d6aaf323c80dd26a953cad84f1",
     "catalog-1983-data.mjs": "e5611b5f1dc419060f36e42120e7182e0d4dada0368e988fdfb31324c796307a",
     "catalog-1983.mjs": "2b19af89430d282afda5a5a8068f8a1d3da8cbd37717712c5bee750ddb3ec070",
     "research-pdfs-data.mjs": "dc67e28ba4f0a445d0ee4bd8cc0a1e6e4d64c666157561603aff957f9e0a7567",
     "module-comparison-data.mjs": "ff76796530c75c79ce5291c136b138c32b9fec315bfa56f5e95bb065cdae3340",
     "metal-squares-data.mjs": "4c7eed1672f36b8a86efb341b43734403546f35d928bc689715cf698e928f424",
     "special-variants-data.mjs": "bacfbe9269fe61e01912274b82368644705ce768db26f59f3a5b76b6447685a9",
-    "lineage-interpretations.mjs": "0dc2748fdcd5a53923483882da25dc0bcae1bad8f08e2900e53ef8d5a09df41a"
+    "lineage-interpretations.mjs": "0dc2748fdcd5a53923483882da25dc0bcae1bad8f08e2900e53ef8d5a09df41a",
+    "video-families.mjs": "98cc42902c24503e160fa66b2d188854bf993f6e9998f3f6d8368d97b6081402",
+    "series-interpretations.mjs": "bbc119d57638b90505ef0d452e30d1d260622bc4a67d32d6eefe795eec9b9968",
+    "series-pdfs-data.mjs": "736071b47178b706d8d6121755e04933631e4855c0535993ad5882f0567cc687"
   },
   "public_overrides": [
     "Removed the beta badge and changed the initial status to Public reference. Backup beta remains unchanged.",
@@ -75,7 +78,9 @@
     "Apply seven-reference supplement after beta publication: two watch variants, five retail packages, corrected documented spellings and links from older uncertain labels; Gem Accents 98 g/resin/mineral specification, Rock for People base-weight qualification; add package category and preserve prior evidence.",
     "Decode PS/PG separately from 5000 for the 2023 Recrystallized silver/gold pair and the PS festival reference. P/S/G expansions are scoped owner/community interpretations; confirmed Casio edition construction is distinguished. Preserve specific readings from generic anniversary-directory replacement and avoid duplicate suffix cards.",
     "Add scoped LCW-M200DJ Multi-Band 5, series/D/J/color/order/market explanations and DJ/DE/DSE/TD comparison. Separate owner/community letter readings from exact-model glass/material evidence; JF is not manufacturing/packaging proof, A is not a universal silver-accent code, and TD does not make D a steel-case claim. Existing specifications remain unchanged.",
-    "Add owner-provided Pro Trek family playlist to every classified Pro Trek reference, known Pro Trek/legacy Pathfinder prefixes and documented Pro Trek Smart identifiers. Pass explicit family metadata in search rows, model details and decoder results; preserve exact-model and module video mappings and all existing facts."
+    "Add owner-provided Pro Trek family playlist to every classified Pro Trek reference, known Pro Trek/legacy Pathfinder prefixes and documented Pro Trek Smart identifiers. Pass explicit family metadata in search rows, model details and decoder results; preserve exact-model and module video mappings and all existing facts.",
+    "Add owner playlists to fourteen requested families/series: Mudman, Gravitymaster, Oceanus, modern 2100, GMW-BZ5000, GW-BX5600, GBX-H5600, Mudmaster, Rangeman, Wave Ceptor, A168W, F-91W, DW-5600 and Frogman. Match named lineages/variants; preserve Pro Trek, exact-model and module links; deduplicate identical URLs without altering any specifications or classifications.",
+    "Apply the two PRW-69 / OCW-G1200 supplied technical PDFs after beta publication: eleven exact references, nine additional identifiers, variant-specific physical facts, separate module research, scoped Y/B/T and G/B/C/D interpretations, and Pro Trek/Oceanus playlists. No exact factory weight inferred from retailer estimates or module assigned from an unresolved report."
   ],
   "ui_notes_source_commit": "8ffd8c52f7eb1c2fe0bab4798638b76ce8286cf6",
   "base_individual_watch_identifiers": 29148,
@@ -87,7 +92,7 @@
     "clocks": 5,
     "publication_method": "Validated base snapshot plus bounded pending technical source addendum; no uploaded scans or bulk base artifact replacements."
   },
-  "creator_video_source_commit": "1170249d665996a2588d843dc4d2f46c308d83f6",
+  "creator_video_source_commit": "f9c86c6ed33fa6e8d29bf8a5586c2f006995a8a8",
   "technical_research_addendum": {
     "source_commit": "5fcbe5d8bccd176bd3349d291d40110b17a1eee4",
     "source_reference": "research/supplied-three-pdf-research-2026-11-17.json",
@@ -127,5 +132,15 @@
   },
   "recrystallized_suffix_source_commit": "d75ff212ad6a48354383d6744058e947b009ebdf",
   "lineage_interpretation_source_commit": "6050a336c60a3d0a322634a5ed85c87f7361f836",
-  "pro_trek_playlist_source_commit": "1170249d665996a2588d843dc4d2f46c308d83f6"
+  "pro_trek_playlist_source_commit": "1170249d665996a2588d843dc4d2f46c308d83f6",
+  "family_playlist_source_commit": "f9c86c6ed33fa6e8d29bf8a5586c2f006995a8a8",
+  "series_pdf_addendum": {
+    "source_commit": "f9c86c6ed33fa6e8d29bf8a5586c2f006995a8a8",
+    "source_reference": "research/supplied-prw69-ocwg1200-2026-11-17.json",
+    "watch_identifiers": 11,
+    "new_individual_identifiers": 9,
+    "module_profiles": 2,
+    "status": "Supplied research pending archive verification. PRW module 3514 remains reported; approximate Oceanus weights and existing conflicting scalars retain their qualifications.",
+    "publication_method": "Bounded technical addendum; no original PDFs, root decoder or replacement bulk artifacts."
+  }
 }

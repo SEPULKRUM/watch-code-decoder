@@ -1,3 +1,4 @@
+import {videoGroupsForModel} from './video-families.mjs?v=family-playlists-20261117';
 // Owner-provided exact-model, module and explicitly requested family mappings.
 // Video links do not supply specifications.
 export const creatorVideos=[
@@ -11,7 +12,21 @@ export const creatorVideos=[
  {models:['GPW-2000TFB-1A'],title:'GPW-2000TFB-1A · SEPULKRUM playlist',url:'https://www.youtube.com/playlist?list=PLDqbRJ4qDRs0',kind:'playlist',attribution:'SEPULKRUM · owner-provided'},
  {models:['AWG-M520UA','AWG-M520UA-1EJR'],title:'AWG-M520UA | The Modern Revival of the 1996 UNITED ARROWS G-Shock',url:'https://www.youtube.com/watch?v=qJTOpZHMlnw',attribution:'SEPULKRUM · owner-provided'},
  {models:['AWG-500J-1A','AWG-M510-1B','AWG-500J-9A'],title:'AWG-500J-1A, AWG-M510-1B and AWG-500J-9A',url:'https://www.youtube.com/watch?v=jGWa9HTgiIw',attribution:'SEPULKRUM · models identified by the owner'},
- {models:[],families:['Pro Trek'],title:'Pro Trek · SEPULKRUM playlist',url:'https://www.youtube.com/playlist?list=PLaV8co9Dpnac',kind:'playlist',attribution:'SEPULKRUM · owner-provided Pro Trek family playlist'}
+ {models:[],families:['Pro Trek'],title:'Pro Trek · SEPULKRUM playlist',url:'https://www.youtube.com/playlist?list=PLaV8co9Dpnac',kind:'playlist',attribution:'SEPULKRUM · owner-provided Pro Trek family playlist'},
+ {"models": [], "groups": ["mudman"], "title": "Mudman · SEPULKRUM playlist", "url": "https://www.youtube.com/playlist?list=PLaVcl4RlLw_c", "kind": "playlist", "attribution": "SEPULKRUM · owner-provided Mudman family playlist"},
+ {"models": [], "groups": ["gravitymaster"], "title": "Gravitymaster · SEPULKRUM playlist", "url": "https://www.youtube.com/playlist?list=PLDqbRJ4qDRs0", "kind": "playlist", "attribution": "SEPULKRUM · owner-provided Gravitymaster family playlist"},
+ {"models": [], "groups": ["oceanus"], "title": "Oceanus · SEPULKRUM playlist", "url": "https://www.youtube.com/playlist?list=PLFqC9gmBe7rQ", "kind": "playlist", "attribution": "SEPULKRUM · owner-provided Oceanus family playlist"},
+ {"models": [], "groups": ["gshock-2100"], "title": "G-SHOCK 2100 series · SEPULKRUM playlist", "url": "https://www.youtube.com/playlist?list=PLL2XjcdAH9yH2nPuwUgZGtTYLz-RLQ3hD", "kind": "playlist", "attribution": "SEPULKRUM · owner-provided G-SHOCK 2100 series family playlist"},
+ {"models": [], "groups": ["gmw-bz5000"], "title": "GMW-BZ5000 · SEPULKRUM playlist", "url": "https://www.youtube.com/playlist?list=PLL2XjcdAH9yEeGXG1tEzVDhZe9ieLb8g1", "kind": "playlist", "attribution": "SEPULKRUM · owner-provided GMW-BZ5000 family playlist"},
+ {"models": [], "groups": ["gw-bx5600"], "title": "GW-BX5600 · SEPULKRUM playlist", "url": "https://www.youtube.com/playlist?list=PLL2XjcdAH9yGZqAO7L6PYH_Dr6s0SCWXf", "kind": "playlist", "attribution": "SEPULKRUM · owner-provided GW-BX5600 family playlist"},
+ {"models": [], "groups": ["gbx-h5600"], "title": "GBX-H5600 · SEPULKRUM playlist", "url": "https://www.youtube.com/playlist?list=PLU_WlAu4MCMk", "kind": "playlist", "attribution": "SEPULKRUM · owner-provided GBX-H5600 family playlist"},
+ {"models": [], "groups": ["mudmaster"], "title": "Mudmaster · SEPULKRUM playlist", "url": "https://www.youtube.com/playlist?list=PLDFeORLiieyY", "kind": "playlist", "attribution": "SEPULKRUM · owner-provided Mudmaster family playlist"},
+ {"models": [], "groups": ["rangeman"], "title": "Rangeman · SEPULKRUM playlist", "url": "https://www.youtube.com/playlist?list=PLL2XjcdAH9yG57B0MK6gL-0kc1q6pEHqB", "kind": "playlist", "attribution": "SEPULKRUM · owner-provided Rangeman family playlist"},
+ {"models": [], "groups": ["wave-ceptor"], "title": "Wave Ceptor · SEPULKRUM playlist", "url": "https://www.youtube.com/playlist?list=PLL2XjcdAH9yHyyqWiz6mEfOCDaidSrIs_", "kind": "playlist", "attribution": "SEPULKRUM · owner-provided Wave Ceptor family playlist"},
+ {"models": [], "groups": ["a168w"], "title": "A168W · SEPULKRUM playlist", "url": "https://www.youtube.com/playlist?list=PLL2XjcdAH9yFUOx6h8QrzZVeK-m09otFy", "kind": "playlist", "attribution": "SEPULKRUM · owner-provided A168W family playlist"},
+ {"models": [], "groups": ["f91w"], "title": "F-91W · SEPULKRUM playlist", "url": "https://www.youtube.com/playlist?list=PLL2XjcdAH9yGOkAg80TetHbZIXmcmIdqF", "kind": "playlist", "attribution": "SEPULKRUM · owner-provided F-91W family playlist"},
+ {"models": [], "groups": ["dw5600"], "title": "DW-5600 · SEPULKRUM playlist", "url": "https://www.youtube.com/playlist?list=PLL2XjcdAH9yEQNdh5kl7X5CUOoCwAqE4m", "kind": "playlist", "attribution": "SEPULKRUM · owner-provided DW-5600 family playlist"},
+ {"models": [], "groups": ["frogman"], "title": "Frogman · SEPULKRUM playlist", "url": "https://www.youtube.com/playlist?list=PLL2XjcdAH9yGTVZbkR3OSp3v0vwuZYnvC", "kind": "playlist", "attribution": "SEPULKRUM · owner-provided Frogman family playlist"}
 ];
 const key=value=>String(value).trim().toUpperCase().replace(/[^A-Z0-9]/g,'');
 export function isProTrekModel(model,family=''){
@@ -22,6 +37,6 @@ export function isProTrekModel(model,family=''){
  return /^WSDF(?:20S?|21HR|30)(?=$|[A-Z])/.test(key(model));
 }
 export function creatorVideosForModel(model,moduleIds=[],family=''){
- const modules=new Set(moduleIds.map(String));
- return creatorVideos.filter(video=>video.models.some(id=>key(id)===key(model))||(video.modules||[]).some(id=>modules.has(id))||(video.families||[]).some(name=>key(name)==='PROTREK'&&isProTrekModel(model,family)));
+ const modules=new Set(moduleIds.map(String)),groups=new Set(videoGroupsForModel(model,family)),seen=new Set();
+ return creatorVideos.filter(video=>video.models.some(id=>key(id)===key(model))||(video.modules||[]).some(id=>modules.has(id))||(video.families||[]).some(name=>key(name)==='PROTREK'&&isProTrekModel(model,family))||(video.groups||[]).some(name=>groups.has(name))).filter(video=>{if(seen.has(video.url))return false;seen.add(video.url);return true});
 }
