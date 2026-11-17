@@ -1,14 +1,14 @@
 {
   "source_repository": "SEPULKRUM/casio-watch-specs",
   "source_commit": "063db208a99c106ec555c849ac44303a5f5b8733",
-  "beta_source_commit": "a2b4564e6156456d87f43d883afe1bcb73782124",
+  "beta_source_commit": "256a63d3d13f60ba22858e919f6ef6b2c2b829ee",
   "destination": "https://sepulkrum.github.io/watch-code-decoder/prefixes/",
   "backup": "https://sepulkrum-casio-specs-beta.miniatureagave.chatgpt.site/",
-  "individual_watch_identifiers": 29244,
+  "individual_watch_identifiers": 29246,
   "files_sha256": {
     "anniversary-data.mjs": "80334d630ee95c82910cd5098f9d89e2d1cd866e96137abf1a35387444770ac1",
     "anniversary.mjs": "f0d0a0f9b16e2a42f08810f0840cb77654c53c98113da3e90f7d7c0f72467781",
-    "app.mjs": "0c1078d15d5ec7c7fd8e228088f611b9b701714a42bba405e3b070e41e35f146",
+    "app.mjs": "9a521b166d4b1df1999320923c3f978ec1f34b957eb0aa271ac5aa105c858b18",
     "brand-emblem.svg": "83bd9517dc72df9d8cc459a58c0cd628af583e509aa9c413ce321248cfa2d7b3",
     "build-info.json": "1e2c332b576830c93835c55dfb938279ad9af7cc5140a6ab0babb430c4d0cdb8",
     "catalog-2011-reference.mjs": "843b9e87ba7b132c6874f1ec215234fdb2af278879383812a82bff1f125de492",
@@ -22,7 +22,7 @@
     "english.mjs": "273347dd491b69629be7b793d598e2f5046232a2ef72b20b12e77e7f279c3440",
     "guide-interpretations.mjs": "482fc5e78e4e9ccc91376189821f2ea6cf2cb175fd71a84ff91ff8b64242bd20",
     "historical-review.mjs": "443e38e042656cbd26322c67fd78f0bc3949ddb47df9940c57f99b25408a4018",
-    "index.html": "7f705dcf08180ef8a11279bfaa168cfc9395e791c1c82d93f635f7f8ff3d9ab3",
+    "index.html": "5a3a40602bb289eabdca96ff329f70e1dedf96a0c5dfc007cd2f8ae31c02f634",
     "master-research.json": "5c0a524bb267a838b7b649cfef27854307f66581d70432bf6d036901ac83143f",
     "master-research.mjs": "82f6b4e6b05fba6aa063fdac92d0314a5be76757d0e1f060cb0cf4e45b56f8dc",
     "model-references.json": "c573a356050bea4c0b8337ab21e9806dd2b12c34c62f528e5e6ec828b84b306c",
@@ -41,7 +41,7 @@
     "specification-display.mjs": "9d2c78f7b1e86229ca3d01bd7cb70577738a6ded47bb0e86afef5e3275efebb9",
     "style.css": "e24798ad74e6f9be677d99989305c360e31e49163ac1010527060638e65e6d86",
     "unified-models.csv": "5c44b696f552b2d2a732de03c7ad9b2c88e1eea9774fc01182c794b36a9755ca",
-    "unified-search.mjs": "d661e9a3bfa8944eb6402d6387ecea7f64687d0ddcd86d2d06af83053edbae98",
+    "unified-search.mjs": "3b9ec9ea5c1064977b1a7c818baebfa5b7b96a5c60d863224634ba17cd25f927",
     "variant-interpretations.mjs": "65eee0ee326d5be8c36475811c1435a5b14f658eb835ac398b312a0f34c5e7c0",
     "watches.csv": "b533f84b4415d587dcba5566efcd033550990a6c3614082bfba03850e53ac728",
     "watchnavi-reference.mjs": "ecf17e595a422767d8ec87db498c6f972d4d2b45607c73a02fce1fcfdd03736d",
@@ -49,10 +49,11 @@
     "awg-m520ua.mjs": "79e3db2ab3451c427734a578b1c353e2486610351f39566d85ac0b4f608cee8e",
     "creator-videos.mjs": "e19bc7bd1aa87b91c5afc405b790385aa9cc9bb6dfcac4f9624e0399155920f8",
     "catalog-1983-data.mjs": "e5611b5f1dc419060f36e42120e7182e0d4dada0368e988fdfb31324c796307a",
-    "catalog-1983.mjs": "64d58d6153bc781b4f179ee5d847f26646004a3c1331f793da26cb7b02c182fc",
+    "catalog-1983.mjs": "2b19af89430d282afda5a5a8068f8a1d3da8cbd37717712c5bee750ddb3ec070",
     "research-pdfs-data.mjs": "dc67e28ba4f0a445d0ee4bd8cc0a1e6e4d64c666157561603aff957f9e0a7567",
     "module-comparison-data.mjs": "ff76796530c75c79ce5291c136b138c32b9fec315bfa56f5e95bb065cdae3340",
-    "metal-squares-data.mjs": "4c7eed1672f36b8a86efb341b43734403546f35d928bc689715cf698e928f424"
+    "metal-squares-data.mjs": "4c7eed1672f36b8a86efb341b43734403546f35d928bc689715cf698e928f424",
+    "special-variants-data.mjs": "bacfbe9269fe61e01912274b82368644705ce768db26f59f3a5b76b6447685a9"
   },
   "public_overrides": [
     "Removed the beta badge and changed the initial status to Public reference. Backup beta remains unchanged.",
@@ -69,7 +70,8 @@
     "Add owner-provided LCW-M200DJ-2AJF video and show exact video mappings in decoded results even before specifications exist. Shared-chat contents were unavailable; no specifications or parts inferred.",
     "Apply technical research from three supplied PDFs after successful private beta publication: exact variants, separate module functions, production estimates and related-model parts scope; preserve existing verified facts, root decoder and bulk base artifacts.",
     "Apply the supplied 3159/3495 comparison, scoped variant weights, explicit regional references, qualified MOYC derived measurements and collaboration suffix after beta verification. Preserve checked facts and original root/bulk files.",
-    "Apply four-module GMW-B5000/GW-B5600 research after beta publication: all 58 exact source entries accessible, six unconfirmed regional identifiers and one unresolved label excluded from watch counts; preserve existing verified physical facts and unit-level module caveats."
+    "Apply four-module GMW-B5000/GW-B5600 research after beta publication: all 58 exact source entries accessible, six unconfirmed regional identifiers and one unresolved label excluded from watch counts; preserve existing verified physical facts and unit-level module caveats.",
+    "Apply seven-reference supplement after beta publication: two watch variants, five retail packages, corrected documented spellings and links from older uncertain labels; Gem Accents 98 g/resin/mineral specification, Rock for People base-weight qualification; add package category and preserve prior evidence."
   ],
   "ui_notes_source_commit": "8ffd8c52f7eb1c2fe0bab4798638b76ce8286cf6",
   "base_individual_watch_identifiers": 29148,
@@ -108,5 +110,15 @@
     "module_profiles": 4,
     "status": "Supplied technical research; series templates and approximate weights remain qualified; ambiguous identifiers categorized separately",
     "publication_method": "Bounded technical addendum, not original PDFs or replacement bulk base artifacts."
+  },
+  "retail_package_identifiers": 5,
+  "seven_special_reference_addendum": {
+    "source_commit": "fdf08d796a868619a43f247f52bef1431a061395",
+    "source_reference": "research/supplied-seven-special-variants-2026-11-17.json",
+    "documented_references": 7,
+    "watch_variants": 2,
+    "retail_packages": 5,
+    "status": "Documented references and package classifications; individual technical claims retain verification and derivation limits",
+    "publication_method": "Bounded technical addendum; original PDF, root decoder and bulk base datasets unchanged."
   }
 }

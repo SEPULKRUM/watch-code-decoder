@@ -1,7 +1,7 @@
-import {englishText} from './english.mjs?v=7c8896384ae6cc00';
-import {moduleIds} from './core.mjs?v=7c8896384ae6cc00';
+import {englishText} from './english.mjs?v=seven-special-20261117';
+import {moduleIds} from './core.mjs?v=seven-special-20261117';
 const compact=value=>String(value).toUpperCase().replace(/[^A-Z0-9]/g,'');
-const categories=new Set(['watch','family','clock','fitment','uncertain']);
+const categories=new Set(['watch','family','clock','fitment','uncertain','package']);
 const cache=new WeakMap(),identityCache=new WeakMap();
 function identities(index){if(!identityCache.has(index)){const byId=new Map(),byCompact=new Map();for(const row of index.records){byId.set(row.id,row);const key=compact(row.id);if(!byCompact.has(key))byCompact.set(key,[]);byCompact.get(key).push(row)}identityCache.set(index,{byId,byCompact})}return identityCache.get(index)}
 const collator=new Intl.Collator('en',{numeric:true,sensitivity:'variant'});
@@ -14,7 +14,7 @@ export function validateSearchIndex(index,catalog){
   if(row.origins.some(o=>!index.sources[o[0]]||typeof o[1]!=='string'))throw Error('Missing indexed source');
   if(row.catalog_id&&(row.catalog_id!==row.id||!catalog.models[row.catalog_id]))throw Error('Index does not match catalog');
  }
- for(const category of categories)if((counts[category]||0)!==index.counts[category])throw Error('Search category count mismatch');
+ for(const category of categories)if((counts[category]||0)!==(index.counts[category]||0))throw Error('Search category count mismatch');
  for(const id of Object.keys(catalog.models))if(!ids.has(id))throw Error('Catalog identifier omitted from unified search');
  for(const resolution of index.fitment_resolutions||[]){
   const combined=index.records.find(r=>r.id===resolution.model_id);
@@ -23,7 +23,7 @@ export function validateSearchIndex(index,catalog){
  return index;
 }
 export function inSearchMode(row,mode='models'){
- if(mode==='models')return row.category==='watch'||row.category==='family';
+ if(mode==='models')return row.category==='watch'||row.category==='family'||row.category==='package';
  if(mode==='all')return true;
  if(mode==='specifications')return row.category==='watch'&&row.has_specifications;
  if(mode==='reference-only')return row.category==='watch'&&!row.has_specifications;
@@ -63,7 +63,7 @@ export function unifiedFamilyCounts(index,mode='models'){
 }
 export function indexedStatus(row){
  if(row.category==='watch')return row.has_checked_fields?'Selected facts source checked · other fields pending':'Specifications pending verification';
- return {family:'Family / base reference · not an exact variant',clock:'Clock reference',fitment:'Combined parts-fitment reference · not one watch',uncertain:'Uncertain source reading · verification required'}[row.category];
+ return {package:'Documented retail package · not an additional watch design',family:'Family / base reference · not an exact variant',clock:'Clock reference',fitment:'Combined parts-fitment reference · not one watch',uncertain:'Uncertain source reading · verification required'}[row.category];
 }
 export function modelForDetail(index,catalog,id){
  const row=indexedModel(index,id);if(!row)return null;

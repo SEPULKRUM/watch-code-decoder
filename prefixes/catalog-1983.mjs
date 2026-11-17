@@ -1,5 +1,5 @@
-import {catalog1983} from './catalog-1983-data.mjs?v=catalog1983-final';
-import {moduleIds} from './core.mjs?v=metal-squares-20261117';
+import {catalog1983} from './catalog-1983-data.mjs?v=seven-special-20261117';
+import {moduleIds} from './core.mjs?v=seven-special-20261117';
 export {catalog1983};
 
 // A bounded source addendum lets production retain its existing base artifacts.
@@ -10,7 +10,7 @@ export function applyCatalog1983(catalog,index,report,patch=catalog1983,evidence
  const prior=index.source_composition;
  const composed=prior&&typeof prior.base_index_sha256==='string'&&prior.base_index_sha256.length>0&&Array.isArray(prior.addenda)&&prior.addenda.length>0&&JSON.stringify(prior)===JSON.stringify(report.source_composition)&&!index._sha256&&!report.index_sha256;
  if((!raw&&!composed)||report.missing_model_count!==0||index.counts.watch!==report.distinct_individual_watch_identifiers)throw Error('Invalid base reconciliation for catalog addendum');
- if(patch.records.every(r=>catalog[r.kind==='module'?'modules':'models'][r.id]?.specs[evidenceField]))return {catalog,index,report};
+ if(patch.records.every(r=>catalog[r.kind==='module'?'modules':'models'][r.id]?.specs[evidenceField])&&Object.entries(patch.category_resolutions||{}).every(([id,c])=>index.records.some(r=>r.id===id&&r.category===c)))return {catalog,index,report};
  const next=structuredClone(catalog),search=structuredClone(index),summary=structuredClone(report);
  const clocks=new Set(patch.clock_identifiers),watches=new Set(patch.watch_identifiers),uncertain=new Set(patch.uncertain_identifiers||[]);
  const sourceIndex=search.sources.length;search.sources.push({path:patch.source_reference,sha256:patch.source_file_sha256});
@@ -30,7 +30,7 @@ export function applyCatalog1983(catalog,index,report,patch=catalog1983,evidence
   if(!row){row={id:record.id,family:record.specs.series||(/^([DG]|AWG)/.test(record.id)?'G-SHOCK':record.id.startsWith('LCW-')?'LINEAGE':clocks.has(record.id)?'Clocks':'Standard / Vintage'),category:clocks.has(record.id)?'clock':'watch',catalog_id:record.id,module_ids:[],origins:[],has_specifications:false};search.records.push(row);byId.set(row.id,row);}
   if(uncertain.has(record.id))row.category='uncertain';
   else if(clocks.has(record.id))row.category='clock';
-  else if(row.category==='uncertain')row.category='watch';
+  else if(row.category==='uncertain'&&watches.has(record.id))row.category='watch';
   row.catalog_id=record.id;
   row.module_ids=[...new Set([...row.module_ids,...moduleIds(target)])];
   row.has_specifications=Boolean(row.has_specifications||record.specs.catalog_material_finish!==undefined||record.specs.water_resistance_m!==undefined||record.specs.dimensions_mm!==undefined||record.specs.color!==undefined);
@@ -38,9 +38,11 @@ export function applyCatalog1983(catalog,index,report,patch=catalog1983,evidence
  }
  for(const pending of patch.unresolved_records||[]){let row=byId.get(pending.id);if(!row){row={id:pending.id,family:'G-SHOCK',category:'uncertain',catalog_id:null,module_ids:[],origins:[],has_specifications:false};search.records.push(row);byId.set(row.id,row)}row.origins.push([sourceIndex,'/unresolved_records/'+pending.id,'unconfirmed_source_label','uncertain']);}
  for(const id of uncertain)if(byId.get(id)?.category!=='uncertain')throw Error('Unconfirmed identifier miscategorized: '+id);
+ for(const [id,category]of Object.entries(patch.category_resolutions||{})){const row=byId.get(id);if(!row||!['watch','package','uncertain'].includes(category))throw Error('Invalid source category resolution: '+id);row.category=category;}
+ for(const id of patch.package_identifiers||[])if(byId.get(id)?.category!=='package')throw Error('Retail package miscategorized: '+id);
  for(const id of watches)if(!byId.has(id)||!['watch','family'].includes(byId.get(id).category))throw Error('Catalog watch omitted: '+id);
  for(const id of clocks)if(byId.get(id)?.category!=='clock')throw Error('Catalog clock not categorized: '+id);
- const counts={all_records:search.records.length,watch:0,family:0,clock:0,fitment:0,uncertain:0};
+ const counts={all_records:search.records.length,watch:0,family:0,clock:0,fitment:0,uncertain:0,package:0};
  for(const row of search.records)counts[row.category]++;
  counts.watch_with_specifications=search.records.filter(r=>r.category==='watch'&&r.has_specifications).length;
  counts.watch_reference_only=counts.watch-counts.watch_with_specifications;
@@ -53,7 +55,7 @@ export function applyCatalog1983(catalog,index,report,patch=catalog1983,evidence
  summary.distinct_raw_identifiers=search.records.length;
  summary.distinct_individual_watch_identifiers=counts.watch;
  summary.models_with_specifications=counts.watch_with_specifications;summary.reference_only_models=counts.watch_reference_only;
- summary.unresolved_identifiers=counts.uncertain;summary.category_counts=Object.fromEntries(['watch','family','clock','fitment','uncertain'].map(k=>[k,counts[k]]));
+ summary.unresolved_identifiers=counts.uncertain;summary.category_counts=Object.fromEntries(['watch','family','clock','fitment','uncertain','package'].map(k=>[k,counts[k]]));
  summary.duplicate_exact_identifiers=summary.total_imported_identifiers-summary.distinct_raw_identifiers;
  const duplicates=new Map((summary.duplicate_identifier_details||[]).map(row=>[row.id,row.occurrences]));
  const originalIds=new Set(index.records.map(row=>row.id));
