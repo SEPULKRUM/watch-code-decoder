@@ -1,14 +1,14 @@
 {
   "source_repository": "SEPULKRUM/casio-watch-specs",
   "source_commit": "063db208a99c106ec555c849ac44303a5f5b8733",
-  "beta_source_commit": "7e7699e3d45e0e5abc2f14572e171b96b7285bbc",
+  "beta_source_commit": "3f23d588b5a0b1930561ae6a29f034fa41d9873d",
   "destination": "https://sepulkrum.github.io/watch-code-decoder/prefixes/",
   "backup": "https://sepulkrum-casio-specs-beta.miniatureagave.chatgpt.site/",
   "individual_watch_identifiers": 29866,
   "files_sha256": {
     "anniversary-data.mjs": "80334d630ee95c82910cd5098f9d89e2d1cd866e96137abf1a35387444770ac1",
     "anniversary.mjs": "3f1756090253ac4ae1a6dbd51922e7f88e30588dc19a6ab4e4060086de715e33",
-    "app.mjs": "b1e9e2ed14c36f82335406d703e2619de4c2ce74f2a65574049fac7f8064db0b",
+    "app.mjs": "5abc2afdd0d7450838ce978e6a25e36255bf248a3d2b6127f3fd961a554a75e2",
     "brand-emblem.svg": "83bd9517dc72df9d8cc459a58c0cd628af583e509aa9c413ce321248cfa2d7b3",
     "build-info.json": "1e2c332b576830c93835c55dfb938279ad9af7cc5140a6ab0babb430c4d0cdb8",
     "catalog-2011-reference.mjs": "843b9e87ba7b132c6874f1ec215234fdb2af278879383812a82bff1f125de492",
@@ -18,11 +18,11 @@
     "core.mjs": "3e02152a5072251a7fcb9fdb242dd8764aaa7585464fd9512b48008b81bdab23",
     "decoder-presentation.mjs": "784fb3c2eecdafbb063391f7e2e4d0e8b4f4af50e8c978a07dbb326d83418a5c",
     "decoder-rules.mjs": "e5fc5bae67f26f5d8c2cf6b22071c951b98e34f6fc41503f69afe76cff764c5b",
-    "decoder.mjs": "617bdb102ba750d2b376a2c08537b117139ef3743ce1ad40d083a57fbb93fa0f",
+    "decoder.mjs": "5e2b7bbc4d269fd048b9b412da2e16e220cbb5888580afe411c2f4b97672d592",
     "english.mjs": "273347dd491b69629be7b793d598e2f5046232a2ef72b20b12e77e7f279c3440",
-    "guide-interpretations.mjs": "25d25fa3253137b9e63c0b93cc34a921e4820bb4a5782c9e7462ec2c4ab09f03",
+    "guide-interpretations.mjs": "dd81c3698cbb7111fa81ab55b7087d3d6ee070475f7ba14ccfe51cec30c55c52",
     "historical-review.mjs": "443e38e042656cbd26322c67fd78f0bc3949ddb47df9940c57f99b25408a4018",
-    "index.html": "ca8056c7ac866697df7267f4f75409265407d48efd77762d2553b57029a255e4",
+    "index.html": "95666a03fe2d71808d51be33258958e16300f48b42b3caa44ecf36c227a1296a",
     "master-research.json": "5c0a524bb267a838b7b649cfef27854307f66581d70432bf6d036901ac83143f",
     "master-research.mjs": "82f6b4e6b05fba6aa063fdac92d0314a5be76757d0e1f060cb0cf4e45b56f8dc",
     "model-references.json": "c573a356050bea4c0b8337ab21e9806dd2b12c34c62f528e5e6ec828b84b306c",
@@ -68,10 +68,11 @@
     "dw-heritage-interpretations.mjs": "86582b29ab65e94772f2b00933b9b4951c911231a00f46340bbf240178afd3ef",
     "model-identity-data.mjs": "fc28d10ca06c2fc182e6f6637fa28d772775288ea2c1b933d494790c0ffc9c7b",
     "official-support.mjs": "fd89ce16243784e4694853262825582cee8feb1697be1619207bfb1f70d33900",
-    "worldwide.mjs": "deeca04ae82886369a37921e14ad9e98fc0313b784965a86d4e122b605c3c774",
+    "worldwide.mjs": "fd6bdf8831cff681885d869ca80cd03f8d912aa3eb189c9765dbfb1dddc670aa",
     "worldwide-data.mjs": "8be856fd79d623a8a2568e5d7b7a07f239c3bc1730edc7d588abc83f96255d40",
-    "master-2026.mjs": "1e2400cdf79d99f70ebd1332dc6823b42823aacb99b877f98a6cb5638c71db9b",
-    "master-2026-data.mjs": "fdbc29027d4313d0b1335fb21deb94ea06f0882b0007867b574ccb3a77cda723"
+    "master-2026.mjs": "c56cec9d1f977aca02eb76ff0cb2291c368672011ad9c34e68a91d7e2ac43c9d",
+    "master-2026-data.mjs": "fdbc29027d4313d0b1335fb21deb94ea06f0882b0007867b574ccb3a77cda723",
+    "scoped-breakdown.mjs": "103f18dcb78d750d8b02d3e42472db663ba98b438ff630a5d120dccacfd21382"
   },
   "public_overrides": [
     "Removed the beta badge and changed the initial status to Public reference. Backup beta remains unchanged.",
@@ -279,5 +280,13 @@
     },
     "validation": "378 tests passed; all current references and additional regional references accessible; old spelling redirects; previous duplicate/status regression cases pass.",
     "publication_method": "Dated technical correction layer; superseded values preserved as history. Original uploads, bulk base datasets and root case-back decoder unchanged."
+  },
+  "segmented_prefix_explanations": {
+    "source_commit": "5031861d463ae8cb1eede7e30bfe194836628513",
+    "documentation": "docs/scoped-prefix-breakdowns.md",
+    "example": "AQ | 240 | EAC | 3A",
+    "scope": "Validated model-specific supplied segmentations replace generic combined series tokens. Whole family codes and existing finer scoped suffix explanations are retained. Unsupported acronym meanings remain unresolved.",
+    "validation": "All 203 current master reference segment boundaries validated in source and public decoder; full, compact, base and regional AQ examples covered.",
+    "data_changes": "No watch identities, physical specifications, module profiles or counts changed."
   }
 }

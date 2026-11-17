@@ -1,8 +1,9 @@
+import {applySuppliedBreakdown,findBreakdownRow} from './scoped-breakdown.mjs?v=prefix-blocks-20261117';
 import {worldwide} from './worldwide-data.mjs';
 const compact=s=>String(s||'').toUpperCase().replace(/[^A-Z0-9]/g,'');
 const models=new Map(worldwide.records.map(r=>[compact(r.id),r]));
 export function applyWorldwideInterpretations(result){
- const record=models.get(compact(result.normalized));if(!record)return result;
+ const record=models.get(compact(result.normalized));const rows=record?record.specs.worldwide_evidence.observations:worldwide.records.filter(r=>r.kind==='model').flatMap(r=>r.specs.worldwide_evidence.observations);const breakdown=findBreakdownRow(result,rows);if(!record)return breakdown?applySuppliedBreakdown(result,breakdown,'https://github.com/SEPULKRUM/casio-watch-specs/blob/main/'+worldwide.source_reference):result;
  const notes=[];
  for(const row of record.specs.worldwide_evidence.observations){
   const parts=row.model_code_breakdown||row.code_breakdown||row.individual_code_breakdown||[];
@@ -13,5 +14,5 @@ export function applyWorldwideInterpretations(result){
  }
  const source='https://github.com/SEPULKRUM/casio-watch-specs/blob/main/'+worldwide.source_reference;
  result.guideNotes=[...(result.guideNotes||[]),...[...new Set(notes)].map(text=>({text:'Supplied exact-model research — pending independent verification: '+text,source,status:'community_interpretation'}))];
- return result;
+ return breakdown?applySuppliedBreakdown(result,breakdown,source):result;
 }

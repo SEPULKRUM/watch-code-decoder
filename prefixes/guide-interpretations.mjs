@@ -1,5 +1,5 @@
-import {applyMaster2026Interpretations} from './master-2026.mjs';
-import {applyWorldwideInterpretations} from './worldwide.mjs';
+import {applyMaster2026Interpretations} from './master-2026.mjs?v=prefix-blocks-20261117';
+import {applyWorldwideInterpretations} from './worldwide.mjs?v=prefix-blocks-20261117';
 import {applyDwHeritageInterpretations} from './dw-heritage-interpretations.mjs?v=dw-heritage-20261117';
 import {applyOceanWaveInterpretations} from './ocean-wave-interpretations.mjs?v=ocean-wave-20261117';
 import {applyMudFrogInterpretations} from './mud-frog-interpretations.mjs?v=mud-frog-20261117';

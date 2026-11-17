@@ -1,5 +1,5 @@
 import {master2026} from './master-2026-data.mjs';
-import {applyMaster2026,canonical2026Reference} from './master-2026.mjs';
+import {applyMaster2026,canonical2026Reference} from './master-2026.mjs?v=prefix-blocks-20261117';
 import {worldwide} from './worldwide-data.mjs';
 import {officialSupportForModel} from './official-support.mjs?v=model-identity-20261117';
 import {dwHeritage} from './dw-heritage-data.mjs?v=dw-heritage-20261117';
@@ -28,7 +28,7 @@ import {historicalReview} from './historical-review.mjs?v=7c8896384ae6cc00';
 import {guideReferenceSections} from './guide-interpretations.mjs?v=dw-heritage-20261117';
 import {decoderDisclosure,decoderRules,evidenceName} from './decoder-rules.mjs?v=7c8896384ae6cc00';
 import {value,moduleIds,findModels,stats,safeUrl,validateData,label,display,evidenceLabel,recordEvidenceLabel} from './core.mjs?v=ua-archive-20261116';
-import {decodeModel,entries} from './decoder.mjs?v=master26-20261117';
+import {decodeModel,entries} from './decoder.mjs?v=prefix-blocks-20261117';
 import {validateReferences,findReferences,referenceStatus} from './model-references.mjs?v=7c8896384ae6cc00';
 import {modelColor,officialProductLink} from './decoder-presentation.mjs?v=7c8896384ae6cc00';
 import {validateParts,partsForModel} from './parts.mjs?v=7c8896384ae6cc00';
