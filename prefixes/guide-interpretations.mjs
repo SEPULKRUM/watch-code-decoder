@@ -1,3 +1,4 @@
+import {applyDwHeritageInterpretations} from './dw-heritage-interpretations.mjs?v=dw-heritage-20261117';
 import {applyOceanWaveInterpretations} from './ocean-wave-interpretations.mjs?v=ocean-wave-20261117';
 import {applyMudFrogInterpretations} from './mud-frog-interpretations.mjs?v=mud-frog-20261117';
 import {applySeriesInterpretations} from './series-interpretations.mjs?v=series-pdfs-20261117';
@@ -62,7 +63,7 @@ export function applyGuide(result,{modifier,number,seriesTail,tail}){
  const shade={'1A':'Black','2A1':'Deep blue','2A2':'Ice blue','2A3':'Turquoise / teal','7A':'White / silver'}[tail.replace(/(?:VER|ER|JF|CR|DR|DF|J|V)$/,'')];
  if(shade)notes.push({page:4,text:`For this MTP-E735AR variant, the guide identifies the dial colour as ${shade}.`});
  }
- result.guideNotes=notes;return applyOceanWaveInterpretations(applyMudFrogInterpretations(applySeriesInterpretations(applyLineageInterpretation(applyAnniversary(applyOwnerModifier(result,modifier)),{modifier,number,seriesTail,tail}),{modifier,number,seriesTail,tail}),{modifier,number,seriesTail,tail}),{modifier,number,seriesTail,tail});
+ result.guideNotes=notes;return applyDwHeritageInterpretations(applyOceanWaveInterpretations(applyMudFrogInterpretations(applySeriesInterpretations(applyLineageInterpretation(applyAnniversary(applyOwnerModifier(result,modifier)),{modifier,number,seriesTail,tail}),{modifier,number,seriesTail,tail}),{modifier,number,seriesTail,tail}),{modifier,number,seriesTail,tail}));
 }
 
 // Complete interpreted coverage is browsable without knowing a model to search.
