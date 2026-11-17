@@ -1,4 +1,4 @@
-import {modelIdentityRules,modelIdentitySource} from './model-identity-data.mjs?v=model-identity-20261117';
+import {modelIdentityRules,modelIdentitySource} from './model-identity-data.mjs';
 // Presentation grouping only. Original identifiers, categories, evidence and facts remain unchanged.
 const cached=new WeakMap();
 const fields=['dimensions_mm','weight_g','case_material','band_material','glass','color','display_polarity'];
@@ -10,7 +10,7 @@ function conflict(catalog,a,b){
  if(a.module_ids.length&&b.module_ids.length&&!a.module_ids.some(id=>b.module_ids.includes(id)))return true;
  return fields.some(f=>{const x=value(catalog,a,f),y=value(catalog,b,f);return x!==undefined&&y!==undefined&&stable(norm(x))!==stable(norm(y))});
 }
-function root(id){const base=id.match(/^(.+-[1-9][A-Z0-9]*?)(?:JF|ER|DR|CR|DF)$/)?.[1]||id;return modelIdentityRules.aliases[base]||base;}
+function root(id){const base=id.match(/^(.+-[1-9][A-Z0-9]*?)(?:JF|JR|ER|DR|CR|DF)$/)?.[1]||id;return modelIdentityRules.aliases[base]||base;}
 function score(catalog,row){return (row.has_checked_fields?100000:0)+(row.catalog_id?10000:0)+row.module_ids.length*100+Object.keys(catalog.models[row.catalog_id||row.id]?.specs||{}).length;}
 function prepare(index,catalog){
  let saved=cached.get(index);if(saved?.catalog===catalog)return saved;

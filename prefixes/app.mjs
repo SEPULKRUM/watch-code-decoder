@@ -1,7 +1,7 @@
 import {worldwide} from './worldwide-data.mjs';
 import {officialSupportForModel} from './official-support.mjs?v=model-identity-20261117';
 import {dwHeritage} from './dw-heritage-data.mjs?v=dw-heritage-20261117';
-import {regionalGroupFor,regionalModelSummary} from './regional-models.mjs?v=model-identity-20261117';
+import {regionalGroupFor,regionalModelSummary} from './regional-models.mjs?v=jr-grouping-20261117';
 import {reconcileFamilyLabels} from './family-classification.mjs?v=regional-groups-20261117';
 import {oceanWave} from './ocean-wave-data.mjs?v=ocean-wave-20261117';
 import {mudFrog} from './mud-frog-data.mjs?v=mud-frog-20261117';
@@ -11,7 +11,7 @@ import {metalSquares} from './metal-squares-data.mjs?v=metal-squares-20261117';
 import {moduleComparison} from './module-comparison-data.mjs?v=module-comparison-20261117';
 import {researchPdfs} from './research-pdfs-data.mjs?v=three-pdfs-20261117';
 import {applyCatalog1983,catalog1983EvidenceForModel,catalog1983} from './catalog-1983.mjs?v=regional-groups-20261117';
-import {validateSearchIndex,searchUnified,indexedModel,exactIndexedModels,modelForDetail,indexedStatus,unifiedFamilyCounts,inSearchMode,fitmentContext} from './unified-search.mjs?v=model-identity-20261117';
+import {validateSearchIndex,searchUnified,indexedModel,exactIndexedModels,modelForDetail,indexedStatus,unifiedFamilyCounts,inSearchMode,fitmentContext} from './unified-search.mjs?v=jr-grouping-20261117';
 import {englishText,nonEnglishScript} from './english.mjs?v=7c8896384ae6cc00';
 import {creatorVideosForModel} from './creator-videos.mjs?v=ocean-wave-20261117';
 import {presentationFacts} from './specification-display.mjs?v=7c8896384ae6cc00';
