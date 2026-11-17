@@ -1,14 +1,14 @@
 {
   "source_repository": "SEPULKRUM/casio-watch-specs",
   "source_commit": "063db208a99c106ec555c849ac44303a5f5b8733",
-  "beta_source_commit": "c629957a8efde0dc428aaed63525a61d15e72e60",
+  "beta_source_commit": "d02b1d3c5a3d622887a7d92cd6227eb0c54fbeb1",
   "destination": "https://sepulkrum.github.io/watch-code-decoder/prefixes/",
   "backup": "https://sepulkrum-casio-specs-beta.miniatureagave.chatgpt.site/",
-  "individual_watch_identifiers": 29215,
+  "individual_watch_identifiers": 29229,
   "files_sha256": {
     "anniversary-data.mjs": "80334d630ee95c82910cd5098f9d89e2d1cd866e96137abf1a35387444770ac1",
     "anniversary.mjs": "f0d0a0f9b16e2a42f08810f0840cb77654c53c98113da3e90f7d7c0f72467781",
-    "app.mjs": "77972f69f0a15e14bc5772bd6919f5c1942aaabb9264fddba71f021155a14886",
+    "app.mjs": "28a63294c22b1ac2749d2e4fa00819e57f0e6e55e4d08e16f0021da3fcfb8c73",
     "brand-emblem.svg": "83bd9517dc72df9d8cc459a58c0cd628af583e509aa9c413ce321248cfa2d7b3",
     "build-info.json": "1e2c332b576830c93835c55dfb938279ad9af7cc5140a6ab0babb430c4d0cdb8",
     "catalog-2011-reference.mjs": "843b9e87ba7b132c6874f1ec215234fdb2af278879383812a82bff1f125de492",
@@ -22,7 +22,7 @@
     "english.mjs": "273347dd491b69629be7b793d598e2f5046232a2ef72b20b12e77e7f279c3440",
     "guide-interpretations.mjs": "482fc5e78e4e9ccc91376189821f2ea6cf2cb175fd71a84ff91ff8b64242bd20",
     "historical-review.mjs": "443e38e042656cbd26322c67fd78f0bc3949ddb47df9940c57f99b25408a4018",
-    "index.html": "51e917ca7713f5a1261d70efaf869ac2cd2c571fbd684bd70ef54a80839cd28e",
+    "index.html": "17949225fe3fc5ba9cfa7e23c201cd99b130b90b711f6d4b542ac31a4a4bc065",
     "master-research.json": "5c0a524bb267a838b7b649cfef27854307f66581d70432bf6d036901ac83143f",
     "master-research.mjs": "82f6b4e6b05fba6aa063fdac92d0314a5be76757d0e1f060cb0cf4e45b56f8dc",
     "model-references.json": "c573a356050bea4c0b8337ab21e9806dd2b12c34c62f528e5e6ec828b84b306c",
@@ -49,7 +49,8 @@
     "awg-m520ua.mjs": "79e3db2ab3451c427734a578b1c353e2486610351f39566d85ac0b4f608cee8e",
     "creator-videos.mjs": "e19bc7bd1aa87b91c5afc405b790385aa9cc9bb6dfcac4f9624e0399155920f8",
     "catalog-1983-data.mjs": "e5611b5f1dc419060f36e42120e7182e0d4dada0368e988fdfb31324c796307a",
-    "catalog-1983.mjs": "14709595137030bce40359d7a7d5f183cc061d65f27c0afb0bc267cd203ec4f4"
+    "catalog-1983.mjs": "b302a8ac7a5fd89cde024c76e7f52139230e0dab2967fd6cc391f6a8499178c1",
+    "research-pdfs-data.mjs": "dc67e28ba4f0a445d0ee4bd8cc0a1e6e4d64c666157561603aff957f9e0a7567"
   },
   "public_overrides": [
     "Removed the beta badge and changed the initial status to Public reference. Backup beta remains unchanged.",
@@ -63,7 +64,8 @@
     "Show owner playlist for every watch with a recorded module 3159 or 3495 association; do not infer module from model family.",
     "Add owner-supplied vintage-square restoration videos, scoped C suffix interpretations, and module 240/691/901 playlist. Notes remain owner claims, not archived Casio verification; preserve root decoder and bulk datasets.",
     "Apply the complete 24-image supplied catalog's technical transcription: exact-reference search, separately scoped watch/module facts and clocks, source/service notes, and recalculated composite reconciliation. Preserve original bulk base files and root decoder.",
-    "Add owner-provided LCW-M200DJ-2AJF video and show exact video mappings in decoded results even before specifications exist. Shared-chat contents were unavailable; no specifications or parts inferred."
+    "Add owner-provided LCW-M200DJ-2AJF video and show exact video mappings in decoded results even before specifications exist. Shared-chat contents were unavailable; no specifications or parts inferred.",
+    "Apply technical research from three supplied PDFs after successful private beta publication: exact variants, separate module functions, production estimates and related-model parts scope; preserve existing verified facts, root decoder and bulk base artifacts."
   ],
   "ui_notes_source_commit": "8ffd8c52f7eb1c2fe0bab4798638b76ce8286cf6",
   "base_individual_watch_identifiers": 29148,
@@ -75,5 +77,13 @@
     "clocks": 5,
     "publication_method": "Validated base snapshot plus bounded pending technical source addendum; no uploaded scans or bulk base artifact replacements."
   },
-  "creator_video_source_commit": "4da32c3173550b1ee4f04c9fa2bb05e9d3d36579"
+  "creator_video_source_commit": "4da32c3173550b1ee4f04c9fa2bb05e9d3d36579",
+  "technical_research_addendum": {
+    "source_commit": "5fcbe5d8bccd176bd3349d291d40110b17a1eee4",
+    "source_reference": "research/supplied-three-pdf-research-2026-11-17.json",
+    "watch_identifiers": 19,
+    "module_profiles": 3,
+    "status": "Supplied conversation research pending independent verification; exact archived corroboration is scoped separately",
+    "publication_method": "Bounded technical transcription; no original PDFs, full conversations, root decoder or bulk base dataset changes."
+  }
 }

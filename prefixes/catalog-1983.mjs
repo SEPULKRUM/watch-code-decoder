@@ -1,14 +1,16 @@
 import {catalog1983} from './catalog-1983-data.mjs?v=catalog1983-final';
-import {moduleIds} from './core.mjs?v=catalog1983';
+import {moduleIds} from './core.mjs?v=three-pdfs-20261117';
 export {catalog1983};
 
 // A bounded source addendum lets production retain its existing base artifacts.
 // Base checksums are validated before composition; source claims never overwrite
 // existing facts, and the composed reconciliation explicitly identifies its inputs.
-export function applyCatalog1983(catalog,index,report){
- const patch=catalog1983;
- if(index._sha256!==report.index_sha256||report.missing_model_count!==0||index.counts.watch!==report.distinct_individual_watch_identifiers)throw Error('Invalid base reconciliation for catalog addendum');
- if(patch.records.every(r=>catalog[r.kind==='module'?'modules':'models'][r.id]?.specs.catalog_1983_evidence))return {catalog,index,report};
+export function applyCatalog1983(catalog,index,report,patch=catalog1983,evidenceField="catalog_1983_evidence"){
+ const raw=typeof index._sha256==='string'&&index._sha256===report.index_sha256;
+ const prior=index.source_composition;
+ const composed=prior&&typeof prior.base_index_sha256==='string'&&prior.base_index_sha256.length>0&&Array.isArray(prior.addenda)&&prior.addenda.length>0&&JSON.stringify(prior)===JSON.stringify(report.source_composition)&&!index._sha256&&!report.index_sha256;
+ if((!raw&&!composed)||report.missing_model_count!==0||index.counts.watch!==report.distinct_individual_watch_identifiers)throw Error('Invalid base reconciliation for catalog addendum');
+ if(patch.records.every(r=>catalog[r.kind==='module'?'modules':'models'][r.id]?.specs[evidenceField]))return {catalog,index,report};
  const next=structuredClone(catalog),search=structuredClone(index),summary=structuredClone(report);
  const clocks=new Set(patch.clock_identifiers),watches=new Set(patch.watch_identifiers);
  const sourceIndex=search.sources.length;search.sources.push({path:patch.source_reference,sha256:patch.source_file_sha256});
@@ -21,16 +23,16 @@ export function applyCatalog1983(catalog,index,report){
    if(field==='module_id'&&(target.module&&String(target.module)!==String(value)||target.specs.module_candidates))continue;
    const current=target.specs[field];
    if(current){if(JSON.stringify(current.value)!==JSON.stringify(value))withheld.push({kind:record.kind,id:record.id,field});continue;}
-   target.specs[field]={value,status:'pending_review',uncertainty:'Supplied catalog transcription; not independently archive-verified. Exact printed model scope only.',sources:[{kind:'user_provided',provided_by:'SEPULKRUM',permission:'user_provided',reference:patch.source_reference,source_sha256:patch.source_sha256,accessed:patch.received,locator:record.kind==='module'?`Module ${record.id} technical table; see scoped page references`:`${record.id} caption; see scoped image/page references`,evidence:`${record.id}: ${field} = ${JSON.stringify(value)}`} ]};
+   target.specs[field]={value,status:'pending_review',uncertainty:evidenceField==='research_pdf_evidence'?'Owner-supplied research conversation; pending independent verification; retain exact model, estimate and fitment scope.':'Supplied catalog transcription; not independently archive-verified. Exact printed model scope only.',sources:[{kind:'user_provided',provided_by:'SEPULKRUM',permission:'user_provided',reference:patch.source_reference,source_sha256:patch.source_sha256,accessed:patch.received,locator:record.kind==='module'?`Module ${record.id} technical table; see scoped page references`:`${record.id} caption; see scoped image/page references`,evidence:`${record.id}: ${field} = ${JSON.stringify(value)}`} ]};
   }
   if(record.kind==='module')continue;
   let row=byId.get(record.id);
-  if(!row){row={id:record.id,family:record.id==='DW-5000C'?'G-SHOCK':clocks.has(record.id)?'Clocks':'Standard / Vintage',category:clocks.has(record.id)?'clock':'watch',catalog_id:record.id,module_ids:[],origins:[],has_specifications:false};search.records.push(row);byId.set(row.id,row);}
+  if(!row){row={id:record.id,family:record.specs.series||(/^([DG]|AWG)/.test(record.id)?'G-SHOCK':record.id.startsWith('LCW-')?'LINEAGE':clocks.has(record.id)?'Clocks':'Standard / Vintage'),category:clocks.has(record.id)?'clock':'watch',catalog_id:record.id,module_ids:[],origins:[],has_specifications:false};search.records.push(row);byId.set(row.id,row);}
   if(clocks.has(record.id))row.category='clock';
   else if(row.category==='uncertain')row.category='watch';
   row.catalog_id=record.id;
   row.module_ids=[...new Set([...row.module_ids,...moduleIds(target)])];
-  row.has_specifications=Boolean(row.has_specifications||record.specs.catalog_material_finish!==undefined||record.specs.water_resistance_m!==undefined);
+  row.has_specifications=Boolean(row.has_specifications||record.specs.catalog_material_finish!==undefined||record.specs.water_resistance_m!==undefined||record.specs.dimensions_mm!==undefined||record.specs.color!==undefined);
   row.origins.push([sourceIndex,'/records/'+record.id,'supplied_catalog_caption',row.category]);
  }
  for(const id of watches)if(!byId.has(id)||!['watch','family'].includes(byId.get(id).category))throw Error('Catalog watch omitted: '+id);
@@ -41,7 +43,7 @@ export function applyCatalog1983(catalog,index,report){
  counts.watch_reference_only=counts.watch-counts.watch_with_specifications;
  counts.catalog_records=Object.keys(next.models).length;counts.catalog_watch_records=search.records.filter(r=>r.category==='watch'&&r.catalog_id).length;
  search.counts=counts;search.records.sort((a,b)=>a.id.localeCompare(b.id));
- const lineage={base_index_sha256:index._sha256,addendum_file_sha256:patch.source_file_sha256,source_reference:patch.source_reference};
+ const lineage={base_index_sha256:prior?.base_index_sha256||index._sha256,addenda:[...(prior?.addenda||[]),{addendum_file_sha256:patch.source_file_sha256,source_reference:patch.source_reference}]};
  search.source_composition=lineage;delete search._sha256;
  summary.source_composition=lineage;delete summary.index_sha256;
  summary.total_imported_identifiers+=patch.identifier_occurrences.length;
@@ -56,7 +58,9 @@ export function applyCatalog1983(catalog,index,report){
  summary.duplicate_identifier_details=[...duplicates].filter(([,n])=>n>1).map(([id,occurrences])=>({id,occurrences}));summary.identifiers_with_exact_duplicates=summary.duplicate_identifier_details.length;
  summary.expected_eligible_individual_identifiers=search.records.filter(r=>r.category==='watch').map(r=>r.id);
  summary.models_missing_from_published_search_index=[];summary.missing_model_count=0;
- summary.catalog_addendum={watch_references:watches.size,clocks:clocks.size,modules:patch.records.filter(r=>r.kind==='module').length,retained_existing_scalar_values:withheld};
+ const addendumSummary={watch_references:watches.size,clocks:clocks.size,modules:patch.records.filter(r=>r.kind==='module').length,retained_existing_scalar_values:withheld};
+ summary.source_addenda=[...(summary.source_addenda||[]),{source_reference:patch.source_reference,...addendumSummary}];
+ if(evidenceField==='catalog_1983_evidence')summary.catalog_addendum=addendumSummary;
  return {catalog:next,index:search,report:summary};
 }
 
