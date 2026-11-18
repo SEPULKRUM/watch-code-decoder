@@ -1,14 +1,14 @@
 {
   "source_repository": "SEPULKRUM/casio-watch-specs",
   "source_commit": "063db208a99c106ec555c849ac44303a5f5b8733",
-  "beta_source_commit": "3f23d588b5a0b1930561ae6a29f034fa41d9873d",
+  "beta_source_commit": "8e0c5e6d87a443477bdf54e4df42a6a4839c5cc0",
   "destination": "https://sepulkrum.github.io/watch-code-decoder/prefixes/",
   "backup": "https://sepulkrum-casio-specs-beta.miniatureagave.chatgpt.site/",
   "individual_watch_identifiers": 29866,
   "files_sha256": {
     "anniversary-data.mjs": "80334d630ee95c82910cd5098f9d89e2d1cd866e96137abf1a35387444770ac1",
     "anniversary.mjs": "3f1756090253ac4ae1a6dbd51922e7f88e30588dc19a6ab4e4060086de715e33",
-    "app.mjs": "5abc2afdd0d7450838ce978e6a25e36255bf248a3d2b6127f3fd961a554a75e2",
+    "app.mjs": "d0ce94d9777da207f3dcc6fde6acd5f61d3a2f183bb395390d532c76bdfb8dfc",
     "brand-emblem.svg": "83bd9517dc72df9d8cc459a58c0cd628af583e509aa9c413ce321248cfa2d7b3",
     "build-info.json": "1e2c332b576830c93835c55dfb938279ad9af7cc5140a6ab0babb430c4d0cdb8",
     "catalog-2011-reference.mjs": "843b9e87ba7b132c6874f1ec215234fdb2af278879383812a82bff1f125de492",
@@ -18,11 +18,11 @@
     "core.mjs": "3e02152a5072251a7fcb9fdb242dd8764aaa7585464fd9512b48008b81bdab23",
     "decoder-presentation.mjs": "784fb3c2eecdafbb063391f7e2e4d0e8b4f4af50e8c978a07dbb326d83418a5c",
     "decoder-rules.mjs": "e5fc5bae67f26f5d8c2cf6b22071c951b98e34f6fc41503f69afe76cff764c5b",
-    "decoder.mjs": "5e2b7bbc4d269fd048b9b412da2e16e220cbb5888580afe411c2f4b97672d592",
+    "decoder.mjs": "94a0c0947a9de6acd82c24266d2d62d80500381a84f949e34ed683c544240b1a",
     "english.mjs": "273347dd491b69629be7b793d598e2f5046232a2ef72b20b12e77e7f279c3440",
-    "guide-interpretations.mjs": "dd81c3698cbb7111fa81ab55b7087d3d6ee070475f7ba14ccfe51cec30c55c52",
+    "guide-interpretations.mjs": "528554e893f0cc091ba753f8e7a116f41d3fb5320fa28e16df079030fb7fb48a",
     "historical-review.mjs": "443e38e042656cbd26322c67fd78f0bc3949ddb47df9940c57f99b25408a4018",
-    "index.html": "95666a03fe2d71808d51be33258958e16300f48b42b3caa44ecf36c227a1296a",
+    "index.html": "59f284616db91a9547843be81ade4a110a5d8dc8c6ce5401b9d81fa6b2fd5f9d",
     "master-research.json": "5c0a524bb267a838b7b649cfef27854307f66581d70432bf6d036901ac83143f",
     "master-research.mjs": "82f6b4e6b05fba6aa063fdac92d0314a5be76757d0e1f060cb0cf4e45b56f8dc",
     "model-references.json": "c573a356050bea4c0b8337ab21e9806dd2b12c34c62f528e5e6ec828b84b306c",
@@ -39,9 +39,9 @@
     "research-prefix-data.mjs": "225bd87a4622b3edd8a6db1eac7fcb5e3e76be6a435ef16a7502a1f24b2a1e7e",
     "search-index.json": "d363c1c7ec9ca03acec69516f133008138573f1b6aaf5600812ed36b1b902b54",
     "specification-display.mjs": "9d2c78f7b1e86229ca3d01bd7cb70577738a6ded47bb0e86afef5e3275efebb9",
-    "style.css": "f8953ae3cf33313f6ad535a31d2bca8dc5f5254030d6fba65f479a1b208051a2",
+    "style.css": "45e28d8c8001555726186a7c570b1a9064cec5885c16d440c6c5fa1579738d34",
     "unified-models.csv": "5c44b696f552b2d2a732de03c7ad9b2c88e1eea9774fc01182c794b36a9755ca",
-    "unified-search.mjs": "0b30198a768f07346441c2d90642b23f0f73fed4617362b7a82850a8d5340c18",
+    "unified-search.mjs": "e7a20e7ccf0feb0043fc702d488a9569ac64311482ad6b6c60cc51b063798817",
     "variant-interpretations.mjs": "65eee0ee326d5be8c36475811c1435a5b14f658eb835ac398b312a0f34c5e7c0",
     "watches.csv": "b533f84b4415d587dcba5566efcd033550990a6c3614082bfba03850e53ac728",
     "watchnavi-reference.mjs": "ecf17e595a422767d8ec87db498c6f972d4d2b45607c73a02fce1fcfdd03736d",
@@ -68,11 +68,13 @@
     "dw-heritage-interpretations.mjs": "86582b29ab65e94772f2b00933b9b4951c911231a00f46340bbf240178afd3ef",
     "model-identity-data.mjs": "fc28d10ca06c2fc182e6f6637fa28d772775288ea2c1b933d494790c0ffc9c7b",
     "official-support.mjs": "fd89ce16243784e4694853262825582cee8feb1697be1619207bfb1f70d33900",
-    "worldwide.mjs": "fd6bdf8831cff681885d869ca80cd03f8d912aa3eb189c9765dbfb1dddc670aa",
+    "worldwide.mjs": "dc458222e63eddb0bd581ba617890075695eed47d91b77452d2636dcfe6a66f7",
     "worldwide-data.mjs": "8be856fd79d623a8a2568e5d7b7a07f239c3bc1730edc7d588abc83f96255d40",
-    "master-2026.mjs": "c56cec9d1f977aca02eb76ff0cb2291c368672011ad9c34e68a91d7e2ac43c9d",
+    "master-2026.mjs": "79b565df842e6d7bb36a4e2190aca7e0d893f7c590a0d5f9508ad73f67d472a4",
     "master-2026-data.mjs": "fdbc29027d4313d0b1335fb21deb94ea06f0882b0007867b574ccb3a77cda723",
-    "scoped-breakdown.mjs": "103f18dcb78d750d8b02d3e42472db663ba98b438ff630a5d120dccacfd21382"
+    "scoped-breakdown.mjs": "a7482641e5619096bef95d1469690d01a0e6245ecc5459971cd21372a1562b78",
+    "official-casio-links.mjs": "0fa0c02ec1cb01df8262833ee2e07f431ba6893842fca0cbbc55e0120591f00a",
+    "official-casio-links-data.mjs": "2fd3f96e0768765d324d1273eb218fd9e3b30afadf493dfe23330b5a963e981f"
   },
   "public_overrides": [
     "Removed the beta badge and changed the initial status to Public reference. Backup beta remains unchanged.",
@@ -288,5 +290,30 @@
     "scope": "Validated model-specific supplied segmentations replace generic combined series tokens. Whole family codes and existing finer scoped suffix explanations are retained. Unsupported acronym meanings remain unresolved.",
     "validation": "All 203 current master reference segment boundaries validated in source and public decoder; full, compact, base and regional AQ examples covered.",
     "data_changes": "No watch identities, physical specifications, module profiles or counts changed."
-  }
+  },
+  "official_casio_destinations": {
+    "source_commit": "64bfe3a81ab08cf90f10f02fe7334c2f0b03e0b3",
+    "reconciliation_commit": "6df95da029953a9b4f47859b7f7145b1a52a4a18",
+    "source_reference": "research/official-casio-link-checks-2026-11-17.json",
+    "checked_reference_groups": 5123,
+    "requests": 5854,
+    "official_sitemaps": 32,
+    "live_watch_identifiers": 29866,
+    "live_coverage": {
+      "product": 3235,
+      "support": 2317,
+      "homepage": 24314
+    },
+    "missing_official_links": 0,
+    "policy": "Checked official product page with specifications, then checked support/service page, otherwise explicit Casio homepage. No guessed model URLs or sibling-variant links."
+  },
+  "prefix_application_audit": {
+    "source_commit": "64bfe3a81ab08cf90f10f02fe7334c2f0b03e0b3",
+    "report": "research/prefix-application-audit.json",
+    "cases": 1371,
+    "syntax_groupings_corrected": 105,
+    "missing_applications": 0,
+    "scope": "Supplied model tokenizations, owner/community prefixes, guide examples and PDF contexts. Unknown and historically ambiguous meanings retain scope; no official universal acronym key is claimed."
+  },
+  "validation": "390 tests passed, including coverage of every retained watch identifier and the supplied prefix application audit."
 }

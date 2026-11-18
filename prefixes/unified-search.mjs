@@ -1,3 +1,4 @@
+import {displaySuppliedRecord} from './scoped-breakdown.mjs?v=official-audit-20261117';
 import {groupRegionalMatches,isBaseReference} from './regional-models.mjs?v=master26-20261117';
 import {englishText} from './english.mjs';
 import {moduleIds} from './core.mjs';
@@ -36,7 +37,7 @@ function prepared(index,catalog,master){
   const byId=new Map(),exact=new Map();
   const rows=index.records.map(row=>{
    const model=row.catalog_id?catalog.models[row.catalog_id]:null,key=compact(row.id);
-   const ownFacts=model?Object.fromEntries(Object.entries(model.specs).filter(([k])=>!model.specs.master_2026_evidence||!['worldwide_evidence','master_research_reference'].includes(k)).map(([k,f])=>[k,k==='master_2026_evidence'?Object.fromEntries(Object.entries(f.value.current_record).filter(([field])=>field!=='historical_field_values')):f.value])):{};
+   const ownFacts=model?Object.fromEntries(Object.entries(model.specs).filter(([k])=>!model.specs.master_2026_evidence||!['worldwide_evidence','master_research_reference'].includes(k)).map(([k,f])=>[k,k==='master_2026_evidence'?Object.fromEntries(Object.entries(displaySuppliedRecord(f.value.current_record)).filter(([field])=>field!=='historical_field_values')):f.value])):{};
    const checkedFacts=model?Object.fromEntries(Object.entries(model.specs).filter(([,f])=>f.status==='verified').map(([k,f])=>[k,f.value])):{};
    const candidate=master&&row.master_row!==undefined?master.models[row.master_row]:null;const raw=candidate?.model_id===row.id?candidate:null;
    const modules=row.module_ids.map(id=>catalog.modules[id]?.specs).filter(Boolean);

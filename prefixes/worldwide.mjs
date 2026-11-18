@@ -1,4 +1,4 @@
-import {applySuppliedBreakdown,findBreakdownRow} from './scoped-breakdown.mjs?v=prefix-blocks-20261117';
+import {applySuppliedBreakdown,findBreakdownRow} from './scoped-breakdown.mjs?v=official-audit-20261117';
 import {worldwide} from './worldwide-data.mjs';
 const compact=s=>String(s||'').toUpperCase().replace(/[^A-Z0-9]/g,'');
 const models=new Map(worldwide.records.map(r=>[compact(r.id),r]));
@@ -7,6 +7,7 @@ export function applyWorldwideInterpretations(result){
  const notes=[];
  for(const row of record.specs.worldwide_evidence.observations){
   const parts=row.model_code_breakdown||row.code_breakdown||row.individual_code_breakdown||[];
+  if(parts&&!Array.isArray(parts))for(const [key,text]of Object.entries(parts))if(typeof text==='string'&&/interpretation|unverified_letter_meanings/.test(key))notes.push(`${key.replaceAll('_',' ')}: ${text}`);
   if(Array.isArray(parts))for(const p of parts)if(p.interpretation)notes.push(`${p.component||p.value||'Code'}: ${p.interpretation} (${p.classification||p.confidence||p.verification||'supplied interpretation'}).`);
   if(row.decoded_model_code)for(const p of Object.values(row.decoded_model_code))if(p?.meaning)notes.push(`${p.code||'Code'}: ${p.meaning}.`);
   if(row.family_specific_suffix_note)notes.push(row.family_specific_suffix_note);

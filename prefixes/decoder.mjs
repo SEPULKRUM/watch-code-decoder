@@ -1,8 +1,9 @@
-import {canonical2026Reference,applyMaster2026Interpretations} from './master-2026.mjs?v=prefix-blocks-20261117';
+import {applyWorldwideInterpretations} from './worldwide.mjs?v=official-audit-20261117';
+import {canonical2026Reference,applyMaster2026Interpretations} from './master-2026.mjs?v=official-audit-20261117';
 import {normalizeAnniversary} from './anniversary.mjs?v=recrystallized-20261117';
 import {decodeAwgM520ua} from './awg-m520ua.mjs?v=creator-20261116';
 import {ownerPattern} from './owner-prefix-readings.mjs?v=7c8896384ae6cc00';
-import {applyGuide} from './guide-interpretations.mjs?v=prefix-blocks-20261117';
+import {applyGuide} from './guide-interpretations.mjs?v=official-audit-20261117';
 import {prefixMeaning} from './prefix-meanings.mjs?v=7c8896384ae6cc00';
 import {appearanceForModel,variantOrderInterpretation} from './variant-interpretations.mjs?v=7c8896384ae6cc00';
 import {normalizeKnownModel,normalizeBCModel,modelRule,splitVariant,ruleSources} from './decoder-rules.mjs?v=7c8896384ae6cc00';
@@ -33,7 +34,7 @@ export function decodeModel(input,data=null,references=null){
  const suppliedPattern=ownerPattern(key);
  let family=[...entries].sort((a,b)=>b[1].length-a[1].length).find(e=>key===e[1]||(key.startsWith(e[1])&&/\d/.test(key.slice(e[1].length))));
  if(suppliedPattern){const suppliedFamily=suppliedPattern.code.split('-')[0];family=entries.find(e=>e[1]===suppliedFamily)||family;}
- if(!family)return applyMaster2026Interpretations({recognized:false,reason:'This prefix is not yet covered by the reference. The model may still be valid.',normalized:cleaned,segments:[],exact,references:matches});
+ if(!family)return applyMaster2026Interpretations(applyWorldwideInterpretations({recognized:false,reason:'This prefix is not yet covered by the reference. The model may still be valid.',normalized:cleaned,segments:[],exact,references:matches}));
  const historicalMatches=[...matches,...(references?Object.values(references.models).filter(m=>cleaned.startsWith(m.id+'-')):[])];
  const historicalReference=historicalMatches.some(m=>m.observations.some(o=>o.historical_context||['checked_compilation_index','supplied_transcription'].includes(o.role)));
  const historicalCollision=historicalReference&&(historicalMatches.some(m=>m.observations.some(o=>o.historical_context))||['GM','GMW','GD','GG','GR','BA'].includes(family[1]));
@@ -57,7 +58,7 @@ export function decodeModel(input,data=null,references=null){
  // Known lines are normalized above; other compact inputs do not receive invented variant boundaries.
  const split=body.split('-'),main=split.shift()||'',tail=split.join('-');
  const match=main.match(/^([A-Z]*)(\d+)([A-Z0-9]*)$/);
- if(!match){segments.push({type:'unknown',token:body,title:'Unresolved model portion',description:'This portion needs a documented model-specific interpretation.',status:'Unresolved'});return applyMaster2026Interpretations({recognized:true,prefix,family:family[0],normalized,segments,exact,references:matches,historicalReference})}
+ if(!match){segments.push({type:'unknown',token:body,title:'Unresolved model portion',description:'This portion needs a documented model-specific interpretation.',status:'Unresolved'});return applyMaster2026Interpretations(applyWorldwideInterpretations({recognized:true,prefix,family:family[0],normalized,segments,exact,references:matches,historicalReference}))}
  const [,modifier,number,seriesTail]=match;
  const rule=historicalReference?null:modelRule(prefix,modifier,number);
  if(rule){if(rule.family)family=[rule.family,...family.slice(1)];segments[0].description=rule.prefixDescription;segments[0].source=rule.source;segments[0].status='Community reading · Casio features confirmed separately';}

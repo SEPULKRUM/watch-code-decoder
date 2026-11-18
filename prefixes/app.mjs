@@ -1,7 +1,8 @@
+import {displaySuppliedRecord,suppliedSegments} from './scoped-breakdown.mjs?v=official-audit-20261117';
+import {officialCasioForModel} from './official-casio-links.mjs?v=official-audit-20261117';
 import {master2026} from './master-2026-data.mjs';
-import {applyMaster2026,canonical2026Reference} from './master-2026.mjs?v=prefix-blocks-20261117';
+import {applyMaster2026,canonical2026Reference} from './master-2026.mjs?v=official-audit-20261117';
 import {worldwide} from './worldwide-data.mjs';
-import {officialSupportForModel} from './official-support.mjs?v=model-identity-20261117';
 import {dwHeritage} from './dw-heritage-data.mjs?v=dw-heritage-20261117';
 import {regionalGroupFor,regionalModelSummary} from './regional-models.mjs?v=master26-20261117';
 import {reconcileFamilyLabels} from './family-classification.mjs?v=regional-groups-20261117';
@@ -13,7 +14,7 @@ import {metalSquares} from './metal-squares-data.mjs?v=metal-squares-20261117';
 import {moduleComparison} from './module-comparison-data.mjs?v=module-comparison-20261117';
 import {researchPdfs} from './research-pdfs-data.mjs?v=three-pdfs-20261117';
 import {applyCatalog1983,catalog1983EvidenceForModel,catalog1983} from './catalog-1983.mjs?v=regional-groups-20261117';
-import {validateSearchIndex,searchUnified,indexedModel,exactIndexedModels,modelForDetail,indexedStatus,unifiedFamilyCounts,inSearchMode,fitmentContext} from './unified-search.mjs?v=master26-20261117';
+import {validateSearchIndex,searchUnified,indexedModel,exactIndexedModels,modelForDetail,indexedStatus,unifiedFamilyCounts,inSearchMode,fitmentContext} from './unified-search.mjs?v=official-audit-20261117';
 import {englishText,nonEnglishScript} from './english.mjs?v=7c8896384ae6cc00';
 import {creatorVideosForModel} from './creator-videos.mjs?v=ocean-wave-20261117';
 import {presentationFacts} from './specification-display.mjs?v=7c8896384ae6cc00';
@@ -28,9 +29,9 @@ import {historicalReview} from './historical-review.mjs?v=7c8896384ae6cc00';
 import {guideReferenceSections} from './guide-interpretations.mjs?v=dw-heritage-20261117';
 import {decoderDisclosure,decoderRules,evidenceName} from './decoder-rules.mjs?v=7c8896384ae6cc00';
 import {value,moduleIds,findModels,stats,safeUrl,validateData,label,display,evidenceLabel,recordEvidenceLabel} from './core.mjs?v=ua-archive-20261116';
-import {decodeModel,entries} from './decoder.mjs?v=prefix-blocks-20261117';
+import {decodeModel,entries} from './decoder.mjs?v=official-audit-20261117';
 import {validateReferences,findReferences,referenceStatus} from './model-references.mjs?v=7c8896384ae6cc00';
-import {modelColor,officialProductLink} from './decoder-presentation.mjs?v=7c8896384ae6cc00';
+import {modelColor} from './decoder-presentation.mjs?v=7c8896384ae6cc00';
 import {validateParts,partsForModel} from './parts.mjs?v=7c8896384ae6cc00';
 const $=s=>document.querySelector(s), el=(tag,text,cls)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=englishText(text);if(cls)n.className=cls;return n};
 let watchnaviOffset=0,masterOffset=0,masterResearch=null,baseReferences=null;
@@ -71,18 +72,17 @@ function partsSection(model){
  return section;
 }
 function watchCard(model){
- const card=el('section',undefined,'watch-link-card');
- const url=officialProductLink(productLinks?.models?.[model.id],model.id);
+ const card=el('section',undefined,'watch-link-card'),destination=officialCasioForModel(model.id);
  const icon=el('span','◷','watch-outline');icon.setAttribute('aria-hidden','true');card.append(icon);
- if(url)card.append(link(`SEE THE WATCH · ${model.id} ↗`,url));
- else{const support=officialSupportForModel(model.id);if(support)card.append(link(`CASIO SUPPORT · ${support.model} ↗`,support.url),el('small','Official support/manual reference; product specifications may be unavailable.'));else card.append(el('p','Official Casio product page unavailable'));}
- return card;
+ const label=destination.kind==='product'?`CASIO PRODUCT · ${destination.model} ↗`:destination.kind==='support'?`CASIO SUPPORT · ${destination.model} ↗`:'CASIO OFFICIAL WEBSITE ↗';
+ card.append(link(label,destination.url),el('small',destination.description));return card;
 }
+
 function openModel(id,write=true){
  id=canonical2026Reference(id);
  const resolved=searchIndex?modelForDetail(searchIndex,data,id):null;const model=resolved?.model||data.models[id];if(!model)return;const entry=resolved?.entry;const familyContext=searchIndex?Boolean(regionalGroupFor(searchIndex,data,id)?.is_base_reference):false;const index2011=String(value(model,'reference_scope')||'').startsWith('2011');activeModel=id;const body=$('#detail-body');body.replaceChildren();body.append(el('div',value(model,'series')||entry?.family||'Casio','detail-family'),el('h2',id));body.querySelector('h2').id='detail-title';body.querySelector('h2').textContent=id;body.append(el('span',entry?indexedStatus(familyContext?{...entry,category:'family'}:entry):recordEvidenceLabel(model),'pill'));if(entry&&!entry.has_specifications)body.append(el('p',indexedStatus(entry),'review-note'));if(entry&&(familyContext||['fitment','uncertain','family','clock','package'].includes(entry.category)))body.append(el('p','This record is categorized separately and is not counted as an individual watch variant.','review-note'));
  if(entry?.master_row!==undefined&&masterResearch){const raw=masterResearch.models[entry.master_row];if(raw?.model_id===id){const report=el('details',undefined,'guide-reference');report.append(el('summary','Supplied research for this exact identifier'));const fields=el('div',undefined,'structured');structured(Object.fromEntries(Object.entries(expandMasterModel(masterResearch,raw)).filter(([,v])=>v!=='')),fields);report.append(el('p','Source claims only; no measurements are inherited from another variant or module.'),fields);body.append(report)}}
- const share=el('button','Copy model link','text-button detail-link');share.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(location.href);share.textContent='Link copied'}catch{share.textContent='Copy the address from your browser'}});body.append(share);if(!entry||entry.category==='watch')body.append(watchCard(model),partsSection(model));if(index2011)body.append(el('p',value(model,'reference_scope')==='2011_clock_index'?'2011 clock index reference. Technical fields not established by the source remain blank.':'2011 watch-family/base-label index reference, not a complete colour or regional SKU. Indexed sizes and mass retain their printed label or suffix-group scope.','review-note'));
+ const share=el('button','Copy model link','text-button detail-link');share.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(location.href);share.textContent='Link copied'}catch{share.textContent='Copy the address from your browser'}});body.append(share);body.append(watchCard(model));if(!entry||entry.category==='watch')body.append(partsSection(model));if(index2011)body.append(el('p',value(model,'reference_scope')==='2011_clock_index'?'2011 clock index reference. Technical fields not established by the source remain blank.':'2011 watch-family/base-label index reference, not a complete colour or regional SKU. Indexed sizes and mass retain their printed label or suffix-group scope.','review-note'));
  appendMaster2026(body,id,model);appendWorldwide(body,id,model);appendRegionalReferences(body,id);appendCreatorVideos(body,id,resolved?.module_ids||moduleIds(model),entry?.family||value(model,'series')||'');appendCatalog1983(body,id);appendPdfResearch(body,id,model);appendModuleComparison(body,id,model);appendSpecialVariants(body,id,model);appendSeriesPdfs(body,id,model);appendMudFrog(body,id,model);appendOceanWave(body,id,model);appendDwHeritage(body,id,model);appendMetalSquares(body,id,model);
  const section=el('section',undefined,'detail-section');section.append(el('h3',index2011?'2011 catalog reference':familyContext?'Family reference':entry&&entry.category!=='watch'?'Source reference':'Watch specifications'),el('p',index2011?'Printed index values and source scope are retained below.':'Case, materials and appearance belong to this model.','detail-description'));addFacts(section,model,['master_2026_evidence','worldwide_evidence','series','module_id','module_candidates','catalog_1983_evidence','research_pdf_evidence','module_comparison_evidence','metal_square_evidence','special_variant_evidence','series_pdf_evidence',...((specialVariants.category_resolutions[id]||mudFrog.category_resolutions[id]||oceanWave.category_resolutions[id]||dwHeritage.category_resolutions[id])?['reference_scope']:[])]);
  const missing=['dimensions_mm','weight_g','case_material','band_material','glass','water_resistance_rating'].filter(k=>!model.specs[k]);if(missing.length&&entry?.category!=='package')section.append(el('p',(index2011?'Exact variant / clock fields not established by this index: ':'Not recorded: ')+missing.map(label).join(' · '),'unknowns'));body.append(section);
@@ -98,7 +98,8 @@ function appendMaster2026(body,id,model){
  const evidence=value(model,'master_2026_evidence');if(!evidence)return;
  const section=el('section',undefined,'detail-section');section.append(el('h3','Current 2026 master specifications and corrections'),el('p','Current exact-model record from the updated master. Manufacturer-page checks are scoped to the cited fields; unknowns and unreleased/postponed status remain explicit.','detail-description'));
  if(evidence.current_record.related_canonical_model){const b=el('button','View current specifications: '+evidence.current_record.related_canonical_model,'text-button detail-link');b.type='button';b.addEventListener('click',()=>openModel(evidence.current_record.related_canonical_model));section.append(b)}
- const current=el('details');current.open=true;current.append(el('summary','Current model, specifications, prices, functions and source checks'));structured(evidence.current_record,current);section.append(current);
+ const current=el('details');current.open=true;current.append(el('summary','Current model, specifications, prices, functions and source checks'));structured(displaySuppliedRecord(evidence.current_record),current);section.append(current);
+ if(suppliedSegments(evidence.current_record)?.some(p=>p.syntaxDerived)){const prior=el('details');prior.append(el('summary','Original supplied prefix grouping — retained as history'));structured(Object.fromEntries(Object.entries(evidence.current_record).filter(([key])=>['model_code_breakdown','code_breakdown','individual_code_breakdown','decoded_model_code'].includes(key))),prior);section.append(prior)}
  if(evidence.dated_changes.length){const changes=el('details');changes.append(el('summary','Dated correction history — superseded values'));structured(evidence.dated_changes,changes);section.append(changes)}
  section.append(link('Correction provenance and source citations ↗',`${repo}/blob/main/${master2026.source_reference}`));body.append(section);
 }
@@ -106,7 +107,7 @@ function appendMaster2026(body,id,model){
 function appendWorldwide(body,id,model){
  const evidence=value(model,'worldwide_evidence');if(!evidence||value(model,'master_2026_evidence'))return;
  const section=el('section',undefined,'detail-section');section.append(el('h3','2020–2026 worldwide register research'),el('p','Supplied research — pending independent archived-source verification. Announcement, planned release and historical listing dates retain their source scope. Conflicting observations are preserved; no specifications are inherited from other variants.','detail-description'));
- for(const observation of evidence.observations){const detail=el('details');detail.append(el('summary',observation.source_document));structured(observation,detail);section.append(detail)}body.append(section);
+ for(const observation of evidence.observations){const detail=el('details');detail.append(el('summary',observation.source_document));structured(displaySuppliedRecord(observation),detail);section.append(detail)}body.append(section);
 }
 
 function appendCatalog1983(body,id){
@@ -287,7 +288,7 @@ function renderPrefix(query,force=false){
  const coverage=el('div',undefined,'decode-coverage');
  if(result.exact){coverage.append(el('div',`Model record available: ${result.exact.id}`));const button=el('button','Open watch specifications','primary');button.addEventListener('click',()=>openModel(result.exact.id));coverage.append(button)}
  else if(searchIndex&&exactIndexedModels(searchIndex,query).length===1){const entry=exactIndexedModels(searchIndex,query)[0];coverage.append(el('div',`${entry.id} · ${indexedStatus(entry)}`));const view=el('button','Open indexed model record','primary');view.addEventListener('click',()=>openModel(entry.id));coverage.append(view)}
- else coverage.append(el('div',result.prefixOnly?'Family decoded. Enter a complete model to check for an exact specification record.':`Prefix decoded. This exact model is not yet in the ${data?Object.keys(data.models).length:'current'}-model specification catalog. The model-family interpretation is available independently.`));root.append(coverage);const videoModel=data?.models?.[result.normalized],videoEntry=searchIndex?indexedModel(searchIndex,result.normalized):null;appendCreatorVideos(root,result.normalized,videoModel?moduleIds(videoModel):[],videoEntry?.family||value(videoModel,'series')||result.family);return result;
+ else coverage.append(el('div',result.prefixOnly?'Family decoded. Enter a complete model to check for an exact specification record.':`Prefix decoded. This exact model is not yet in the ${data?Object.keys(data.models).length:'current'}-model specification catalog. The model-family interpretation is available independently.`));const destination=officialCasioForModel(result.normalized);coverage.append(link(destination.label+' ↗',destination.url));root.append(coverage);const videoModel=data?.models?.[result.normalized],videoEntry=searchIndex?indexedModel(searchIndex,result.normalized):null;appendCreatorVideos(root,result.normalized,videoModel?moduleIds(videoModel):[],videoEntry?.family||value(videoModel,'series')||result.family);return result;
 }
 function submitPrefix(model){$('#prefix-input').value=model;state.query=model;state.page=1;$('#search').value=model;if(data)render();renderPrefix(model,true)}
 
@@ -300,7 +301,7 @@ function render(){
  const list=$('#results');list.replaceChildren();
  for(const entry of found.records){
   const model=entry.catalog_id?data.models[entry.catalog_id]:null,tr=el('tr'),td=el('td'),button=el('button',undefined,'model-button');button.type='button';button.setAttribute('aria-label',`Open ${entry.id}`);
-  const mark=el('span','C','watch-mark');mark.setAttribute('aria-hidden','true');const title=el('span');const identifier=el('strong');identifier.textContent=entry.display_id||entry.id;title.append(identifier,el('small',indexedStatus(entry)));button.append(mark,title);button.addEventListener('click',()=>openModel(entry.id));td.append(button);if(entry.regional_ids?.length>1){const refs=el('details',undefined,'regional-references'),summary=el('summary',`${entry.regional_ids.length} stored references`);refs.append(summary);for(const id of entry.regional_ids){const b=el('button',id,'text-button detail-link');b.type='button';b.addEventListener('click',()=>openModel(id));refs.append(b)}td.append(refs)}if(entry.base_reference_ids?.length){const context=el('details',undefined,'regional-references');context.append(el('summary','Family context'));for(const id of entry.base_reference_ids){const b=el('button',id,'text-button detail-link');b.type='button';b.addEventListener('click',()=>openModel(id));context.append(b)}td.append(context)}const videos=creatorVideosForModel(entry.id,entry.module_ids,entry.family);if(videos.length){const a=link(videos[0].kind==='playlist'?'▶ My playlist ↗':'▶ My video ↗',videos[0].url);a.className='creator-video-row';a.setAttribute('aria-label','Watch SEPULKRUM video about '+entry.id);td.append(a)}tr.append(td,el('td',entry.family));
+  const mark=el('span','C','watch-mark');mark.setAttribute('aria-hidden','true');const title=el('span');const identifier=el('strong');identifier.textContent=entry.display_id||entry.id;title.append(identifier,el('small',indexedStatus(entry)));button.append(mark,title);button.addEventListener('click',()=>openModel(entry.id));td.append(button);const destination=officialCasioForModel(entry.id),casioLink=link(destination.label+' ↗',destination.url);casioLink.className='official-casio-row';casioLink.setAttribute('aria-label',destination.label+' for '+(entry.display_id||entry.id));td.append(casioLink);if(entry.regional_ids?.length>1){const refs=el('details',undefined,'regional-references'),summary=el('summary',`${entry.regional_ids.length} stored references`);refs.append(summary);for(const id of entry.regional_ids){const b=el('button',id,'text-button detail-link');b.type='button';b.addEventListener('click',()=>openModel(id));refs.append(b)}td.append(refs)}if(entry.base_reference_ids?.length){const context=el('details',undefined,'regional-references');context.append(el('summary','Family context'));for(const id of entry.base_reference_ids){const b=el('button',id,'text-button detail-link');b.type='button';b.addEventListener('click',()=>openModel(id));context.append(b)}td.append(context)}const videos=creatorVideosForModel(entry.id,entry.module_ids,entry.family);if(videos.length){const a=link(videos[0].kind==='playlist'?'▶ My playlist ↗':'▶ My video ↗',videos[0].url);a.className='creator-video-row';a.setAttribute('aria-label','Watch SEPULKRUM video about '+entry.id);td.append(a)}tr.append(td,el('td',entry.family));
   const module=el('td');module.append(el('span',entry.module_ids.length?entry.module_ids.join(' / '):'Unknown','module-tag'+(entry.module_ids.length>1?' ambiguous':'')));
   const water=model?presentationFacts(model,{verified:state.verified}).find(([field])=>field==='water_resistance')?.[1].value:null;
   const weight=model&&(!state.verified||model.specs.weight_g?.status==='verified')&&(value(model,'weight_g')!==null?display(value(model,'weight_g'),'weight_g'):value(model,'indexed_weight_g')!==null?display(value(model,'indexed_weight_g'),'indexed_weight_g')+' · index':null);
