@@ -1,4 +1,4 @@
-import {modelIdentityRules,modelIdentitySource} from './model-identity-data.mjs?v=master26-20261117';
+import {modelIdentityRules,modelIdentitySource} from './model-identity-data.mjs?v=g2300b-20261118';
 // Presentation grouping only. Original identifiers, categories, evidence and facts remain unchanged.
 const cached=new WeakMap();
 const fields=['dimensions_mm','weight_g','case_material','band_material','glass','color','display_polarity'];
