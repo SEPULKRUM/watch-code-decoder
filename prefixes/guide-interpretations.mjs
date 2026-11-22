@@ -1,17 +1,18 @@
-import {applyMaster2026Interpretations} from './master-2026.mjs?v=official-audit-20261117';
-import {applyWorldwideInterpretations} from './worldwide.mjs?v=regional-fix-v4-20261122';
-import {applyDwHeritageInterpretations} from './dw-heritage-interpretations.mjs?v=dw-heritage-20261117';
-import {applyOceanWaveInterpretations} from './ocean-wave-interpretations.mjs?v=ocean-wave-20261117';
-import {applyMudFrogInterpretations} from './mud-frog-interpretations.mjs?v=mud-frog-20261117';
-import {applySeriesInterpretations} from './series-interpretations.mjs?v=series-pdfs-20261117';
-import {applyLineageInterpretation,lineageConfigurations} from './lineage-interpretations.mjs?v=lineage-20261117';
-import {applyAnniversary,anniversaryReferenceSections} from './anniversary.mjs?v=recrystallized-20261117';
+import {regionalSuffixDescription} from './scoped-breakdown.mjs?v=regional-search-20261122';
+import {applyMaster2026Interpretations} from './master-2026.mjs';
+import {applyWorldwideInterpretations} from './worldwide.mjs?v=regional-search-20261122';
+import {applyDwHeritageInterpretations} from './dw-heritage-interpretations.mjs';
+import {applyOceanWaveInterpretations} from './ocean-wave-interpretations.mjs';
+import {applyMudFrogInterpretations} from './mud-frog-interpretations.mjs';
+import {applySeriesInterpretations} from './series-interpretations.mjs';
+import {applyLineageInterpretation,lineageConfigurations} from './lineage-interpretations.mjs';
+import {applyAnniversary,anniversaryReferenceSections} from './anniversary.mjs';
 import {applyOwnerModifier,ownerReadings} from './owner-prefix-readings.mjs';
 // Selected watch facts and scoped interpretations from the supplied five-page guide.
 // No PDF, advertising artwork or source-page reproduction is distributed.
 export const guideSource='https://github.com/SEPULKRUM/casio-watch-specs/blob/main/docs/full-guide-coverage.md';
 export const guideColours={'1':'Black','2':'Blue','3':'Green','4':'Red / pink','5':'Brown / beige','6':'Purple','7':'White / silver','8':'Gray / silver','9':'Gold / yellow'};
-export const guideMarkets={JF:'Japanese-market / Japan domestic market',J:'Japanese-market / Japan domestic market',JR:'Japan-market reference',CR:'North / South America',ER:'European-market / Europe',V:'International / export markets',VER:'International / export markets',DR:'International / export markets',DF:'International / export markets'};
+export const guideMarkets={JF:'Japanese-market / Japan domestic market',J:'Japanese-market / Japan domestic market',JR:'Japan-market reference',CR:'North America (commonly US / Canada)',ER:'European-market / Europe',V:'International / export markets',VER:'International / export markets',DR:'International / export markets',DF:'International / Asian export markets'};
 export const guideModifiers={D:'stainless-steel bracelet',T:'titanium case / bracelet',L:'leather strap',B:'nylon / cloth band, or a bezel / variant marker on MDV-106B',C:'cloth / nylon strap or coloured ion-plating, depending on position',G:'gold-tone / two-tone plating',V:'Velcro / fabric strap',E:'expansion band, or sapphire / slim trim in Lineage TSE / DSE',AR:'Arabic edition: Eastern Arabic numerals and English / Arabic day wheel'};
 const contexts={
  WV:[2,'Digital Wave Ceptor examples: WV-58, WV-59, WV-200.'],WVA:[2,'Analog-digital examples: WVA-M630, M640, M650.'],WVQ:[2,'Analog chronograph example: WVQ-M410.'],
@@ -58,7 +59,7 @@ export function applyGuide(result,{modifier,number,seriesTail,tail}){
  if(p==='GWF'&&modifier==='D'&&number==='1000'){const s=result.segments.find(s=>s.type==='modifier');if(s)Object.assign(s,note('D is associated by the watch community with the depth-measurement / diving-sensor GWF-D1000 FROGMAN series. It is a model-line reading, not the steel-bracelet D used in other positions.'));}
  for(const s of result.segments){
  if(context&&s.type==='variant'&&guideColours[s.token]&&!result.exact?.specs?.color&&s.status!=='official_observed')Object.assign(s,note(`The guide’s common colour reading is ${guideColours[s.token]}. Exact dial, case, strap, accents and LCD polarity vary by model.`));
- if(s.type==='market'&&guideMarkets[s.token])Object.assign(s,note(s.token==='JR'?'JR — Japan Release is an owner/community interpretation associated with Japanese-market limited or collaboration releases; JF is common on standard JDM models. This is not an official Casio expansion or a guarantee of limited status, packaging or manufacturing country.':`${guideMarkets[s.token]} suffix in the guide / community reference. This indicates a sales-market association, not manufacturing country.`));
+ if(s.type==='market'&&guideMarkets[s.token])Object.assign(s,note(regionalSuffixDescription(s.token)||(s.token==='JR'?'JR — Japan Release is an owner/community interpretation associated with Japanese-market limited or collaboration releases; JF is common on standard JDM models. This is not an official Casio expansion or a guarantee of limited status, packaging or manufacturing country.':`${guideMarkets[s.token]} suffix in the guide / community reference. This indicates a sales-market association, not manufacturing country.`)));
  if(s.type==='order'&&/^A\d?$/.test(s.token))Object.assign(s,note('Variation / order marker within the colour code; following digits can distinguish shades. A1 / A2 / A3 do not have one universal shade meaning.'));
  }
  if(p==='MTP'&&modifier==='E'&&number==='735'&&seriesTail==='AR'){
@@ -79,7 +80,7 @@ export function guideReferenceSections(){
  if(title==='MTP / LTP')items.push('V00x: value dress / casual (guide suggests 30 m; do not infer from generic Water Resistant). 13xx: classic dress / date or day-date (guide suggests 50 m). B1xx: retro / integrated or slim. E3xx / E7xx: multi-dial, calendar / chronograph-style or octagonal integrated. S1xx: solar association.');
  sections.push({title,items:[...new Set(items)]});
  }
- sections.push({title:'Material / edition modifiers before the final hyphen',items:Object.entries(guideModifiers).map(([token,text])=>token+': '+text+'. Context and exact model take precedence.')},{title:'Colour digits and variation markers',items:[...Object.entries(guideColours).map(([token,text])=>token+': '+text),'A is a variation / order marker. 2A1 / 2A2 / 2A3 can distinguish blue shades; deep blue / ice blue / turquoise are scoped to MTP-E735AR, not universal shades.']},{title:'Market suffixes at the end',items:Object.entries(guideMarkets).map(([token,text])=>token+': '+text+'. Sales market, not manufacturing country.')});
+ sections.push({title:'Material / edition modifiers before the final hyphen',items:Object.entries(guideModifiers).map(([token,text])=>token+': '+text+'. Context and exact model take precedence.')},{title:'Colour digits and variation markers',items:[...Object.entries(guideColours).map(([token,text])=>token+': '+text),'A is a variation / order marker. 2A1 / 2A2 / 2A3 can distinguish blue shades; deep blue / ice blue / turquoise are scoped to MTP-E735AR, not universal shades.']},{title:'Market suffixes at the end',items:Object.entries(guideMarkets).map(([token,text])=>token+': '+text+'. '+(regionalSuffixDescription(token)||'Sales market, not manufacturing country.'))});
  sections.push({title:'Owner-supplied G-SHOCK prefix and modifier interpretations',items:ownerReadings.map(r=>r.code+': '+r.meaning+'. '+r.context+' Community interpretation; exact-model features take precedence.')});
  sections.push({title:'Scoped Lineage DJ / DE / DSE / TD interpretations',items:[...lineageConfigurations.map(r=>r.scope+' — '+r.suffix+': '+r.interpretation),'LCW-M200DJ: M is read as Multi-Band; existing module 4709 research records Multi-Band 5. The 200 series number is not a module or a production date.','LCW-M200DJ-2AJF: 2 identifies the blue dial; A is a variation marker, not a universal silver-accent definition. JF is a Japanese retail-market reference, not proof of manufacture or packaging language.']});
  return [...sections,...anniversaryReferenceSections()];

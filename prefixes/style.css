@@ -29,3 +29,5 @@
 .regional-references{margin:.3rem 0 .5rem 48px;font-size:12px}.regional-references summary{cursor:pointer;color:var(--muted)}.regional-references .detail-link{display:block;text-align:left;margin:0;padding:.35rem 0;font-size:12px;overflow-wrap:anywhere}
 
 .official-casio-row{display:block;margin:.3rem 0 .4rem 2.9rem;font-size:.82rem;line-height:1.4}
+
+.regional-query-note{display:block;max-width:60em;margin-top:6px;font-size:13px;line-height:1.5;color:#bfc1c9}

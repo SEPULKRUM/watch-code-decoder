@@ -1,5 +1,5 @@
-import {displaySuppliedRecord} from './scoped-breakdown.mjs?v=official-audit-20261117';
-import {groupRegionalMatches,isBaseReference} from './regional-models.mjs?v=g2300b-20261118';
+import {displaySuppliedRecord} from './scoped-breakdown.mjs?v=regional-search-20261122';
+import {groupRegionalMatches,isBaseReference,regionalReferenceRoot} from './regional-models.mjs';
 import {englishText} from './english.mjs';
 import {moduleIds} from './core.mjs';
 const compact=value=>String(value).toUpperCase().replace(/[^A-Z0-9]/g,'');
@@ -34,7 +34,7 @@ export function inSearchMode(row,mode='models'){
 function prepared(index,catalog,master){
  let saved=cache.get(index);
  if(!saved||saved.catalog!==catalog||saved.master!==master){
-  const byId=new Map(),exact=new Map();
+  const byId=new Map(),exact=new Map(),regionalRoots=new Map();
   const rows=index.records.map(row=>{
    const model=row.catalog_id?catalog.models[row.catalog_id]:null,key=compact(row.id);
    const ownFacts=model?Object.fromEntries(Object.entries(model.specs).filter(([k])=>!model.specs.master_2026_evidence||!['worldwide_evidence','master_research_reference'].includes(k)).map(([k,f])=>[k,k==='master_2026_evidence'?Object.fromEntries(Object.entries(displaySuppliedRecord(f.value.current_record)).filter(([field])=>field!=='historical_field_values')):f.value])):{};
@@ -42,9 +42,10 @@ function prepared(index,catalog,master){
    const candidate=master&&row.master_row!==undefined?master.models[row.master_row]:null;const raw=candidate?.model_id===row.id?candidate:null;
    const modules=row.module_ids.map(id=>catalog.modules[id]?.specs).filter(Boolean);
    const item={row,key,text:englishText(row.id+' '+row.family+' '+row.module_ids.join(' ')+' '+JSON.stringify(ownFacts)+' '+JSON.stringify(model?.specs.master_2026_evidence?{}:raw||{})+' '+JSON.stringify(modules)).toUpperCase(),checkedText:englishText(row.id+' '+JSON.stringify(checkedFacts)).toUpperCase()};
+   if(row.category==='watch'){const root=compact(regionalReferenceRoot(row.id));if(!regionalRoots.has(root))regionalRoots.set(root,[]);regionalRoots.get(root).push(row)}
    byId.set(row.id,row);if(!exact.has(key))exact.set(key,[]);exact.get(key).push(row);return item;
   }).sort((a,b)=>collator.compare(a.row.id,b.row.id));
-  saved={catalog,master,rows,byId,exact};cache.set(index,saved);
+  saved={catalog,master,rows,byId,exact,regionalRoots};cache.set(index,saved);
  }
  return saved;
 }
@@ -56,12 +57,13 @@ export function searchUnified(index,catalog,{query='',family='',verified=false,m
  const explicitMembers=new Set((index.fitment_resolutions||[]).filter(r=>key&&compact(r.model_id)===key).flatMap(r=>r.related_models));
  const size=[25,50,100].includes(Number(pageSize))?Number(pageSize):50;
  const saved=prepared(index,catalog,master),identifierQuery=terms.length===1&&/[A-Z]/.test(q)&&/[0-9]/.test(q)&&saved.rows.some(item=>item.key.startsWith(key)||item.row.id.toUpperCase()===q);
+ const marketQuery=terms.length===1?key.match(/^(.+)(JF|JR|ER|DR|CR|DF)$/):null;const regionalRows=marketQuery&&!saved.exact.get(key)?.some(r=>r.category==='watch')?saved.regionalRoots.get(marketQuery[1]):null;const regionalIds=regionalRows?.length?new Set(regionalRows.map(r=>r.id)):null;
  const literalIdentifierQuery=identifierQuery&&q.includes('-')&&saved.rows.some(item=>item.row.id.toUpperCase().startsWith(q));
- let found=saved.rows.filter(item=>(inSearchMode(item.row,mode)||groupRegional&&mode==='family'&&isBaseReference(index,catalog,item.row.id))&&(!family||item.row.family===family)&&(!verified||item.row.has_checked_fields)&&(explicitMembers.has(item.row.id)||terms.every(term=>{const text=verified?item.checkedText:item.text;return identifierQuery?(literalIdentifierQuery?item.row.id.toUpperCase().startsWith(q):item.key.startsWith(key)||item.row.id.toUpperCase()===q):text.includes(term)||compact(term)&&item.key.includes(compact(term))})));
+ let found=saved.rows.filter(item=>(inSearchMode(item.row,mode)||groupRegional&&mode==='family'&&isBaseReference(index,catalog,item.row.id))&&(!family||item.row.family===family)&&(!verified||item.row.has_checked_fields)&&(regionalIds?regionalIds.has(item.row.id):(explicitMembers.has(item.row.id)||terms.every(term=>{const text=verified?item.checkedText:item.text;return identifierQuery?(literalIdentifierQuery?item.row.id.toUpperCase().startsWith(q):item.key.startsWith(key)||item.row.id.toUpperCase()===q):text.includes(term)||compact(term)&&item.key.includes(compact(term))}))));
  if(q){const exact=[],rest=[];for(const item of found)(item.row.id.toUpperCase()===q||item.key===key?exact:rest).push(item);found=exact.concat(rest)}
  const referenceTotal=found.length;if(groupRegional)found=groupRegionalMatches(index,catalog,found.map(item=>item.row),{verified}).map(row=>({row}));
  const pageCount=Math.max(1,Math.ceil(found.length/size)),current=Math.min(pageCount,Math.max(1,Math.floor(Number(page)||1))),offset=(current-1)*size;
- return {total:found.length,referenceTotal,records:found.slice(offset,offset+size).map(item=>item.row),page:current,pageCount,pageSize:size,offset};
+ return {total:found.length,referenceTotal,regionalQuery:regionalIds&&found.length?{entered:q,base:marketQuery[1],suffix:marketQuery[2],note:'Market-suffix search: showing stored references for this base watch. The entered regional reference is not yet verified; displayed specifications belong to the stored model.'}:null,records:found.slice(offset,offset+size).map(item=>item.row),page:current,pageCount,pageSize:size,offset};
 }
 export function unifiedFamilyCounts(index,mode='models',catalog=null){
  const filtered=index.records.filter(row=>inSearchMode(row,mode)||catalog&&mode==='family'&&isBaseReference(index,catalog,row.id)),rows=catalog?groupRegionalMatches(index,catalog,filtered):filtered;const counts={};for(const row of rows)counts[row.family]=(counts[row.family]||0)+1;return counts;

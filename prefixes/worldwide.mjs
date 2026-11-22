@@ -1,5 +1,5 @@
-import {applySuppliedBreakdown,findBreakdownRow} from './scoped-breakdown.mjs?v=regional-fix-v4-20261122';
-import {worldwide} from './worldwide-data.mjs?v=gb001-20261122';
+import {applySuppliedBreakdown,findBreakdownRow} from './scoped-breakdown.mjs?v=regional-search-20261122';
+import {worldwide} from './worldwide-data.mjs?v=regional-search-20261122';
 const compact=s=>String(s||'').toUpperCase().replace(/[^A-Z0-9]/g,'');
 const models=new Map(worldwide.records.map(r=>[compact(r.id),r]));
 export function applyWorldwideInterpretations(result){
