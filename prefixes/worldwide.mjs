@@ -1,5 +1,5 @@
-import {applySuppliedBreakdown,findBreakdownRow} from './scoped-breakdown.mjs?v=official-audit-20261117';
-import {worldwide} from './worldwide-data.mjs?v=g2300b-20261118';
+import {applySuppliedBreakdown,findBreakdownRow} from './scoped-breakdown.mjs?v=gb001-20261122';
+import {worldwide} from './worldwide-data.mjs?v=gb001-20261122';
 const compact=s=>String(s||'').toUpperCase().replace(/[^A-Z0-9]/g,'');
 const models=new Map(worldwide.records.map(r=>[compact(r.id),r]));
 export function applyWorldwideInterpretations(result){

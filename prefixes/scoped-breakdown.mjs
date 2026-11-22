@@ -15,7 +15,7 @@ function repairReferenceGrouping(row){
 export function suppliedSegments(row){
  const id=compactCode(reference(row));if(!id)return null;
  const decoded=Object.entries(row.decoded_model_code||{}).filter(([key,v])=>roles[key]&&v?.code).map(([key,v])=>({type:roles[key],token:String(v.code),description:v.meaning||'Meaning not established for this exact model.',confidence:v.evidence||''}));
- if(decoded.length>1&&/^[A-Z]+(?:-[A-Z]+)?$/.test(decoded[0].token)&&decoded.map(p=>compactCode(p.token)).join('')===id)return decoded;
+ if(decoded.length>1&&/^[A-Z]+(?:-[A-Z0-9]+)?$/.test(decoded[0].token)&&decoded.map(p=>compactCode(p.token)).join('')===id)return decoded;
  const raw=row.model_code_breakdown||row.code_breakdown||row.individual_code_breakdown;
  if(raw&&!Array.isArray(raw)&&Array.isArray(raw.full_reference_tokenization)){
   const [prefix,main,tail,...extra]=raw.full_reference_tokenization.map(String);const parsed=main?.match(/^([A-Z]*)(\d+)([A-Z]*)$/);
