@@ -1,4 +1,4 @@
-import {displaySuppliedRecord,suppliedSegments} from './scoped-breakdown.mjs?v=official-audit-20261117';
+import {displaySuppliedRecord,suppliedSegments} from './scoped-breakdown.mjs?v=regional-fix-v4-20261122';
 import {officialCasioForModel} from './official-casio-links.mjs?v=official-audit-20261117';
 import {master2026} from './master-2026-data.mjs';
 import {applyMaster2026,canonical2026Reference} from './master-2026.mjs?v=official-audit-20261117';
@@ -29,7 +29,7 @@ import {historicalReview} from './historical-review.mjs?v=7c8896384ae6cc00';
 import {guideReferenceSections} from './guide-interpretations.mjs?v=g2300b-20261118';
 import {decoderDisclosure,decoderRules,evidenceName} from './decoder-rules.mjs?v=7c8896384ae6cc00';
 import {value,moduleIds,findModels,stats,safeUrl,validateData,label,display,evidenceLabel,recordEvidenceLabel} from './core.mjs?v=ua-archive-20261116';
-import {decodeModel,entries} from './decoder.mjs?v=gb001-20261122';
+import {decodeModel,entries} from './decoder.mjs?v=regional-fix-v4-20261122';
 import {validateReferences,findReferences,referenceStatus} from './model-references.mjs?v=7c8896384ae6cc00';
 import {modelColor} from './decoder-presentation.mjs?v=7c8896384ae6cc00';
 import {validateParts,partsForModel} from './parts.mjs?v=7c8896384ae6cc00';
