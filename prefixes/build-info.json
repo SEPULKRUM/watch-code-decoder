@@ -1,1 +1,7 @@
-{"asset_version":"7c8896384ae6cc00","search_index_sha256":"d363c1c7ec9ca03acec69516f133008138573f1b6aaf5600812ed36b1b902b54","reconciliation_sha256":"82a81d32bce3967a75cafb5d777d544142c7a018d341ebc5f31bb194883a0d08","individual_watch_identifiers":29148,"public_revision":"awg-m520ua-20261116"}
+{
+  "asset_version": "shriro-public-gzip-20261123",
+  "search_index_sha256": "681286ee62e8280b7876ec4614c83adc5e9cd25e8f69d172d8158c515f20dd68",
+  "reconciliation_sha256": "fb20c5a26adbe7273b27c0451cb15ba45809f9791c17ba657663eb712ed4fbc0",
+  "individual_watch_identifiers": 30071,
+  "public_revision": "shriro-archive-20261123"
+}
