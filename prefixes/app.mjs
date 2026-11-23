@@ -340,7 +340,7 @@ async function load(remote=false){
   const [catalogArtifact,indexArtifact,reportArtifact]=await Promise.all([read('catalog.json'),read('search-index.json'),read('reconciliation-report.json')]);
   if(indexArtifact.data.catalog_sha256!==catalogArtifact.sha)throw Error('Catalog and search index are from different snapshots.');
   indexArtifact.data._sha256=indexArtifact.sha;installData(catalogArtifact.data,indexArtifact.data,reportArtifact.data);
-  status(remote?'Latest reconciled GitHub data loaded':'Unified model index loaded');$('#updated').textContent=remote?'Refreshed just now · main branch':'Snapshot · 16 November 2026';
+  status(remote?'Latest reconciled GitHub data loaded':'Unified model index loaded');$('#updated').textContent=remote?'Refreshed just now · main branch':'Published snapshot';
  }catch(error){if(data&&searchIndex)status('Refresh unavailable · keeping the complete saved search index');else{$('#load-error').hidden=false;$('#load-message').textContent=error.message;status('Unified index unavailable')}}finally{$('#refresh').disabled=false}
 }
 
