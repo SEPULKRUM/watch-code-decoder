@@ -6,13 +6,13 @@
   "backup": "https://sepulkrum-casio-specs-beta.miniatureagave.chatgpt.site/",
   "individual_watch_identifiers": 30071,
   "files_sha256": {
-    "DEPLOYMENT.md": "455fb1cf654a29c47c4bb9073ed24408c1049bd6ef69ac6e54f26fb711f52005",
+    "DEPLOYMENT.md": "a23d8595383ef92a8cb4c626ae6aa9915f49490b0531b1ad2512f17d3a518bf9",
     "anniversary-data.mjs": "80334d630ee95c82910cd5098f9d89e2d1cd866e96137abf1a35387444770ac1",
     "anniversary.mjs": "3f1756090253ac4ae1a6dbd51922e7f88e30588dc19a6ab4e4060086de715e33",
-    "app.mjs": "4e5a39b0b26061e9cc336bb81ff108a4515e38d727a795d039c185c789772fe5",
+    "app.mjs": "08fb653c9d0c07c4aa1744c58537373f9d07f814de463ad09892f8720f5b29a8",
     "awg-m520ua.mjs": "79e3db2ab3451c427734a578b1c353e2486610351f39566d85ac0b4f608cee8e",
     "brand-emblem.svg": "83bd9517dc72df9d8cc459a58c0cd628af583e509aa9c413ce321248cfa2d7b3",
-    "build-info.json": "b6d780f9d8e5f58c4ca8d146c623241dfa4efdc16f878a75ccabb32b4a206537",
+    "build-info.json": "46dcb4897c57f55fd0230e379cbe3ba29ef0a5345eaa2d4c02965616f9324ab7",
     "catalog-1983-data.mjs": "e5611b5f1dc419060f36e42120e7182e0d4dada0368e988fdfb31324c796307a",
     "catalog-1983.mjs": "3e0a5ed65d9e1451e4daa5ac817b2e1cc420c3a5b7550a5ca2ba0a9c631595c0",
     "catalog-2011-reference.mjs": "843b9e87ba7b132c6874f1ec215234fdb2af278879383812a82bff1f125de492",
@@ -32,7 +32,7 @@
     "family-classification.mjs": "bf67f6c6981950223fc8c2638aaa8852978d2c1bd526157d048c7ec908a66e5a",
     "guide-interpretations.mjs": "8ebdeb2920456867cf1edf7ba60933cb7757953bee67756089e59e2b8be4351c",
     "historical-review.mjs": "443e38e042656cbd26322c67fd78f0bc3949ddb47df9940c57f99b25408a4018",
-    "index.html": "8df80e48b04c0fadebb12329c0cedc999673ec2d237b24d88f494439cb14f5ff",
+    "index.html": "5a42faefc4b5c6af3c4a2f143d02938a1b71d70cf3d5e2aa37f49088e2eb0c5f",
     "lineage-interpretations.mjs": "0dc2748fdcd5a53923483882da25dc0bcae1bad8f08e2900e53ef8d5a09df41a",
     "master-2026-data.mjs": "fdbc29027d4313d0b1335fb21deb94ea06f0882b0007867b574ccb3a77cda723",
     "master-2026.mjs": "79b565df842e6d7bb36a4e2190aca7e0d893f7c590a0d5f9508ad73f67d472a4",
@@ -81,7 +81,8 @@
     "watchnavi-reference.mjs": "ecf17e595a422767d8ec87db498c6f972d4d2b45607c73a02fce1fcfdd03736d",
     "watchnavi-search.mjs": "e8194ca938d514a5be09281cc4171bc40cf6b50a9eccc2543bffb6a20fadc8a8",
     "worldwide-data.mjs": "7176f3d1ff799537329285b768172465cec57d5bb6748a9461c59e7455c7f04c",
-    "worldwide.mjs": "91f0f5a04ad642c703d71bea0cf44c112287c992e81b1ebb08305eafda51b741"
+    "worldwide.mjs": "91f0f5a04ad642c703d71bea0cf44c112287c992e81b1ebb08305eafda51b741",
+    "tests/dataset-loading.test.mjs": "39c2623376a59ca4050c2e782ad0936290c4845fb762517f885962dd87dd09e4"
   },
   "public_overrides": [
     "Removed the beta badge and changed the initial status to Public reference. Backup beta remains unchanged.",
@@ -383,7 +384,7 @@
     "source_document": "G-B001 2023 Complete_Code_Breakdown and Specifications.pdf",
     "casio_cataloged_editions": 6,
     "documented_watch_references": 12,
-    "reported_collaboration_reference": "G-B001BE — uncertain; full suffix unresolved",
+    "reported_collaboration_reference": "G-B001BE \u2014 uncertain; full suffix unresolved",
     "research_segments": "G / B / 001 / MV / A-B-E / color / JR; RG and SF remain grouped theme segments",
     "official_variants": "MVA, MVB and MVE retained as complete manufacturer strings",
     "weight_groups_g": {
@@ -407,5 +408,13 @@
     "promoted_verified_fields": 0,
     "missing_eligible_references": 0,
     "scope": "Historical DW-5000C and 5600-series context is not treated as exact-variant physical specification evidence. Dynamic later lineup widgets are excluded."
+  },
+  "dataset_loader_fix": {
+    "date": "2026-11-23",
+    "cause": "Public reader requested reconciliation-report.json.gz although the published report is uncompressed JSON. Missing gzip request returned HTTP 503 and prevented all catalog loading.",
+    "fix": "Use gzip only for the split catalog and search index; read the reconciliation report as plain JSON. Preserve uncompressed remote refresh and coherent-snapshot checks.",
+    "regression_test": "prefixes/tests/dataset-loading.test.mjs",
+    "validation": "Real packaged loader loads all three datasets; catalog/index/report SHA-256 match; zero eligible omissions; both GMWB5000SS-2D and GMW-B5000SS-2D find stored exact-model specifications.",
+    "data_changes": "None; evidence, specifications, identifiers and image policy unchanged."
   }
 }
