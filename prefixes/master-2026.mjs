@@ -1,4 +1,4 @@
-import {applySuppliedBreakdown,findBreakdownRow} from './scoped-breakdown.mjs?v=official-audit-20261117';
+import {applySuppliedBreakdown,findBreakdownRow} from './scoped-breakdown.mjs?v=gbx-sfj-20261126';
 import {master2026} from './master-2026-data.mjs';
 import {applyCatalog1983} from './catalog-1983.mjs';
 import {moduleIds} from './core.mjs';

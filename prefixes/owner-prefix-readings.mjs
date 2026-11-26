@@ -84,8 +84,8 @@ export const ownerReadings=[
   },
   {
     "code": "GBX",
-    "meaning": "G-Shock Bluetooth Xtreme",
-    "context": "G-LIDE surf digital with MIP display / tide graph association."
+    "meaning": "G-LIDE surf-focused G-SHOCK subseries",
+    "context": "Keep GBX intact. Tide graphs, moon data, sunrise/sunset times, Bluetooth Mobile Link and training are platform associations; verify exact-model features independently. Individual G/B/X expansions are inferred and unverified."
   },
   {
     "code": "GCW",

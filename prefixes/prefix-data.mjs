@@ -1,4 +1,4 @@
-import {ownerReadings,ownerReadingSource} from './owner-prefix-readings.mjs?v=7c8896384ae6cc00';
+import {ownerReadings,ownerReadingSource} from './owner-prefix-readings.mjs?v=gbx-sfj-20261126';
 import {researchEntries} from './research-prefix-data.mjs?v=7c8896384ae6cc00';
 // Family reference reused from SEPULKRUM/watch-code-decoder/prefixes (read-only).
 // Additional catalog-backed EFB, BGD, BA and GD family associations.

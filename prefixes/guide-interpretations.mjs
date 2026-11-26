@@ -1,13 +1,13 @@
-import {regionalSuffixDescription} from './scoped-breakdown.mjs?v=gb2023-correction-v2-20261122';
-import {applyMaster2026Interpretations} from './master-2026.mjs';
-import {applyWorldwideInterpretations} from './worldwide.mjs?v=gb2023-correction-v2-20261122';
+import {regionalSuffixDescription} from './scoped-breakdown.mjs?v=gbx-sfj-20261126';
+import {applyMaster2026Interpretations} from './master-2026.mjs?v=gbx-sfj-20261126';
+import {applyWorldwideInterpretations} from './worldwide.mjs?v=gbx-sfj-20261126';
 import {applyDwHeritageInterpretations} from './dw-heritage-interpretations.mjs';
 import {applyOceanWaveInterpretations} from './ocean-wave-interpretations.mjs';
 import {applyMudFrogInterpretations} from './mud-frog-interpretations.mjs';
 import {applySeriesInterpretations} from './series-interpretations.mjs';
 import {applyLineageInterpretation,lineageConfigurations} from './lineage-interpretations.mjs';
 import {applyAnniversary,anniversaryReferenceSections} from './anniversary.mjs';
-import {applyOwnerModifier,ownerReadings} from './owner-prefix-readings.mjs';
+import {applyOwnerModifier,ownerReadings} from './owner-prefix-readings.mjs?v=gbx-sfj-20261126';
 // Selected watch facts and scoped interpretations from the supplied five-page guide.
 // No PDF, advertising artwork or source-page reproduction is distributed.
 export const guideSource='https://github.com/SEPULKRUM/casio-watch-specs/blob/main/docs/full-guide-coverage.md';

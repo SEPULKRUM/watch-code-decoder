@@ -1,4 +1,4 @@
-import {displaySuppliedRecord} from './scoped-breakdown.mjs?v=gb2023-correction-v2-20261122';
+import {displaySuppliedRecord} from './scoped-breakdown.mjs?v=gbx-sfj-20261126';
 import {groupRegionalMatches,isBaseReference,regionalReferenceRoot} from './regional-models.mjs';
 import {englishText} from './english.mjs';
 import {moduleIds} from './core.mjs';

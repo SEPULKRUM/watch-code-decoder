@@ -1,4 +1,4 @@
-import {ownerPrefixMeaning} from './owner-prefix-readings.mjs?v=7c8896384ae6cc00';
+import {ownerPrefixMeaning} from './owner-prefix-readings.mjs?v=gbx-sfj-20261126';
 // Whole-prefix community readings. The guide is secondary evidence, not a Casio acronym key.
 const guide='https://github.com/SEPULKRUM/casio-watch-specs/blob/main/research/reference-supplements/guide-v3-2026-11-15.json';
 const meanings={

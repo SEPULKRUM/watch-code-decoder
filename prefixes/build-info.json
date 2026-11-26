@@ -1,8 +1,11 @@
 {
-  "asset_version": "public-audit-20261123",
+  "asset_version": "gbx-sfj-20261126",
   "search_index_sha256": "681286ee62e8280b7876ec4614c83adc5e9cd25e8f69d172d8158c515f20dd68",
   "reconciliation_sha256": "fb20c5a26adbe7273b27c0451cb15ba45809f9791c17ba657663eb712ed4fbc0",
   "individual_watch_identifiers": 30071,
-  "public_revision": "report-loader-fix-20261123",
-  "snapshot_date": "2026-11-23"
+  "public_revision": "gbx-sfj-20261126",
+  "snapshot_date": "2026-11-23",
+  "composite_updated_on": "2026-11-26",
+  "composite_watch_identifiers": 30073,
+  "composite_watch_groups": 29354
 }
