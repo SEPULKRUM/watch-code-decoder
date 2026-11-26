@@ -353,6 +353,7 @@ footer strong{color:#c8cbd1}
       <div class="evidence"><div class="evidence-tag">E</div><p>11-character production code <strong>E</strong>: Japan observed on photographed case backs marked <strong>JAPAN H</strong> and <strong>JAPAN K</strong>, including GWG-B1000 and GWF-1000 examples.</p></div>
       <div class="evidence"><div class="evidence-tag">2</div><p>11-character production code <strong>2</strong>: <strong>Confirmed Thailand</strong> from multiple photographed Casio case backs marked MADE IN THAILAND, including Pro Trek PRW-69YB, GMW-BX5600, and F-B100W.</p></div>
       <div class="evidence"><div class="evidence-tag">3</div><p>11-character production code <strong>3</strong>: <strong>China observed</strong> on an owner-supplied AWG-M100FP case back (Module 5230), code <strong>2532610JL7M</strong>, marked <strong>CASED IN CHINA</strong> and <strong>JAPAN MOV’T EL</strong>. The casing and movement-origin markings have separate meanings.</p></div>
+      <div class="evidence"><div class="evidence-tag">O/N/D</div><p>Legacy numeric six-character month convention: <strong>O = October, N = November, D = December</strong>. Community references describe this on older Casio/Frogman watches. A year digit repeats by decade; model evidence is needed. Trailing characters remain undecoded. Sources: <a href="https://www.hablemosderelojes.com/t/numeros-de-serie-en-el-frogman-y-como-leerlos/26295" target="_blank" rel="noopener noreferrer">2008 collector discussion</a> · <a href="https://zonacasio.blogspot.com/2020/08/que-indican-los-diferentes-codigos-en.html" target="_blank" rel="noopener noreferrer">Zona Casio (2020)</a>. These are community sources, not an official universal Casio code key.</p></div>
       <div class="evidence"><div class="evidence-tag">?</div><p>Trailing internal characters are displayed but intentionally left undecoded until their meaning is verified.</p></div>
     </div>
   </section>
@@ -364,6 +365,7 @@ footer strong{color:#c8cbd1}
       <div class="example" data-code="G2WOX2">G2WOX2<span>6-character · February 2026</span></div>
       <div class="example" data-code="D4AGE8">D4AGE8<span>6-character · April 2023</span></div>
       <div class="example" data-code="79CCUD">79CCUD<span>Legacy numeric 6-character · September 2007 / 2017</span></div>
+      <div class="example" data-code="6N033C">6N033C<span>Legacy O/N/D · November · decade unresolved</span></div>
       <div class="example" data-code="120841">120841<span>Legacy numeric 6-character · February 2001 / 2011</span></div>
       <div class="example" data-code="201A246E">201A246E<span>8-character · Japan factory family</span></div>
       <div class="example" data-code="26E0470UWEE">26E0470UWEE<span>11-character · JAPAN H documented</span></div>
@@ -424,6 +426,8 @@ const month6={
   "7":"July","8":"August","9":"September","0":"October","A":"November","B":"December"
 };
 
+const legacyMonth6={...month6,O:"October",N:"November",D:"December"};
+
 const production11={
   "1":{text:"Japan",confidence:"Observed",detail:"Observed with JAPAN H and JAPAN GE case-back markings."},
   "E":{text:"Japan",confidence:"Observed",detail:"Observed on photographed Japan case backs marked JAPAN H and JAPAN K, including GWG-B1000 and GWF-1000 examples."},
@@ -480,7 +484,7 @@ function showResult(code,items,statusClass,statusText,note){
 }
 
 function decode6(code){
-  const y=code[0],m=code[1],internal=code.slice(2),month=month6[m];
+  const y=code[0],m=code[1],internal=code.slice(2),month=/^\d$/.test(y)?legacyMonth6[m]:month6[m];
 
   if(/^\d$/.test(y)){
     const years=year6Numeric[y]||[];
@@ -491,6 +495,19 @@ function decode6(code){
         field("Month code",`${m} — not verified in current dataset`),
         field("Internal code",internal)
       ],"unknown","Partially decoded","The code shape is recognized, but one or more values are not yet verified.");
+      return;
+    }
+
+    if(/^[OND]$/.test(m)){
+      showResult(code,[
+        field("Format","Legacy numeric 6-character code · O/N/D convention"),
+        field("Year digit",`${y} — year ending in ${y}; decade unresolved`),
+        field("Month",`${m} = ${month}`),
+        field("Production date",`${month}; the year and decade require model-specific evidence`),
+        field("Internal code",`${internal} — meaning not yet decoded`),
+        field("Evidence","O/N/D is reported in collector references, including Frogman discussions; applicability to this particular watch still needs model/case-back evidence.")
+      ],"observed","Community-supported month convention",
+        "This is not an official Casio decoding key. The month interpretation is conditional on this legacy format applying. Do not choose a decade or interpret the trailing characters without supporting evidence.");
       return;
     }
 
@@ -590,7 +607,7 @@ function decode(){
   }
 
   if(/^[A-Z][0-9AB][A-Z0-9]{4}$/.test(code)){decode6(code);return}
-  if(/^[0-9][0-9AB][A-Z0-9]{4}$/.test(code)){decode6(code);return}
+  if(/^[0-9][0-9ABOND][A-Z0-9]{4}$/.test(code)){decode6(code);return}
   if(/^[A-Z0-9]{4}\d{3}[A-J]$/.test(code)){decode8(code);return}
   if(/^\d{2}[A-Z0-9]\d{3}[A-Z0-9]{5}$/.test(code)){decode11(code);return}
 
